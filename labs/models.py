@@ -6,7 +6,8 @@ from datetime import datetime
 
 class Projeto(models.Model):
 	titulo = models.CharField('Título', max_length=80)
-	slug = models.SlugField('URL', unique=True)
+	# slug = models.SlugField('URL', unique=True)
+	link_externo = models.URLField('Link externo', blank=True)
 	descricao = models.CharField('Descrição', max_length=140,
 	help_text=u"Uma breve descrição em 140 caracteres. Um tweet :)")
 	publicacao = models.DateTimeField('Publicação', default=datetime.now, blank=True)
@@ -17,10 +18,10 @@ class Projeto(models.Model):
 	def __unicode__(self):
 		return self.titulo
 
-	def save(self, *args, **kwargs):
-		if self.slug == '':
-			self.slug = slugify(self.titulo)
-		super(Projeto, self).save(*args, **kwargs)
+	# def save(self, *args, **kwargs):
+	# 	if self.slug == '':
+	# 		self.slug = slugify(self.titulo)
+	# 	super(Projeto, self).save(*args, **kwargs)
 
 	class Meta:
 		ordering = ['-publicacao']
