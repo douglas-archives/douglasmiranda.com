@@ -4,3 +4,4 @@ local_settings.py
 grappelli/*
 dados
 *.sublime-*
+media/*

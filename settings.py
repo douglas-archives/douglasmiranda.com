@@ -1,6 +1,7 @@
 # Django settings for douglasmiranda project.
 import os
 PROJECT_ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
+os.environ['DJANGO_SETTINGS_MODULE'] = 'douglasmiranda.settings'
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -24,6 +25,11 @@ DATABASES = {
         },
     }
 }
+
+# TEMPLATE_CONTEXT_PROCESSORS = (
+#     "django.core.context_processors.auth",
+#     "django.core.context_processors.request",
+# )
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -50,7 +56,8 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT_PATH, 'media')
+MEDIA_ROOT = os.path.join(PROJECT_ROOT_PATH, 'media/')
+FILEBROWSER_MEDIA_ROOT = '/home/douglas/labs/python/django-labs/douglasmiranda/media/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -74,7 +81,7 @@ ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT_PATH, 'static'),
+    os.path.join(PROJECT_ROOT_PATH, 'static/'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -128,6 +135,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     # its need to be here, before django.contrib.admin
     'grappelli',
+    'filebrowser',
 
     'django.contrib.admin',
 
