@@ -1,0 +1,6 @@
+*.pyc
+local_settings.py
+.codeintel/*
+grappelli/*
+dados
+*.sublime-*

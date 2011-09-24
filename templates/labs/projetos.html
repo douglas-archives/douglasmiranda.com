@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block titulo %}Projetos - {{ block.super }}{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/projetos.css" type="text/css" />
+{% endblock %}
+		{% block content %}
+			<ul id="ultimos-projetos">
+			{% for projeto in ultimos_projetos %}
+				<li>
+					<a href="">
+						<img src="{{ MEDIA_URL }}{{ projeto.imagem }}">
+						<p>{{ projeto.titulo }}</p>
+					</a>
+				</li>
+			{% endfor %}
+			</ul>
+		{% endblock %}

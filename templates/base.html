@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8" />
+	<title>{% block titulo %}Douglas Miranda - #Webdevelopment{% endblock %}</title>
+	{% include "global-styles.html" %}
+	{% block css %}{% endblock %}
+	{% block js_head %}{% endblock %}
+</head>
+{% block body %}
+<body id="page" class="page">
+{% endblock %}
+	<div id="wrapper">
+		<header id="banner">
+			<h1>
+				<a href="#">
+					Douglas Miranda
+					<strong>
+						trying to code more than programms
+					</strong>
+				</a>
+			</h1>
+
+			{% include "horizontal-menu.html" %}
+
+		</header><!-- /#banner -->
+		{% block featured %}{% endblock %}
+		<section id="content">
+			{% block content %}{% endblock %}
+		</section><!-- /#content -->
+		{% block extras %}{% endblock %}
+		{% include "footer.html" %}
+		{% include "global-footer-scripts.html" %}
+		{% block js_footer %}{% endblock %}
+	</div>
+</body>
+</html>

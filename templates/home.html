@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block css %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/home.css" type="text/css" />
+{% endblock %}
+{% block body %}
+<body id="index" class="home">
+{% endblock %}
+			{% block featured %}
+				<aside id="featured"><article>
+				<figure>
+					<img src="images/temp/sm-logo.gif" alt="Smashing Magazine" />
+				</figure>
+				<hgroup>
+					<h2>if principal:</h2>
+					<h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+				</hgroup>
+				<p class="description">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+				</p>
+				</article>
+			</aside><!-- /#featured -->
+			{% endblock %}
+			{% block content %}
+			<h2>articles = Article.objects.get_published()[:3]</h2>
+			<ol id="posts-list" class="hfeed">
+				<li>
+					<article class="hentry">
+						<header>
+							<h3 class="entry-title">
+								<a href="#" rel="bookmark" title="Permalink to this POST TITLE">This be the title</a>
+							</h3>
+						</header>
+						<footer class="post-info">
+							<abbr class="published" title="2005-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->
+								10th October 2005
+							</abbr>
+						</footer><!-- /.post-info -->
+						<div class="entry-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis nunc vitae libero iaculis elementum. Nullam et justo <a href="#">non sapien</a> dapibus blandit nec et leo. Ut ut malesuada tellus.</p>
+						</div><!-- /.entry-content -->
+					</article>
+				</li>
+				<li>
+					<article class="hentry">
+						<header>
+							<h3 class="entry-title">
+								<a href="#" rel="bookmark" title="Permalink to this POST TITLE">This be the title</a>
+							</h3>
+						</header>
+						<footer class="post-info">
+							<abbr class="published" title="2005-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->
+								10th October 2005
+							</abbr>
+						</footer><!-- /.post-info -->
+						<div class="entry-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis nunc vitae libero iaculis elementum. Nullam et justo <a href="#">non sapien</a> dapibus blandit nec et leo. Ut ut malesuada tellus.</p>
+						</div><!-- /.entry-content -->
+					</article>
+				</li>
+				<li>
+					<article class="hentry">
+						<header>
+							<h3 class="entry-title">
+								<a href="#" rel="bookmark" title="Permalink to this POST TITLE">This be the title</a>
+							</h3>
+						</header>
+						<footer class="post-info">
+							<abbr class="published" title="2005-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->
+								10th October 2005
+							</abbr>
+						</footer><!-- /.post-info -->
+						<div class="entry-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis nunc vitae libero iaculis elementum. Nullam et justo <a href="#">non sapien</a> dapibus blandit nec et leo. Ut ut malesuada tellus.</p>
+						</div><!-- /.entry-content -->
+					</article>
+				</li>
+
+			</ol><!-- /#posts-list -->
+			{% endblock %}
+
+			{% block extras %}
+			<section id="extras">
+				<div class="blogroll">
+					<h2>links = get_blogroll_links()</h2>
+					<ul>
+						<li><a href="#" rel="external">Tabless</a></li>
+						<li><a href="#" rel="external">Python</a></li>
+						<li><a href="#" rel="external">Andrews Medina</a></li>
+
+						<li><a href="#" rel="external">Smashing Magazine</a></li>
+						<li><a href="#" rel="external">Django</a></li>
+						<li><a href="#" rel="external">HTML5 Spec</a></li>
+					</ul>
+				</div><!-- /.blogroll -->
+
+				<div class="social">
+					<h2>follow(people.me)</h2>
+					<ul>
+						<li><a href="#" rel="me">@douglaswebev</a></li>
+						<li><a href="#" rel="me">github.fork(me)</a></li>
+					</ul>
+				</div><!-- /.social -->
+			</section><!-- /#extras -->
+			{% endblock %}
