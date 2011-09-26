@@ -8,7 +8,7 @@
 			{% for projeto in ultimos_projetos %}
 				<li>
 					<a href="{{ projeto.link_externo }}">
-						<img src="{{ MEDIA_URL }}{{ projeto.imagem }}">
+						<img src="{{ projeto.imagem.url }}">
 						<p>{{ projeto.titulo }}</p>
 					</a>
 				</li>
