@@ -56,8 +56,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT_PATH, 'media/')
-FILEBROWSER_MEDIA_ROOT = '/home/douglas/labs/python/django-labs/douglasmiranda/media/'
+MEDIA_ROOT = os.path.join(PROJECT_ROOT_PATH, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -133,7 +132,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.syndication',
     'django.contrib.flatpages',
-    # its need to be here, before django.contrib.admin
+    # eh necessario que o grappelli esteja examtamente aqui antes de django.contrib.admin
     'grappelli',
     'filebrowser',
 
@@ -165,5 +164,5 @@ LOGGING = {
         },
     }
 }
-
-# FIXTURE_DIRS = (os.path.join(PROJECT_ROOT_PATH, 'blog/fixtures/'),)
+# configuracoes para o filebrowser
+FILEBROWSER_DIRECTORY = 'uploads/'
