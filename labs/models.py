@@ -9,7 +9,7 @@ class Projeto(models.Model):
 	titulo = models.CharField('título', max_length=80)
 	# slug = models.SlugField('URL', unique=True)
 	link_externo = models.URLField('link externo', blank=True)
-	descricao = models.TextField('descrição', max_length=140,
+	descricao = models.CharField('descrição', max_length=140,
 	help_text=u"uma breve descrição em 140 caracteres. Um tweet :)")
 	publicacao = models.DateTimeField('publicação', default=datetime.now, blank=True)
 	imagem = FileBrowseField("imagem", max_length=200, directory="labs/projetos/imagens/",
