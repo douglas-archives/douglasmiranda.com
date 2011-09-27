@@ -1,15 +1,27 @@
-#ultimos-projetos li{
-    width: 200px;
-    height: 130px;
-	float: left;
-    margin-bottom: 20px;
-    margin-right: 20px;
+#ultimos-projetos{
+	display:block;
+	height:500px;
 }
-	#ultimos-projetos li img{
-		width: 200px;
-	    height: 130px;
+#ultimos-projetos li{
+	width: 200px;
+	height: 130px;
+	float: left;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+	#ultimos-projetos li a{
+		display:block;
+		text-decoration: none;
 	}
+		#ultimos-projetos li img{
+			width: 200px;
+			height: 130px;
+			border:#fff 3px solid;
+		}
+		#ultimos-projetos li img:hover{
+			border:#F97F2D 3px solid;
+		}
 .no-margin{
-    margin-bottom: 0px !important;
-    margin-right: 0px !important;
+	margin-bottom: 0px !important;
+	margin-right: 0px !important;
 }

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Django settings for douglasmiranda project.
 import os
 PROJECT_ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
@@ -25,11 +26,6 @@ DATABASES = {
         },
     }
 }
-
-# TEMPLATE_CONTEXT_PROCESSORS = (
-#     "django.core.context_processors.auth",
-#     "django.core.context_processors.request",
-# )
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -76,7 +72,7 @@ STATIC_URL = '/static/'
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = STATIC_URL + 'grappelli/'
+ADMIN_MEDIA_PREFIX = os.path.join(STATIC_URL, 'grappelli/')
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -166,3 +162,12 @@ LOGGING = {
 }
 # configuracoes para o filebrowser
 FILEBROWSER_DIRECTORY = 'uploads/'
+
+FILEBROWSER_VERSIONS = {
+    'admin_thumbnail': {'verbose_name': '(Admin) Miniatura', 'width': 60, 'height': 60, 'opts': 'crop'},
+    'thumbnail': {'verbose_name': 'Miniatura (1 col)', 'width': 60, 'height': 60, 'opts': 'crop'},
+    'small': {'verbose_name': 'Pequena (2 col)', 'width': 140, 'height': '', 'opts': ''},
+    'medium': {'verbose_name': 'Média (4 col)', 'width': 300, 'height': '', 'opts': ''},
+    'big': {'verbose_name': 'Grande 480 (6 col)', 'width': 460, 'height': '', 'opts': ''},
+    'large': {'verbose_name': 'Grande 640 (8 col)', 'width': 680, 'height': '', 'opts': ''},
+}
