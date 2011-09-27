@@ -20,6 +20,12 @@ class ArtigoAdmin(admin.ModelAdmin):
 		self.message_user(request, "%s como publicado." % message_bit)
 	make_published.short_description = "Publicar artigos selecionados"
 
+	# class Media:
+	# 	js = [
+	# 		'grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
+	# 		'js/admin/tiny_mce/tinymce_setup.js',
+	# 	]
+
 admin.site.register(Artigo, ArtigoAdmin)
 
 class FlatPageAdmin(FlatPageAdminOld):
