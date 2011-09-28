@@ -4,12 +4,12 @@ from django.views.generic import TemplateView
 
 from douglasmiranda import settings
 # from blog.feeds import UltimosArtigos
-# from blog.models import Artigo
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^$',  TemplateView.as_view(template_name = 'home.html'), name="inicial"),
+	url(r'^$', TemplateView.as_view(template_name="home.html"), name='inicial'),
+	# url(r'^$', 'blog.views.artigos_home', name="inicial"),
 	(r'^labs/', include('labs.urls')),
 	# (r'^blog/', include('blog.urls')),
 	# (r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
