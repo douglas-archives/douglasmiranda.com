@@ -38,7 +38,7 @@ body {
     background: url("../images/body/background.png") repeat-x 0 0 #F5F4EF;
     color: #000305;
     font-size: 14px;
-    font-family: 'Lucida Grande', Arial;
+    font-family: Arial, 'Lucida Grande';
     line-height: 1.429;
     margin: 0;
     padding: 0;
@@ -48,18 +48,18 @@ body {
 #wrapper {clear: both; margin: 0 auto; width: 800px;}
 
 /* Headings */
-h2 {font-size: 1.571em} /* 22px */
-h3 {font-size: 1.429em} /* 20px */
-h4 {font-size: 1.286em} /* 18px */
-h5 {font-size: 1.143em} /* 16px */
-h6 {font-size: 1em} /* 14px */
- 
+h2 {font-size: 22px}
+h3 {font-size: 20px}
+h4 {font-size: 18px}
+h5 {font-size: 16px}
+h6 {font-size: 14px}
+
 h2, h3, h4, h5, h6 {
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: .8em;
 }
- 
+
 /* Anchors */
 a {outline: 0;}
 a img {border: 0px; text-decoration: none;}
@@ -69,43 +69,42 @@ a:link, a:visited {
     text-decoration: underline;
 }
 a:hover, a:active {
-    /*background-color: #C74350;*/
     color: #777;
     text-decoration: none;
     text-shadow: 1px 1px 1px #ccc;
 }
- 
+
 /* Paragraphs */
 p {margin-bottom: 1.143em;}
 * p:last-child {margin-bottom: 0;}
- 
+
 strong, b {font-weight: bold;}
 em, i {font-style: italic;}
- 
+
 ::-moz-selection {background: #333; color: #fff;}
 ::selection {background: #333; color: #fff;}
- 
+
 /* Lists */
 ul {
     list-style: outside disc;
     margin: 1em 0 1.5em 1.5em;
 }
- 
+
 ol {
     list-style: outside decimal;
     margin: 1em 0 1.5em 1.5em;
 }
- 
+
 dl {margin: 0 0 1.5em 0;}
 dt {font-weight: bold;}
 dd {margin-left: 1.5em;}
- 
+
 /* Quotes */
 blockquote {font-style: italic;}
 cite {}
- 
+
 q {}
- 
+
 /* Tables */
 table {margin: .5em auto 1.5em auto; width: 98%;}
 
@@ -232,6 +231,7 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
 
 #about .primary {float: left; width: 165px;}
 #about .primary strong {color: #C64350; display: block; font-size: 1.286em;}
+#about a {padding: 0px;}
 #about .photo {width:55px; height:55px; float: left; margin: 5px 20px;}
 
 #about .url:link, #about .url:visited {text-decoration: none;}
