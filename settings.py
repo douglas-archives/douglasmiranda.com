@@ -17,9 +17,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'douglasmiranda',                      # Or path to database file if using sqlite3.
-        'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': '123456',                  # Not used with sqlite3.
-        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'USER': 'douglasmiranda',                      # Not used with sqlite3.
+        'PASSWORD': 'oew92jhi0',                  # Not used with sqlite3.
+        'HOST': 'mysql.douglasmiranda.com',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
         'OPTIONS' : {
             'init_command': 'SET storage_engine=INNODB',
@@ -91,7 +91,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'mt6dk44g03$d(l-uu-5-058-=++)d_ru98hapfdiga409i0bpod)=v*s'
+SECRET_KEY = 'mt6dk44g03$d(l-uu-sd-058-=++)d_rusdfsdfawe9i0bpod)=v*s'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -171,3 +171,12 @@ FILEBROWSER_VERSIONS = {
     'big': {'verbose_name': 'Grande 480 (6 col)', 'width': 460, 'height': '', 'opts': ''},
     'large': {'verbose_name': 'Grande 640 (8 col)', 'width': 680, 'height': '', 'opts': ''},
 }
+
+# configuracoes adicionais do grappelli
+GRAPPELLI_ADMIN_HEADLINE = u'Douglas Miranda'
+GRAPPELLI_ADMIN_TITLE = u'Douglas Miranda'
+
+try:
+    from local_settings import *
+except:
+    pass
