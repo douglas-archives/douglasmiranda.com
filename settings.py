@@ -106,7 +106,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    # 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'douglasmiranda.urls'
@@ -127,7 +127,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.syndication',
-    'django.contrib.flatpages',
+    # 'django.contrib.flatpages',
     # eh necessario que o grappelli esteja examtamente aqui antes de django.contrib.admin
     'grappelli',
     'filebrowser',

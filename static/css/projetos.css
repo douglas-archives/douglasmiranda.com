@@ -1,27 +1,47 @@
-#ultimos-projetos{
-	display:block;
-	height:500px;
+h3 a{
+	color:#000 !important;
+	text-decoration:none !important;
 }
+#ultimos-projetos{
+	display:table;
+	margin:0px;
+}
+
 #ultimos-projetos li{
-	width: 200px;
-	height: 130px;
+	width: 206px;
+	height: 195px;
 	float: left;
-	margin-bottom: 20px;
-	margin-right: 20px;
+	margin: 23px;
 }
 	#ultimos-projetos li a{
 		display:block;
 		text-decoration: none;
+		padding:0px;
 	}
+		#ultimos-projetos li .descricao{
+			display: none;
+		}
 		#ultimos-projetos li img{
 			width: 200px;
 			height: 130px;
-			border:#fff 3px solid;
+			border:#f4f4f4 3px solid;
 		}
-		#ultimos-projetos li img:hover{
-			border:#F97F2D 3px solid;
+		#ultimos-projetos .active{
+			position:relative;
+			z-index: 9999;
 		}
-.no-margin{
-	margin-bottom: 0px !important;
-	margin-right: 0px !important;
-}
+		#ultimos-projetos .active a{
+			background:#f4f4f4;
+			border: 5px solid #F97F2D;
+			left: -5px;
+			position: absolute;
+			top: -5px;
+		}
+		#ultimos-projetos .active p{
+			margin: 0px 5px 10px 5px;
+		}
+		#ultimos-projetos .active .descricao{
+			display:block;
+			margin-left: 18px;
+			text-align: justify;
+		}

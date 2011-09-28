@@ -1,17 +1,53 @@
 {% extends 'base.html' %}
-{% block titulo %}Projetos - {{ block.super }}{% endblock %}
-{% block css %}
-<link rel="stylesheet" href="{{ STATIC_URL }}css/projetos.css" type="text/css" />
-{% endblock %}
+	{% block titulo %}Projetos - {{ block.super }}{% endblock %}
+	{% block css %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/projetos.css" type="text/css" />
+	{% endblock %}
 		{% block content %}
+			<h2>Projetos que apoio, contribuo ou gosto de divulgar</h2>
 			<ul id="ultimos-projetos">
 			{% for projeto in ultimos_projetos %}
 				<li>
 					<a href="{{ projeto.link_externo }}">
 						<img src="{{ projeto.imagem.url }}">
 						<p>&raquo; {{ projeto.titulo }}</p>
+						<p class="descricao">{{ projeto.descricao }}</p>
 					</a>
 				</li>
 			{% endfor %}
 			</ul>
+			<h3>
+				<a name="por-que-contribuir-e-ou-divulgar-projetos-open-source" href="#por-que-contribuir-e-ou-divulgar-projetos-open-source">
+					Por que contribuir e/ou divulgar projetos open-source?
+				</a>
+			</h3>
+			<p>Por que é legal! (ok, isso não basta neh..)</p>
+			<p>Tudo bem, não sou um veterano no assunto. Porém me encantei pela filosofia open-source, a forma como contribuímos somente divulgando um novo repositório com linhas úteis de código-fonte.
+			</p>
+			<p>E o mesmo acontece quando criamos nosso próprio repositório com aquela pequena aplicação útil que criamos em um final de semana para resolver um problema em particular, mas que por estar agora liberado para todo o mundo usufruir, as poucas linhas de código podem virar uma aplicação útil com muitos colaboradores e nem por isto você vai perder o crédito, pelo contrário todos envolvidos reconhecem a origem da idéia.</p>
+			<h3>
+				<a name="como-crescer-profissionalmente-com-esse-lance-ai" href="#como-crescer-profissionalmente-com-esse-lance-ai">
+					Como crescer profissionalmente com esse lance aí?
+				</a>
+			</h3>
+			<p>Estou no ínicio da minha fase de crescimento profissional ainda para responder algo desse tipo, porém posso assegurar algo que percebo claramente no mundo open-source.
+			</p>
+			<p>Grandes corporações ou mesmo pequenas e médias, não irão te achar ou contratar você porque tu fizestes "tal" aplicação, digo, não tão facilmente. Mas se existe algo disponível para acesso global que você contribui ou mesmo é idealizador do projeto, feito com o mesmo nível de excelência que é utilizado quando você presta serviço, para que currículo melhor que este? A empresa pode visualizar sua interação na comunidade e ver o que faz e como. :D</p>
+			<p>Espero ter passado o que quero com esse texto.</p>
+			<p>Se não passei, fica com o primeiro parágrafo e basta! ;)</p>
 		{% endblock %}
+
+	{% block js_footer %}
+	<script>
+		$(document).ready(function(){
+			$('#ultimos-projetos li').hover(
+				function(){
+					$(this).addClass('active');
+				},
+				function(){
+					$(this).removeClass('active');
+				}
+			);
+		});
+	</script>
+	{% endblock %}
