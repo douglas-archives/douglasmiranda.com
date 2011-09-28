@@ -1,15 +1,19 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
-from django.views.generic import TemplateView
+from django.views.generic import ListView
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from douglasmiranda import settings
+from labs.models import Projeto
 # from blog.feeds import UltimosArtigos
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^$', TemplateView.as_view(template_name="home.html"), name='inicial'),
+	url(r'^',  ListView.as_view(model=Projeto,
+									  template_name = 'home.html',
+									  queryset=Projeto.objects.all(),
+									  context_object_name='ultimos_projetos'), name="inicial"),
 	# url(r'^$', 'blog.views.artigos_home', name="inicial"),
 	(r'^labs/', include('labs.urls')),
 	# (r'^blog/', include('blog.urls')),
