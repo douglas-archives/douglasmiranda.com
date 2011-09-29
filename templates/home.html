@@ -9,16 +9,20 @@
 			<aside id="featured">
 				<article>
 					<figure>
-						<img src="images/temp/sm-logo.gif" alt="Lorem ipsum dolor sit amet" />
+						<a href="">
+							<img src="{{ artigo_em_destaque.imagem_destaque.url }}" alt="{{ artigo_em_destaque.titulo }}" />
+						</a>
 					</figure>
 					<hgroup>
 						<h2>if principal:</h2>
-						<h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+						<h3>
+							<a href="">
+								{{ artigo_em_destaque.titulo }}
+							</a>
+						</h3>
 					</hgroup>
 					<p class="description">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+						{{ artigo_em_destaque.resumo }}
 					</p>
 				</article>
 			</aside><!-- /#featured -->
@@ -26,16 +30,19 @@
 			{% block content %}
 			<h2>articles = Article.objects.get_published()[:3]</h2>
 			<ol id="posts-list" class="hfeed">
+				{% for artigo in ultimos_artigos %}
 				<li>
 					<article class="hentry">
 						<header>
 							<h3 class="entry-title">
-								<a href="#" rel="bookmark" title="Permalink to this POST TITLE">This be the title</a>
+								<a href="#" rel="bookmark" title="{{ artigo.titulo }}">
+									{{ artigo.titulo }}
+								</a>
 							</h3>
 						</header>
 						<footer class="post-info">
-							<abbr class="published" title="2005-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->
-								10th October 2005
+							<abbr class="published" title="2005-10-10T14:07:00-07:00">
+								há {{ artigo.publicacao|timesince }}
 							</abbr>
 						</footer><!-- /.post-info -->
 						<div class="entry-content">
@@ -43,41 +50,7 @@
 						</div><!-- /.entry-content -->
 					</article>
 				</li>
-				<li>
-					<article class="hentry">
-						<header>
-							<h3 class="entry-title">
-								<a href="#" rel="bookmark" title="Permalink to this POST TITLE">This be the title</a>
-							</h3>
-						</header>
-						<footer class="post-info">
-							<abbr class="published" title="2005-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->
-								10th October 2005
-							</abbr>
-						</footer><!-- /.post-info -->
-						<div class="entry-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis nunc vitae libero iaculis elementum. Nullam et justo <a href="#">non sapien</a> dapibus blandit nec et leo. Ut ut malesuada tellus.</p>
-						</div><!-- /.entry-content -->
-					</article>
-				</li>
-				<li>
-					<article class="hentry">
-						<header>
-							<h3 class="entry-title">
-								<a href="#" rel="bookmark" title="Permalink to this POST TITLE">This be the title</a>
-							</h3>
-						</header>
-						<footer class="post-info">
-							<abbr class="published" title="2005-10-10T14:07:00-07:00"><!-- YYYYMMDDThh:mm:ss+ZZZZ -->
-								10th October 2005
-							</abbr>
-						</footer><!-- /.post-info -->
-						<div class="entry-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis nunc vitae libero iaculis elementum. Nullam et justo <a href="#">non sapien</a> dapibus blandit nec et leo. Ut ut malesuada tellus.</p>
-						</div><!-- /.entry-content -->
-					</article>
-				</li>
-
+				{% endfor %}
 			</ol><!-- /#posts-list -->
 			{% endblock %}
 

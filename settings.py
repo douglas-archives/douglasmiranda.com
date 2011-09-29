@@ -164,9 +164,9 @@ LOGGING = {
 FILEBROWSER_DIRECTORY = 'uploads/'
 
 FILEBROWSER_VERSIONS = {
-    'admin_thumbnail': {'verbose_name': '(Admin) Miniatura', 'width': 60, 'height': 60, 'opts': 'crop'},
+    'admin_thumbnail': {'verbose_name': '(Admin) Miniatura', 'width': 143, 'height': 40, 'opts': 'crop'},
     'thumbnail': {'verbose_name': 'Miniatura (1 col)', 'width': 60, 'height': 60, 'opts': 'crop'},
-    'small': {'verbose_name': 'Pequena (2 col)', 'width': 140, 'height': '', 'opts': ''},
+    'small': {'verbose_name': 'Pequena (2 col)', 'width': 270, 'height': 70, 'opts': 'crop'},
     'medium': {'verbose_name': 'Média (4 col)', 'width': 300, 'height': '', 'opts': ''},
     'big': {'verbose_name': 'Grande 480 (6 col)', 'width': 460, 'height': '', 'opts': ''},
     'large': {'verbose_name': 'Grande 640 (8 col)', 'width': 680, 'height': '', 'opts': ''},

@@ -1,12 +1,13 @@
 from django.contrib import admin
 from models import Artigo
+from filebrowser.settings import ADMIN_THUMBNAIL
 
 
 class ArtigoAdmin(admin.ModelAdmin):
-	list_display = ('titulo', 'publicacao', 'status')
+	list_display = ('titulo', 'publicacao', 'status', 'principal', 'image_thumbnail')
 	actions = ['make_published']
 	date_hierarchy = 'publicacao'
-	lists_filter = ['publicacao', 'status']
+	list_filter = ['publicacao', 'status']
 	search_fields = ['titulo']
 	prepopulated_fields = {"slug": ("titulo",)}
 
@@ -18,6 +19,14 @@ class ArtigoAdmin(admin.ModelAdmin):
 			message_bit = "%s artigos foram marcados" % rows_updated
 		self.message_user(request, "%s como publicado." % message_bit)
 	make_published.short_description = "Publicar artigos selecionados"
+	# TODO: Descobrir se este eh o melhor jeito de se fazer isto
+	def image_thumbnail(self, obj):
+	    if obj.imagem_destaque and obj.imagem_destaque.filetype == "Image":
+	        return '<img src="%s" />' % obj.imagem_destaque.version_generate(ADMIN_THUMBNAIL).url
+	    else:
+	        return ""
+	image_thumbnail.allow_tags = True
+	image_thumbnail.short_description = "Imagem em destaque"
 
 	class Media:
 		js = [
