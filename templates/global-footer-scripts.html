@@ -1,16 +1,25 @@
 	<script src="{{ STATIC_URL }}js/jquery-1.4.2.js"></script>
 	<script>
 		$(document).ready(function(){
-			before = '<span class="elements-mouse-over-effect">click("</span>';
-			after = '<span class="elements-mouse-over-effect">")</span>';
-			$(this).after();
-			i = null;
-			$('article h3 a').hover(
+			cursor = '<span class="element-mouse-over-effect"> |</span>';
+			interval = null;
+			$('h3 a').hover(
 				function(){
-					$(this).before(before).after(after);
+					link = $(this);
+					link.after(cursor);
+					i = 1;
+					interval = setInterval(function(){
+					    i++;
+					    if(i%2 == 0){
+					        link.parent().find('span.element-mouse-over-effect').css('color', '#fff');
+					    }else{
+					        link.parent().find('.element-mouse-over-effect').css('color', '#000');
+					    }
+					}, 500)
 				},
 				function(){
-					$(this).parent().find('span.elements-mouse-over-effect').remove();
+					clearInterval(interval)
+					$(this).parent().find('span.element-mouse-over-effect').remove();
 				}
 			);
 		});
