@@ -113,7 +113,7 @@ ROOT_URLCONF = 'douglasmiranda.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT_PATH, 'templates'),
-    os.path.join(PROJECT_ROOT_PATH, 'templates/labs'),
+    # os.path.join(PROJECT_ROOT_PATH, 'templates/labs'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -162,16 +162,15 @@ LOGGING = {
 }
 # configuracoes para o filebrowser
 FILEBROWSER_DIRECTORY = 'uploads/'
-
+FILEBROWSER_ADMIN_VERSIONS = ['thumbnail', 'artigo_destaque', 'projetos', 'big', 'large']
 FILEBROWSER_VERSIONS = {
     'admin_thumbnail': {'verbose_name': '(Admin) Miniatura', 'width': 143, 'height': 40, 'opts': 'crop'},
     'thumbnail': {'verbose_name': 'Miniatura (1 col)', 'width': 60, 'height': 60, 'opts': 'crop'},
-    'small': {'verbose_name': 'Pequena (2 col)', 'width': 270, 'height': 70, 'opts': 'crop'},
-    'medium': {'verbose_name': 'Média (4 col)', 'width': 300, 'height': '', 'opts': ''},
+    'artigo_destaque': {'verbose_name': 'Artigo/destaque', 'width': 270, 'height': 70, 'opts': 'crop'},
+    'projetos': {'verbose_name': 'Projetos', 'width': 200, 'height': 130, 'opts': 'crop'},
     'big': {'verbose_name': 'Grande 480 (6 col)', 'width': 460, 'height': '', 'opts': ''},
     'large': {'verbose_name': 'Grande 640 (8 col)', 'width': 680, 'height': '', 'opts': ''},
 }
-
 # configuracoes adicionais do grappelli
 GRAPPELLI_ADMIN_HEADLINE = u'Douglas Miranda'
 GRAPPELLI_ADMIN_TITLE = u'Douglas Miranda'

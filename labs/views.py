@@ -6,3 +6,4 @@ class HomeListView(ListView):
 	model = Projeto
 	template_name = 'labs/projetos.html'
 	query_set = Projeto.objects.all()
+	paginate_by = 6

@@ -6,7 +6,10 @@ h3 a{
 	display:table;
 	margin:0px;
 }
-
+.pagination{
+	text-align:right;
+	margin: 20px 0px 40px 0px;
+}
 #ultimos-projetos li{
 	width: 206px;
 	height: 195px;
