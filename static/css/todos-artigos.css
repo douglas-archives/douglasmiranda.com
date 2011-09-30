@@ -1,0 +1,12 @@
+#posts-list h3 a{
+    color:#333;
+}
+.entry-title{
+    margin-bottom:7px;
+}
+.published{
+    color: #666;
+}
+.entry-content{
+    margin-bottom:15px;
+}
