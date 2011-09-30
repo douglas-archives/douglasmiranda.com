@@ -34,6 +34,20 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 #featured h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
 #featured h3 a:hover, #featured h3 a:active {color: #333;}
 
+
+#posts-list h3 a{
+    color:#333;
+}
+.entry-title{
+    margin-bottom:7px;
+}
+.published{
+    color: #666;
+}
+.entry-content{
+    margin-bottom:15px;
+}
+
 /*
     Extras
 *****************/

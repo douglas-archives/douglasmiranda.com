@@ -29,31 +29,9 @@
 			{% endblock %}
 			{% block content %}
 			<h2>articles = Article.objects.get_published()[:3]</h2>
-			<ol id="posts-list" class="hfeed">
-				{% for artigo in ultimos_artigos %}
-				<li>
-					<article class="hentry">
-						<header>
-							<h3 class="entry-title">
-								<a href="#" rel="bookmark" title="{{ artigo.titulo }}">
-									{{ artigo.titulo }}
-								</a>
-							</h3>
-						</header>
-						<footer class="post-info">
-							<abbr class="published" title="2005-10-10T14:07:00-07:00">
-								há {{ artigo.publicacao|timesince }}
-							</abbr>
-						</footer><!-- /.post-info -->
-						<div class="entry-content">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque venenatis nunc vitae libero iaculis elementum. Nullam et justo <a href="#">non sapien</a> dapibus blandit nec et leo. Ut ut malesuada tellus.</p>
-						</div><!-- /.entry-content -->
-					</article>
-				</li>
-				{% endfor %}
-			</ol><!-- /#posts-list -->
+			{% include "blog/listagem-artigos.html" %}
 			{% endblock %}
-
+			{% include "blog/listagem-artigos.html" %}
 			{% block extras %}
 			<section id="extras">
 				<div class="blogroll">

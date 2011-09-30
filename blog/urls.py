@@ -1,12 +1,6 @@
-from django.conf.urls.defaults import patterns, include, url
-from blog.models import Artigo
-
+from django.conf.urls.defaults import patterns, url
+from blog.views import TodosArtigosListView
 
 urlpatterns = patterns('',
-    (r'^$','django.views.generic.date_based.archive_index',
-        {
-            'queryset': Artigo.objects.all(),
-            'date_field': 'publicacao'
-        }
-    )
+    url(r'^todos-artigos/', TodosArtigosListView.as_view(), name='todos-artigos'),
 )

@@ -21,10 +21,10 @@ class ArtigoAdmin(admin.ModelAdmin):
 	make_published.short_description = "Publicar artigos selecionados"
 	# TODO: Descobrir se este eh o melhor jeito de se fazer isto
 	def image_thumbnail(self, obj):
-	    if obj.imagem_destaque and obj.imagem_destaque.filetype == "Image":
-	        return '<img src="%s" />' % obj.imagem_destaque.version_generate(ADMIN_THUMBNAIL).url
-	    else:
-	        return ""
+		if obj.imagem_destaque and obj.imagem_destaque.filetype == "Image":
+			return '<img src="%s" />' % obj.imagem_destaque.version_generate(ADMIN_THUMBNAIL).url
+		else:
+			return ""
 	image_thumbnail.allow_tags = True
 	image_thumbnail.short_description = "Imagem em destaque"
 

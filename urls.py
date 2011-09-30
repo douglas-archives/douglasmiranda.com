@@ -11,7 +11,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
 	url(r'^$',  HomeListView.as_view(), name="inicial"),
 	(r'^labs/', include('labs.urls')),
-	# (r'^blog/', include('blog.urls')),
+	(r'^artigo/', include('blog.urls')),
 	# (r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
 	# 	{'feed_dict': {'ultimos': UltimosArtigos}},
 	# ),
