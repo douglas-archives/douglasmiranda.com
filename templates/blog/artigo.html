@@ -4,7 +4,7 @@
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/artigo.css" type="text/css" />
 	{% endblock %}
 		{% block content %}
-			<article class="hentry">
+			<article id="article-detail">
 				<header>
 					<h3 class="entry-title">
 						<a href="{% url blog-artigo slug=artigo.slug %}" rel="bookmark" title="{{ artigo.titulo }}">

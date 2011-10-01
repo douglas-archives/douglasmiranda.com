@@ -1,0 +1,20 @@
+#article-detail header p{
+	color: #555555;
+	font-size: 12px;
+	margin-left: 30px;
+}
+#article-detail h3 a{
+	color:#333333;
+}
+#article-detail blockquote{
+	padding:30px;
+	margin:15px 0 15px 0;
+	background:url("../images/articles/blockquote-open.png") no-repeat scroll left top,
+			   url("../images/articles/blockquote-close.png") no-repeat scroll right bottom;
+}
+#article-detail ol li, #article-detail ul li{
+	display: list-item;
+	margin-left:15px;
+}
+#article-detail ol li{list-style-type: decimal;}
+#article-detail ul li{list-style-type: disc;}
