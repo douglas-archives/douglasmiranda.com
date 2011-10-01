@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+	{% block titulo %}{{artigo.titulo}} - {{ block.super }}{% endblock %}
+	{% block css %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/artigo.css" type="text/css" />
+	{% endblock %}
+		{% block content %}
+			<article class="hentry">
+				<header>
+					<h3 class="entry-title">
+						<a href="#" rel="bookmark" title="{{ artigo.titulo }}">
+							{{ artigo.titulo }}
+						</a>
+					</h3>
+					<p>{{ artigo.resumo }}</p>
+				</header>
+				<div class="entry-content">
+					<p>{{ artigo.conteudo|safe }}</p>
+				</div><!-- /.entry-content -->
+				<footer class="post-info">
+					<abbr class="published" title="2005-10-10T14:07:00-07:00">
+						há {{ artigo.publicacao|timesince }}
+					</abbr>
+				</footer><!-- /.post-info -->
+			</article>
+			{{artigo}}
+		{% endblock %}
