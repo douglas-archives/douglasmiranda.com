@@ -3,6 +3,14 @@
 	font-size: 12px;
 	margin-left: 30px;
 }
+#article-detail .code-inline{
+	background-color: #F8F8FF;
+    border: 1px solid #DEDEDE;
+    color: #444444;
+    font-size: 12px;
+    padding: 0 0.2em;
+    border-radius: 3px;
+}
 #article-detail .clearfix{
 	clear: both;
 }

@@ -36,7 +36,7 @@ tinyMCE.init({
     dialog_type: 'window',
     editor_deselector: 'mceNoEditor',
     keep_styles: false,
-    language: 'en',
+    language: 'pt',
     object_resizing: false,
     media_strict: true,
     
@@ -47,7 +47,7 @@ tinyMCE.init({
     width: 758,
     height: 300,
     indentation: '10px',
-    
+
     // Cleanup
     cleanup: true,
     cleanup_on_startup: true,
@@ -56,22 +56,22 @@ tinyMCE.init({
     fix_table_elements: true,
     fix_nesting: true,
     forced_root_block : 'p',
-    
+
     // URL
     relative_urls: false,
     remove_script_host: true,
-    
+
     // Content CSS
     // content_css : "css/example.css",
-    
+
     // Plugins
     plugins: 'advimage,advlink,fullscreen,paste,media,searchreplace,grappelli,grappelli_contextmenu,template',
-    
+
     // Theme Advanced
     theme_advanced_toolbar_location: 'top',
     theme_advanced_toolbar_align: 'left',
     theme_advanced_statusbar_location: 'bottom',
-    theme_advanced_buttons1: 'formatselect,styleselect,|,bold,italic,underline,|,bullist,numlist,blockquote,|,undo,redo,|,link,unlink,|,image,|,fullscreen,|,grappelli_adv',
+    theme_advanced_buttons1: 'formatselect,styleselect,|,bold,italic,underline,|,bullist,numlist,blockquote,|,undo,redo,|,link,unlink,anchor,|,image,|,fullscreen,|,grappelli_adv',
     theme_advanced_buttons2: 'search,|,pasteword,template,media,charmap,|,code,|,table,cleanup,grappelli_documentstructure',
     theme_advanced_buttons3: '',
     theme_advanced_path: false,
@@ -79,17 +79,20 @@ tinyMCE.init({
     theme_advanced_resizing: true,
     theme_advanced_resize_horizontal: false,
     theme_advanced_resizing_use_cookie: true,
-    theme_advanced_styles: 'Image Left=img_left;Image Right=img_right;Image Center=img_center;Image Block=img_block',
-    
+    theme_advanced_styles: 'Imagem à esquerda=img_left;Imagem à Direita=img_right;Imagem Centralizada=img_center',
+
     // Style formats
     // see http://wiki.moxiecode.com/index.php/TinyMCE:Configuration/style_formats
     style_formats : [
-        {title : 'Paragraph Small', block : 'p', classes: 'p_small'},
-        {title : 'Paragraph ImageCaption', block : 'p', classes: 'p_caption'},
+        {title : 'Negrito', inline : 'strong'},
+        {title : 'Itátilo', inline : 'i'},
+        {title : 'Texto Vermelho', inline : 'span', styles : {color : '#ff0000'}},
+        {title : 'Parágrafo para legenda de Imagem', block : 'p', classes: 'p_caption'},
         {title : 'Clearfix', block : 'p', classes: 'clearfix'},
-        {title : 'Code', block : 'code', classes: 'code'}
+        {title : 'Código inline',inline: 'code', classes: 'code-inline', styles : {display : 'inline-block'}},
+        {title : 'Trecho de código', block : 'code', classes: 'code'}
     ],
-    
+
     // Templates
     // see http://wiki.moxiecode.com/index.php/TinyMCE:Plugins/template
     // please note that you need to add the URLs (src) to your url-patterns
@@ -106,15 +109,15 @@ tinyMCE.init({
             description : '4 Columns.'
         }
     ],
-    
+
     // Adv
-    advlink_styles: 'Internal Link=internal;External Link=external',
+    advlink_styles: 'Link Interno=internal;Link Externo=external',
     advimage_update_dimensions_onchange: true,
-    
+
     // Grappelli
     grappelli_adv_hidden: false,
     grappelli_show_documentstructure: 'on'
-    
+
     // Elements
     // valid_elements: '@[id|class|style|title|dir<ltr?rtl|lang|xml::lang|onclick|ondblclick|'
     // + 'onmousedown|onmouseup|onmouseover|onmousemove|onmouseout|onkeypress|'
