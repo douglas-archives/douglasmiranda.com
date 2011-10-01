@@ -3,6 +3,9 @@
 	font-size: 12px;
 	margin-left: 30px;
 }
+#article-detail .clearfix{
+	clear: both;
+}
 #article-detail p{
 	text-align:justify;
 }
