@@ -6,6 +6,17 @@
 #article-detail h3 a{
 	color:#333333;
 }
+#article-detail img{
+	margin: 10px 15px;
+	border: 5px solid #f4f4f4;
+}
+#article-detail img:hover{border: 5px solid #F96F13;}
+#article-detail .img_left{float: left;}
+#article-detail .img_right{float: right;}
+#article-detail .img_center{
+	margin:10px auto;
+	display:block;
+}
 #article-detail blockquote{
 	padding:30px;
 	margin:15px 0 15px 0;

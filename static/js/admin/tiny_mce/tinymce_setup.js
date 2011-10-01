@@ -79,7 +79,7 @@ tinyMCE.init({
     theme_advanced_resizing: true,
     theme_advanced_resize_horizontal: false,
     theme_advanced_resizing_use_cookie: true,
-    theme_advanced_styles: 'Image Left=img_left;Image Right=img_right;Image Block=img_block',
+    theme_advanced_styles: 'Image Left=img_left;Image Right=img_right;Image Center=img_center;Image Block=img_block',
     
     // Style formats
     // see http://wiki.moxiecode.com/index.php/TinyMCE:Configuration/style_formats
@@ -87,7 +87,7 @@ tinyMCE.init({
         {title : 'Paragraph Small', block : 'p', classes: 'p_small'},
         {title : 'Paragraph ImageCaption', block : 'p', classes: 'p_caption'},
         {title : 'Clearfix', block : 'p', classes: 'clearfix'},
-        {title : 'Code', block : 'p', classes: 'code'}
+        {title : 'Code', block : 'code', classes: 'code'}
     ],
     
     // Templates
