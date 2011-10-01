@@ -39,16 +39,5 @@
 		{% endblock %}
 
 	{% block js_footer %}
-	<script>
-		$(document).ready(function(){
-			$('#ultimos-projetos li').hover(
-				function(){
-					$(this).addClass('active');
-				},
-				function(){
-					$(this).removeClass('active');
-				}
-			);
-		});
-	</script>
+	<script src="{{ STATIC_URL }}js/projetos.js"></script>
 	{% endblock %}
