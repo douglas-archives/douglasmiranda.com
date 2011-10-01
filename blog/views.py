@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from blog.models import Artigo
 
 class TodosArtigosListView(ListView):
@@ -8,3 +8,8 @@ class TodosArtigosListView(ListView):
 	queryset = Artigo.objects.get_publicados()
 	paginate_by = 7
 
+class ArtigoDetailView(DetailView):
+	model = Artigo
+	template_name = 'blog/artigo.html'
+	context_object_name = 'artigo'
+	# queryset
