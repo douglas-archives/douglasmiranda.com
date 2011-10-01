@@ -9,7 +9,7 @@ from home.views import HomeListView
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^$',  HomeListView.as_view(), name="inicial"),
+	url(r'^$',  HomeListView.as_view(), name="projeto-inicial"),
 	(r'^labs/', include('labs.urls')),
 	(r'^artigo/', include('blog.urls')),
 	# (r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
