@@ -91,7 +91,7 @@ tinyMCE.init({
         {title : 'Clearfix', block : 'p', classes: 'clearfix'},
         {title : 'Código inline', inline: 'code', classes: 'code-inline',
             styles : {
-            'display' : 'inline',
+            'display' : 'inline-block',
             'background-color': '#F8F8FF',
             'border': '1px solid #DEDEDE',
             'color': '#444444',
