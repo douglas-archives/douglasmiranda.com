@@ -7,7 +7,7 @@
 			<article class="hentry">
 				<header>
 					<h3 class="entry-title">
-						<a href="#" rel="bookmark" title="{{ artigo.titulo }}">
+						<a href="{% url blog-artigo slug=artigo.slug %}" rel="bookmark" title="{{ artigo.titulo }}">
 							{{ artigo.titulo }}
 						</a>
 					</h3>

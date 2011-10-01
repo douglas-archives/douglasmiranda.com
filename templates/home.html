@@ -6,17 +6,18 @@
 <body id="index" class="home">
 {% endblock %}
 			{% block featured %}
+			{% if artigo_em_destaque %}
 			<aside id="featured">
 				<article>
 					<figure>
-						<a href="">
+						<a href="{% url blog-artigo slug=artigo_em_destaque.slug %}">
 							<img src="{{ artigo_em_destaque.imagem_destaque.url }}" alt="{{ artigo_em_destaque.titulo }}" />
 						</a>
 					</figure>
 					<hgroup>
 						<h2>if principal:</h2>
 						<h3>
-							<a href="">
+							<a href="{% url blog-artigo slug=artigo_em_destaque.slug %}">
 								{{ artigo_em_destaque.titulo }}
 							</a>
 						</h3>
@@ -26,6 +27,7 @@
 					</p>
 				</article>
 			</aside><!-- /#featured -->
+			{% endif %}
 			{% endblock %}
 			{% block content %}
 			<h2>articles = Article.objects.get_published()[:3]</h2>
