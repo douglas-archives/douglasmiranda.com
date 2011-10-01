@@ -12,6 +12,10 @@
 	background:url("../images/articles/blockquote-open.png") no-repeat scroll left top,
 			   url("../images/articles/blockquote-close.png") no-repeat scroll right bottom;
 }
+#article-detail blockquote p{
+	border-left: #f8f8f8 solid 2px;
+	padding-left:5px;
+}
 #article-detail ol li, #article-detail ul li{
 	display: list-item;
 	margin-left:15px;

@@ -14,13 +14,12 @@
 					<p>{{ artigo.resumo }}</p>
 				</header>
 				<div class="entry-content">
-					<p>{{ artigo.conteudo|safe }}</p>
+					{{ artigo.conteudo|safe }}
 				</div><!-- /.entry-content -->
 				<footer class="post-info">
-					<abbr class="published" title="2005-10-10T14:07:00-07:00">
-						há {{ artigo.publicacao|timesince }}
+					<abbr class="published">
+						{{ artigo.publicacao }}
 					</abbr>
 				</footer><!-- /.post-info -->
 			</article>
-			{{artigo}}
 		{% endblock %}
