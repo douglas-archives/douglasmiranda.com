@@ -69,7 +69,7 @@ a:link, a:visited {
     text-decoration: none;
 }
 a:hover, a:active {
-    color: #777;
+    color: #333;
     text-decoration: none;
     text-shadow: 1px 1px 1px #ccc;
 }
