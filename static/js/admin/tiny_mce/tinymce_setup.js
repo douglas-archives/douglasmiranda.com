@@ -89,7 +89,17 @@ tinyMCE.init({
         {title : 'Texto Vermelho', inline : 'span', styles : {color : '#ff0000'}},
         {title : 'Parágrafo para legenda de Imagem', block : 'p', classes: 'p_caption'},
         {title : 'Clearfix', block : 'p', classes: 'clearfix'},
-        {title : 'Código inline',inline: 'code', classes: 'code-inline', styles : {display : 'inline-block'}},
+        {title : 'Código inline', inline: 'code', classes: 'code-inline',
+            styles : {
+            'display' : 'inline',
+            'background-color': '#F8F8FF',
+            'border': '1px solid #DEDEDE',
+            'color': '#444444',
+            'font-size': '12px',
+            'padding': '0 0.2em',
+            'border-radius': '3px'
+            }
+        },
         {title : 'Trecho de código', block : 'code', classes: 'code'}
     ],
 
