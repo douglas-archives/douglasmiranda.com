@@ -66,7 +66,7 @@ a img {border: 0px; text-decoration: none;}
 a:link, a:visited {
     color: #f97f2d;
     padding: 0 1px;
-    text-decoration: underline;
+    text-decoration: none;
 }
 a:hover, a:active {
     color: #777;
