@@ -62,7 +62,7 @@ tinyMCE.init({
     remove_script_host: true,
 
     // Content CSS
-    // content_css : "css/example.css",
+    content_css : "/static/grappelli/tinymce/jscripts/tiny_mce/themes/advanced/skins/grappelli/custom_content_style.css",
 
     // Plugins
     plugins: 'advimage,advlink,fullscreen,paste,media,searchreplace,grappelli,grappelli_contextmenu,template',
@@ -72,14 +72,14 @@ tinyMCE.init({
     theme_advanced_toolbar_align: 'left',
     theme_advanced_statusbar_location: 'bottom',
     theme_advanced_buttons1: 'formatselect,styleselect,|,bold,italic,underline,|,bullist,numlist,blockquote,|,undo,redo,|,link,unlink,anchor,|,image,|,fullscreen,|,grappelli_adv',
-    theme_advanced_buttons2: 'search,|,pasteword,template,media,charmap,|,code,|,table,cleanup,grappelli_documentstructure',
+    theme_advanced_buttons2: 'search,|,pasteword,template,media,charmap,|,code,|,cleanup,grappelli_documentstructure',
     theme_advanced_buttons3: '',
     theme_advanced_path: false,
     theme_advanced_blockformats: 'p,h2,h3,h4,pre',
     theme_advanced_resizing: true,
     theme_advanced_resize_horizontal: false,
     theme_advanced_resizing_use_cookie: true,
-    theme_advanced_styles: 'Imagem à esquerda=img_left;Imagem à Direita=img_right;Imagem Centralizada=img_center',
+    theme_advanced_styles: 'Imagem à esquerda=img_left;Imagem à Direita=img_right;Imagem Centralizada=img_center;Block Style=img_block',
 
     // Style formats
     // see http://wiki.moxiecode.com/index.php/TinyMCE:Configuration/style_formats
@@ -100,7 +100,7 @@ tinyMCE.init({
             'border-radius': '3px'
             }
         },
-        {title : 'Trecho de código', block : 'code', classes: 'code'}
+        {title : 'Trecho de código', block : 'code', classes: 'prettyprint'}
     ],
 
     // Templates
@@ -109,14 +109,9 @@ tinyMCE.init({
     // with django.views.generic.simple.direct_to_template
     template_templates : [
         {
-            title : '2 Columns',
-            src : '/path/to/your/template/',
-            description : '2 Columns.'
-        },
-        {
-            title : '4 Columns',
-            src : '/path/to/your/template/',
-            description : '4 Columns.'
+            title : 'Tabela 2 colunas',
+            src : '/artigo/template/2-columns/',
+            description : 'Template com tabela de 2 colunas, usado nos artigos.'
         }
     ],
 

@@ -23,3 +23,18 @@
 				</footer><!-- /.post-info -->
 			</article>
 		{% endblock %}
+{% block js_footer %}
+<script type="text/javascript">
+	$(window).load(function(){
+		if($('code.prettyprint').length > 0){
+			// prettify the code
+			$.getScript("{{ STATIC_URL }}plugins/prettify/prettify.js",
+				function(){
+					$('head').append('<link rel="stylesheet" href="{{ STATIC_URL }}plugins/prettify/prettify.css" type="text/css" />');
+					prettyPrint();
+				}
+			)
+		}
+	});
+</script>
+{% endblock %}
