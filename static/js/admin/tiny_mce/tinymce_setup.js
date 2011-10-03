@@ -32,7 +32,7 @@ tinyMCE.init({
     
     // General
     //accessibility_warnings: false,
-    browsers: 'gecko,msie,safari,opera',
+    browsers: 'gecko,msie,safari',
     dialog_type: 'window',
     editor_deselector: 'mceNoEditor',
     keep_styles: false,
@@ -75,7 +75,7 @@ tinyMCE.init({
     theme_advanced_buttons2: 'search,|,pasteword,template,media,charmap,|,code,|,cleanup,grappelli_documentstructure',
     theme_advanced_buttons3: '',
     theme_advanced_path: false,
-    theme_advanced_blockformats: 'p,h2,h3,h4,pre',
+    theme_advanced_blockformats: 'p,h2,h3,h4,pre,table',
     theme_advanced_resizing: true,
     theme_advanced_resize_horizontal: false,
     theme_advanced_resizing_use_cookie: true,
