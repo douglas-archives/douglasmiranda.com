@@ -6,7 +6,7 @@ from filebrowser.fields import FileBrowseField
 
 class Gerenciador(models.Manager):
 	def get_publicados(self):
-		return self.filter(status=2)
+		return self.filter(status=2, publicacao__lte=datetime.now())
 	def get_rascunhos(self):
 		return self.filter(status=1)
 
