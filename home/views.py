@@ -9,7 +9,7 @@ class HomeListView(ListView):
 		context = super(HomeListView, self).get_context_data(**kwargs)
 		try:
 			context['artigo_em_destaque'] = Artigo.objects.get_publicados().filter(principal=True).latest()
-			context['artigos'] = Artigo.objects.get_publicados().exclude(pk=context['artigo_em_destaque'].pk)
+			context['artigos'] = Artigo.objects.get_publicados().exclude(pk=context['artigo_em_destaque'].pk)[:3]
 		except:
-			context['artigos'] = Artigo.objects.get_publicados()
+			context['artigos'] = Artigo.objects.get_publicados()[:3]
 		return context

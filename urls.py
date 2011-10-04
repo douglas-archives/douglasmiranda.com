@@ -2,6 +2,7 @@ from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+from django.views.generic import TemplateView
 from douglasmiranda import settings
 from home.views import HomeListView
 # from blog.feeds import UltimosArtigos
@@ -9,7 +10,8 @@ from home.views import HomeListView
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	url(r'^$',  HomeListView.as_view(), name="projeto-inicial"),
+	url(r'^$',  HomeListView.as_view(), name='projeto-inicial'),
+	url(r'^me/',  TemplateView.as_view(template_name='me.html'), name='projeto-me'),
 	(r'^labs/', include('labs.urls')),
 	(r'^artigo/', include('blog.urls')),
 	# (r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
