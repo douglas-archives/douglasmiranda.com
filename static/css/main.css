@@ -159,6 +159,7 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     text-align: center;
     width: 800px;
     border-radius: 5px;
+    position:relative;
 }
 
 #banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
@@ -227,4 +228,31 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
 #about .bio {float: right; width: 500px;}
 #about .primary strong{
     color:#F96F13;
+}
+#search-form input[type=text]{
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    display: inline;
+    height: 27px;
+    margin: 3px;
+    padding: 2px;
+    width: 115px;
+}
+#search-form .active{
+    border: 1px solid #F96F13 !important;
+}
+#search-form input[type=submit]{
+    background: none repeat scroll 0 0 #F96F13;
+    border: 1px dashed #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    color: #FFFFFF;
+    margin-left: 5px;
+    padding: 9px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+#search-form input[type=submit]:hover{
+    color: #333;
+    cursor:pointer;
 }
