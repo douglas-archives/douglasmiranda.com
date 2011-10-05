@@ -16,8 +16,8 @@
 						<a href="#" title="Em breve!">/labs</a>
 					</li>
 					<li>
-						<form method="get" name="search" id="search-form" action="">
-							<input type="text" name="q" placeholder="Pesquisar...">
+						<form method="get" name="search" id="search-form" action="{% url blog-busca-artigos %}">
+							<input type="text" name="q" placeholder="Pesquisar..." value="{{ search_term }}">
 							<input type="submit" value="Pesquisar">
 						</form>
 					</li>
