@@ -27,9 +27,6 @@
 #article-detail .clearfix{
 	clear: both;
 }
-#article-detail p{
-	text-align:justify;
-}
 #article-detail h3 a{
 	color:#333333;
 }
