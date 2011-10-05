@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
-	{% block titulo %}Artigos - {{ block.super }}{% endblock %}
+	{% block titulo %}
+		Artigos - {% if page_obj.number %} página {{page_obj.number}} - {% endif %}
+		{{ block.super }}
+	{% endblock %}
 	{% block css %}
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/todos-artigos.css" type="text/css" />
 	{% endblock %}
