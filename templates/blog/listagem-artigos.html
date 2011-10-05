@@ -1,7 +1,7 @@
-			<ol id="posts-list" class="hfeed">
+			<ol id="posts-list">
 				{% for artigo in artigos %}
 				<li>
-					<article class="hentry">
+					<article>
 						<header>
 							<h3 class="entry-title">
 								<a href="{% url blog-artigo slug=artigo.slug %}" rel="bookmark" title="{{ artigo.titulo }}">
@@ -11,7 +11,7 @@
 						</header>
 						<footer class="post-info">
 							<abbr class="published">
-								há {{ artigo.publicacao|timesince }}
+								publicado há {{ artigo.publicacao|timesince }}
 							</abbr>
 						</footer><!-- /.post-info -->
 						<div class="entry-content">
