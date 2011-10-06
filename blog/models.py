@@ -34,7 +34,7 @@ class Artigo(models.Model):
 
 	@models.permalink
 	def get_absolute_url(self):
-		return ('artigo', [self.slug])
+		return ('blog-artigo', [self.slug])
 
 	def save(self, *args, **kwargs):
 		if self.slug == '':
