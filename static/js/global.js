@@ -1,4 +1,11 @@
 $(document).ready(function(){
+	// Efeito active do menu
+	$("nav ul li a").each(function(){
+	    if($(this).attr('href') == $(document).context.location.pathname){
+	        $(this).parent().addClass('active')
+	        return false;
+	    } 
+	});
 	// Efeito cursor nos links
 	cursor = '<span class="element-mouse-over-effect"> |</span>';
 	interval = null;
