@@ -9,7 +9,7 @@ $(document).ready(function(){
 	// Efeito cursor nos links
 	cursor = '<span class="element-mouse-over-effect"> |</span>';
 	interval = null;
-	$('h3 a').hover(
+	$('h3 a, #article-detail h1 a').hover(
 		function(){
 			link = $(this);
 			link.after(cursor);

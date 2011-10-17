@@ -26,8 +26,14 @@
 #article-detail .clearfix{
 	clear: both;
 }
-#article-detail h3 a{
+#article-detail h1{
+	font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+#article-detail h1 a, #article-detail h1 span{
 	color:#333333;
+	font-size:20px;
 }
 #article-detail img{
 	margin: 10px 15px;
@@ -89,3 +95,4 @@
 }
 #article-detail ol li{list-style-type: decimal;}
 #article-detail ul li{list-style-type: disc;}
+.post-info{margin-top:15px;}

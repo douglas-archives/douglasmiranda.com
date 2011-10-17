@@ -6,11 +6,11 @@
 		{% block content %}
 			<article id="article-detail">
 				<header>
-					<h3 class="entry-title">
+					<h1 class="entry-title">
 						<a href="{% url blog-artigo slug=artigo.slug %}" rel="bookmark" title="{{ artigo.titulo }}">
 							{{ artigo.titulo }}
 						</a>
-					</h3>
+					</h1>
 					<p>{{ artigo.resumo }}</p>
 				</header>
 				<div class="entry-content">
