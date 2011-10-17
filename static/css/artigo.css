@@ -22,7 +22,6 @@
 }
 #article-detail .prettyprint:hover, #article-detail .code-inline:hover{
 	border:#F96F13 1px solid !important;
-	cursor:pointer;
 }
 #article-detail .clearfix{
 	clear: both;
