@@ -72,7 +72,7 @@ STATIC_URL = 'http://static.douglasmiranda.com/'
 # URL prefix for admin static files -- CSS, JavaScript and images.
 # Make sure to use a trailing slash.
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/static/grappelli/'
+ADMIN_MEDIA_PREFIX = 'http://static.douglasmiranda.com/grappelli/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
