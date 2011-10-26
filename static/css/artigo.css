@@ -3,6 +3,9 @@
 	font-size: 12px;
 	margin-bottom:16px;
 }
+#article-detail .published{
+	font-weight: bold;
+}
 #article-detail .code-inline{
 	background-color: #F8F8FF;
     border: 1px solid #DEDEDE;
