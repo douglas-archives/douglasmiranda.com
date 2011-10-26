@@ -94,17 +94,6 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 #extras .blogroll li:nth-last-child(2) a,
 #extras .blogroll li:nth-last-child(3) a {border: 0;}
 
-#extras div[class='social'] a {
-    background-repeat: no-repeat;
-    background-position: 3px 6px;
-    padding-left: 25px;
-}
-
-/* Icons */
-.social a[href*='facebook.com'] {}
-.social a[href*='/feed/'] {}
-.social a[href*='twitter.com'] {}
-
 #buzz-web{
     color: #b4be3a !important;
 }
