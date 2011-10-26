@@ -9,11 +9,13 @@
 			{% if artigo_em_destaque %}
 			<aside id="featured">
 				<article>
+					{% if artigo_em_destaque.imagem_destaque %}
 					<figure>
 						<a href="{% url blog-artigo slug=artigo_em_destaque.slug %}">
 							<img src="{{ artigo_em_destaque.imagem_destaque.url }}" alt="{{ artigo_em_destaque.titulo }}" />
 						</a>
 					</figure>
+					{% endif %}
 					<hgroup>
 						<h2>if principal:</h2>
 						<h3>
