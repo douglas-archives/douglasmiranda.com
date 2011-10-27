@@ -69,10 +69,8 @@ STATIC_ROOT = ''
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = 'http://static.douglasmiranda.com/'
 
-# URL prefix for admin static files -- CSS, JavaScript and images.
-# Make sure to use a trailing slash.
-# Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = 'http://static.douglasmiranda.com/grappelli/'
+# servindo com o Django os arquivos estaticos do admin
+ADMIN_MEDIA_PREFIX = '/static/grappelli/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
@@ -171,6 +169,12 @@ FILEBROWSER_VERSIONS = {
     'big': {'verbose_name': 'Grande 480 (6 col)', 'width': 460, 'height': '', 'opts': ''},
     'large': {'verbose_name': 'Grande 640 (8 col)', 'width': 680, 'height': '', 'opts': ''},
 }
+
+# personalizei este endereço pois os arquivos estaticos do filebrowser
+# estão sendo servidos com o Django por alguns problemas com crossbrowser
+# e o uploadify, mais personalizacoes em filebrowser/upload.html
+FILEBROWSER_URL_FILEBROWSER_MEDIA = '/static/filebrowser/'
+
 # configuracoes adicionais do grappelli
 GRAPPELLI_ADMIN_HEADLINE = u'Douglas Miranda'
 GRAPPELLI_ADMIN_TITLE = u'Douglas Miranda'

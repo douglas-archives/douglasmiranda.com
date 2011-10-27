@@ -11,6 +11,9 @@ urlpatterns = patterns('',
 	(r'^labs/', include('labs.urls')),
 	(r'^artigo/', include('blog.urls')),
 
+	# sirvo os arquivos estaticos do admin com o Django,
+	# por alguns problemas que ainda nao resolvi com o django-filebrowser
+	(r'^static/(.*)$', 'django.views.static.serve', {'document_root':'/home/douglasmiranda/www/static/'}),
 	(r'^grappelli/', include('grappelli.urls')),
 	(r'^admin/filebrowser/', include('filebrowser.urls')),
 	url(r'^admin/', include(admin.site.urls)),
