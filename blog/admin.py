@@ -30,8 +30,8 @@ class ArtigoAdmin(admin.ModelAdmin):
 
 	class Media:
 		js = [
-			'grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
-			'js/admin/tiny_mce/tinymce_setup.js',
+			'/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
+			'/static/js/admin/tiny_mce/tinymce_setup.js',
 		]
 
 admin.site.register(Artigo, ArtigoAdmin)
