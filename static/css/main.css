@@ -263,8 +263,8 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     margin-left: 5px;
     padding: 9px;
     position: absolute;
-    right: 0;
-    z-index: -1;
+    z-index: -1 !important;
+        top: 0;
 }
 #search-form input[type=submit]:hover{
     color: #333;
