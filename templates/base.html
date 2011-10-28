@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
 	<meta charset="utf-8" />
+	<meta name="google-site-verification" content="64KgpIRkL_XFYVed2Pju392AunehCxJH5mH__wbPoag" />
 	<title>{% block titulo %}Douglas Miranda - #Webdevelopment{% endblock %}</title>
 	{% include "global-styles.html" %}
 	{% block css %}{% endblock %}
@@ -30,6 +31,16 @@
 		{% include "footer.html" %}
 		{% include "global-footer-scripts.html" %}
 		{% block js_footer %}{% endblock %}
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-26623511-1']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
 	</div>
 </body>
 </html>
