@@ -15,11 +15,11 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'douglasmiranda',                      # Or path to database file if using sqlite3.
-        'USER': 'douglasmiranda',                      # Not used with sqlite3.
-        'PASSWORD': 'oew92jhi0',                  # Not used with sqlite3.
-        'HOST': 'mysql.douglasmiranda.com',                      # Set to empty string for localhost. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
         'OPTIONS' : {
             'init_command': 'SET storage_engine=INNODB',
@@ -179,7 +179,13 @@ FILEBROWSER_URL_FILEBROWSER_MEDIA = '/static/filebrowser/'
 GRAPPELLI_ADMIN_HEADLINE = u'Douglas Miranda'
 GRAPPELLI_ADMIN_TITLE = u'Douglas Miranda'
 
+
 try:
     from local_settings import *
+except:
+    pass
+
+try:
+    from production_settings import *
 except:
     pass
