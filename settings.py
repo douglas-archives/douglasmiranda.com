@@ -125,7 +125,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.syndication',
-    # 'django.contrib.flatpages',
     # eh necessario que o grappelli esteja examtamente aqui antes de django.contrib.admin
     'grappelli',
     'filebrowser',

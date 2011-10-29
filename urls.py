@@ -2,6 +2,8 @@ from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 from django.views.generic import TemplateView
 from home.views import HomeListView
+from blog.feeds import UltimosArtigos
+
 
 admin.autodiscover()
 
@@ -10,6 +12,8 @@ urlpatterns = patterns('',
 	url(r'^me/',  TemplateView.as_view(template_name='me.html'), name='projeto-me'),
 	(r'^labs/', include('labs.urls')),
 	(r'^artigo/', include('blog.urls')),
+	(r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': {'ultimos': UltimosArtigos}}),
+
 
 	# sirvo os arquivos estaticos do admin com o Django,
 	# por alguns problemas que ainda nao resolvi com o django-filebrowser
