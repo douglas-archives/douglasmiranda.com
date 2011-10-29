@@ -27,8 +27,8 @@ class Artigo(models.Model):
 	publicacao = models.DateTimeField('publicação', default=datetime.now, blank=True)
 	status = models.IntegerField('status', choices=STATUS_CHOICES, default=1)
 	principal = models.BooleanField('é principal?', default=False)
-	imagem_destaque = FileBrowseField("imagem em destaque", max_length=200, directory="artigos/imagens/",
-							  extensions=[".png", ".jpg", ".jpeg", ".gif"], format='image', blank=True, null=True)
+	imagem_destaque = FileBrowseField("imagem em destaque", max_length=200, directory="artigos/imagens/", 
+										format='image', blank=True, null=True)
 
 	objects = Gerenciador()
 
