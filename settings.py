@@ -116,6 +116,8 @@ MIDDLEWARE_CLASSES = (
     'custom_middleware_classes.removeWWW.UrlMiddleware',
 )
 
+REMOVE_WWW = True
+
 ROOT_URLCONF = 'douglasmiranda.urls'
 
 TEMPLATE_DIRS = (
