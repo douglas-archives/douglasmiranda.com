@@ -14,7 +14,7 @@
 					<p>{{ artigo.resumo }}</p>
 					<a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ artigo.titulo }}" data-count="horizontal" data-via="douglaswebdev" data-lang="pt">Tweetar</a>
 					<div id="fb-root"></div>
-					<div id="facebook-like-article" class="fb-like" data-href="{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+					<div id="facebook-like-article" class="fb-like" data-href="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
 				</header>
 				<div class="entry-content">
 					{{ artigo.conteudo|safe }}
