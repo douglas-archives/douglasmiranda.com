@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 	{% block titulo %}{{artigo.titulo}} - {{ block.super }}{% endblock %}
+	{% block meta_og %}
+	<meta property="og:title" content="{{artigo.titulo}}" />
+	<meta property="og:type" content="article" />
+	<meta property="og:site_name" content="Desenvolvimento Web" />
+	{% endblock %}
 	{% block css %}
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/artigo.css" type="text/css" />
 	{% endblock %}
@@ -54,12 +59,12 @@
 		})();
 		// twitter
 		(function() {
-		    var s = document.createElement('script');
-		    s.type = 'text/javascript';
-		    s.async = true;
-		    s.src = 'http://platform.twitter.com/widgets.js';
-		    var x = document.getElementsByTagName('script')[0];
-		    x.parentNode.insertBefore(s, x);
+			var s = document.createElement('script');
+			s.type = 'text/javascript';
+			s.async = true;
+			s.src = 'http://platform.twitter.com/widgets.js';
+			var x = document.getElementsByTagName('script')[0];
+			x.parentNode.insertBefore(s, x);
 		})();
 		// facebook
 		(function(d, s, id) {
