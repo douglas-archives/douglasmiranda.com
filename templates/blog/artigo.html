@@ -12,6 +12,9 @@
 						</a>
 					</h1>
 					<p>{{ artigo.resumo }}</p>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ artigo.titulo }}" data-count="horizontal" data-via="douglaswebdev" data-lang="pt">Tweetar</a>
+					<div id="fb-root"></div>
+					<div id="facebook-like-article" class="fb-like" data-href="{% url blog-artigo slug=artigo.slug %}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
 				</header>
 				<div class="entry-content">
 					{{ artigo.conteudo|safe }}
@@ -42,12 +45,31 @@
 				}
 			)
 		}
+		// disqus
 		var disqus_shortname = 'douglasmiranda';
 		(function() {
 			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
 			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
 			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 		})();
+		// twitter
+		(function() {
+		    var s = document.createElement('script');
+		    s.type = 'text/javascript';
+		    s.async = true;
+		    s.src = 'http://platform.twitter.com/widgets.js';
+		    var x = document.getElementsByTagName('script')[0];
+		    x.parentNode.insertBefore(s, x);
+		})();
+		// facebook
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) {return;}
+		  js = d.createElement(s); js.id = id;
+		  js.async = true;
+		  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=241131705939637";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 	});
 </script>
 {% endblock %}
