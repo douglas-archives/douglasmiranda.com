@@ -45,7 +45,7 @@ body {
     text-align: left;
 }
 /* wrapper */
-#wrapper {clear: both; margin: 0 auto; width: 800px;}
+#wrapper {clear: both; margin: 0 auto; width: 800px; position:relative;}
 
 /* Headings */
 h2 {font-size: 22px}
@@ -160,6 +160,14 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     width: 800px;
     border-radius: 5px;
     position:relative;
+}
+#banner #rss{
+    position: absolute;
+    right: -5px;
+    top: 100px;
+    width: 30px;
+    height: 30px;
+    background:url(../images/header/rss.png);
 }
 
 #banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
