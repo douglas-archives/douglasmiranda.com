@@ -3,9 +3,10 @@
 	{% block meta_og %}
 	<meta property="og:title" content="{{artigo.titulo}}" />
 	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" />
 	<meta property="og:site_name" content="Desenvolvimento Web" />
 	<meta property="og:description" content="{{artigo.resumo}}"/>
-	<meta property="fb:app_id" content="241131705939637"/>
+	<meta property="fb:admins" content="1844862175" />
 	{% endblock %}
 	{% block css %}
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/artigo.css" type="text/css" />
