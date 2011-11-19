@@ -11,6 +11,9 @@
 	{% block css %}
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/artigo.css" type="text/css" />
 	{% endblock %}
+	{% block extra_head %}
+		<link rel="canonical" href="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" />
+	{% endblock %}
 		{% block content %}
 			<article id="article-detail">
 				<header>
