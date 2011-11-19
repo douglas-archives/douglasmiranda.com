@@ -5,3 +5,4 @@ dados
 *.sublime-*
 media/*
 tmp/*
+fabfile.py
