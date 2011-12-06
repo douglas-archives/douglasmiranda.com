@@ -16,7 +16,7 @@
 }
 #article-detail .prettyprint{
 	width:754px;
-	background:#fbfbfb url(../images/articles/code/code-close.png) right bottom no-repeat;
+	background:#fbfbfb url(http://static.douglasmiranda.com/blog/images/articles/code/code-close.png) right bottom no-repeat;
     border: #DEDEDE 1px solid;
     padding: 0 0.2em;
     border-radius: 3px;
@@ -83,8 +83,8 @@
 #article-detail blockquote{
 	padding:30px;
 	margin:15px 0 15px 0;
-	background:url(../images/articles/blockquote-open.png) no-repeat scroll left top,
-			   url(../images/articles/blockquote-close.png) no-repeat scroll right bottom;
+	background:url(http://static.douglasmiranda.com/blog/images/articles/blockquote-open.png) no-repeat scroll left top,
+			   url(http://static.douglasmiranda.com/blog/images/articles/blockquote-close.png) no-repeat scroll right bottom;
 	clear:both;
 }
 #article-detail blockquote p{
