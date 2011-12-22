@@ -57,7 +57,7 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT_PATH, 'media')
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = 'http://media.douglasmiranda.com/'
 
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
@@ -67,7 +67,7 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
-STATIC_URL = ''
+STATIC_URL = 'http://static.douglasmiranda.com/'
 
 # servindo com o Django os arquivos estaticos do admin
 ADMIN_MEDIA_PREFIX = '/static/grappelli/'
@@ -85,7 +85,6 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'compressor.finders.CompressorFinder', # django-compressor
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
@@ -143,8 +142,6 @@ INSTALLED_APPS = (
 
     'django.contrib.admin',
 
-    'compressor',
-
     'douglasmiranda.blog',
     'douglasmiranda.labs',
 )
@@ -171,7 +168,6 @@ LOGGING = {
         },
     }
 }
-
 # configuracoes para o filebrowser
 FILEBROWSER_DIRECTORY = 'uploads/'
 FILEBROWSER_ADMIN_VERSIONS = ['thumbnail', 'artigo_destaque', 'projetos', 'big', 'large']
