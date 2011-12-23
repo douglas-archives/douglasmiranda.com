@@ -32,7 +32,7 @@
 			{% endif %}
 			{% endblock %}
 			{% block content %}
-			<h2>articles = Article.objects.get_published()[:3]</h2>
+			<h2>articles = Article.objects.published()[:3]</h2>
 			{% include "blog/listagem-artigos.html" %}
 			{% endblock %}
 			{% include "blog/listagem-artigos.html" %}
@@ -40,7 +40,7 @@
 			{% block extras %}
 			<section id="extras">
 				<div class="blogroll">
-					<h2>links = get_blogroll_links()</h2>
+					<h2>links = blogroll_links()</h2>
 					<ul>
 						<li><a href="http://highscalability.com/" rel="external">High Scalability</a></li>
 						<li><a href="http://smashingmagazine.com/" rel="external">Smashing Magazine</a></li>
