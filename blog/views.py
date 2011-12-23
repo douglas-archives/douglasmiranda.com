@@ -6,7 +6,7 @@ class TodosArtigosListView(ListView):
 	model = Artigo
 	template_name = 'blog/todos-artigos.html'
 	context_object_name = 'artigos'
-	queryset = Artigo.objects.get_publicados()
+	queryset = Artigo.objects.publicados()
 	paginate_by = 7
 
 class BuscaArtigosListView(ListView):
@@ -16,7 +16,7 @@ class BuscaArtigosListView(ListView):
 	context_object_name = 'artigos'
 
 	def get_queryset(self, **kwargs):
-		return Artigo.objects.get_publicados().filter(Q(titulo__icontains=self.request.GET['q']) | Q(conteudo__icontains=self.request.GET['q']))
+		return Artigo.objects.publicados().filter(Q(titulo__icontains=self.request.GET['q']) | Q(conteudo__icontains=self.request.GET['q']))
 
 	def get_context_data(self, **kwargs):
 		context = super(BuscaArtigosListView, self).get_context_data(**kwargs)

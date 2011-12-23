@@ -8,8 +8,8 @@ class HomeListView(ListView):
 	def get_context_data(self, **kwargs):
 		context = {}
 		try:
-			context['artigo_em_destaque'] = Artigo.objects.get_publicados().filter(principal=True).latest()
-			context['artigos'] = Artigo.objects.get_publicados().exclude(pk=context['artigo_em_destaque'].pk)[:3]
+			context['artigo_em_destaque'] = Artigo.objects.publicados().filter(principal=True).latest()
+			context['artigos'] = Artigo.objects.publicados().exclude(pk=context['artigo_em_destaque'].pk)[:3]
 		except:
-			context['artigos'] = Artigo.objects.get_publicados()[:3]
+			context['artigos'] = Artigo.objects.publicados()[:3]
 		return context

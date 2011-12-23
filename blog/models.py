@@ -5,9 +5,9 @@ from datetime import datetime
 from filebrowser.fields import FileBrowseField
 
 class Gerenciador(models.Manager):
-	def get_publicados(self):
+	def publicados(self):
 		return self.filter(status=2, publicacao__lte=datetime.now())
-	def get_rascunhos(self):
+	def rascunhos(self):
 		return self.filter(status=1)
 
 class Artigo(models.Model):
