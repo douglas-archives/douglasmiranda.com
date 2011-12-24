@@ -185,6 +185,27 @@ FILEBROWSER_VERSIONS = {
 # e o uploadify, mais personalizacoes em filebrowser/upload.html
 FILEBROWSER_URL_FILEBROWSER_MEDIA = '/static/filebrowser/'
 
+# EXTENSIONS AND FORMATS
+# Allowed Extensions for File Upload. Lower case is important.
+FILEBROWSER_EXTENSIONS = {
+    'Image': ['.jpg','.jpeg','.gif','.png','.tif','.tiff'],
+    'Document': ['.pdf','.doc','.rtf','.txt','.xls','.csv'],
+    'Video': ['.mov','.wmv','.mpeg','.mpg','.avi','.rm'],
+    'Audio': ['.mp3','.mp4','.wav','.aiff','.midi','.m4p'],
+    'Compacted Files': ['.zip','.rar','.tar','.gz','.tar.gz','.jar']
+}
+# Define different formats for allowed selections.
+# This has to be a subset of EXTENSIONS.
+# e.g., add ?type=image to the browse-URL ...
+FILEBROWSER_SELECT_FORMATS = {
+    'file': ['Folder','Image','Document','Video','Audio','Compacted Files'],
+    'image': ['Image'],
+    'document': ['Document'],
+    'media': ['Video','Audio'],
+}
+
+
+
 # configuracoes adicionais do grappelli
 GRAPPELLI_ADMIN_HEADLINE = u'Douglas Miranda'
 GRAPPELLI_ADMIN_TITLE = u'Douglas Miranda'
