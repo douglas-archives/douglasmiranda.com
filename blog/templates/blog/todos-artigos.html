@@ -8,6 +8,7 @@
 	{% endblock %}
 		{% block content %}
 			<h2>Artigos</h2>
+			{% include "global-paginator.html" %}
 			{% include "blog/listagem-artigos.html" %}
 			{% include "global-paginator.html" %}
 		{% endblock %}
