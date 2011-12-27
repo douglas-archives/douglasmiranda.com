@@ -54,7 +54,7 @@
     float: none;
     margin: 14px 0;
 }
-#article-detail iframe{
+#article-detail .entry-content iframe{
 	margin:10px auto;
 	display:block;
 }
