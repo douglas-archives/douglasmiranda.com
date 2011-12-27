@@ -54,6 +54,10 @@
     float: none;
     margin: 14px 0;
 }
+#article-detail iframe{
+	margin:10px auto;
+	display:block;
+}
 #article-detail .template-table{
 	width:714px;
 	background-color: #F8F8FF;
