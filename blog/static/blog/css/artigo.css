@@ -99,6 +99,7 @@
 	display: list-item;
 	margin-left:15px;
 }
+#article-detail ol, #article-detail ul{display:table;}
 #article-detail ol li{list-style-type: decimal;}
 #article-detail ul li{list-style-type: disc;}
 .post-info{margin-top:15px;}
