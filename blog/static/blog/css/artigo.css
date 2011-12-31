@@ -66,6 +66,9 @@
     padding: 0 0.2em;
     border-radius: 3px;
 }
+	.template-table p{
+		margin-bottom:5px;
+	}
 	._2-columns td{
 		padding:3px;
 	}
