@@ -15,7 +15,8 @@
 artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" />
 	<link rel="shortcut icon" href="/favicon.png" type="image/png" />
 	<title>{% block titulo %}Douglas Miranda - #Webdevelopment{% endblock %}</title>
-	{% include "global-styles.html" %}
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/main.css" type="text/css" />
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 	{% block css %}{% endblock %}
 	{% block js_head %}{% endblock %}
 	{% block extra_head %}{% endblock %}
