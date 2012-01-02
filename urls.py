@@ -22,6 +22,5 @@ urlpatterns = patterns('',
 	(r'^static/(.*)$', 'django.views.static.serve', {'document_root':'/home/douglasmiranda/www/static/'}),
 	(r'^grappelli/', include('grappelli.urls')),
 	(r'^admin/filebrowser/', include('filebrowser.urls')),
-	(r'^admin/', include('smuggler.urls')), # put it before admin url patterns
 	url(r'^admin/', include(admin.site.urls)),
 )

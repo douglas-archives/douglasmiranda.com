@@ -12,8 +12,6 @@ Na verdade tentei escrever o máximo em português até nomes de variaveis, pois
 
 [django-filebrowser](https://github.com/sehmaschine/django-filebrowser) - Manipulador de arquivos de mídia
 
-[django-smuggler](https://github.com/semente/django-smuggler) - App Django para importar e exportar fixtures via Django Admin Interface
-
 Na interface:
 
 [layout](http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/) - Não sou designer então o layout é de um artigo de Smashing Magazine com as minhas adaptações necessárias
