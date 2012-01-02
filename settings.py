@@ -144,6 +144,8 @@ INSTALLED_APPS = (
 
     'douglasmiranda.blog',
     'douglasmiranda.labs',
+
+    'smuggler',
 )
 
 # A sample logging configuration. The only tangible logging
