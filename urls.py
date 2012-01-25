@@ -9,6 +9,7 @@ from douglasmiranda.settings import STATIC_URL
 admin.autodiscover()
 
 urlpatterns = patterns('',
+	(r'^robots.txt$', 'django.views.generic.simple.direct_to_template', {'template': 'robots.txt', 'mimetype': 'text/plain'}),
 	(r'^favicon.png$', 'django.views.generic.simple.redirect_to', {'url': STATIC_URL+'images/favicon.png'}),
 	url(r'^$',  HomeListView.as_view(), name='projeto-inicial'),
 	url(r'^me/',  TemplateView.as_view(template_name='me.html'), name='projeto-me'),
