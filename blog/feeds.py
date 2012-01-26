@@ -3,8 +3,8 @@ from models import Artigo
 
 
 class UltimosArtigos(Feed):
-	title = 'Artigos por Douglas Miranda'
-	description = 'Ultimos artigos do Blog douglasmiranda.com - more than lines of code'
+	title = 'Douglas Miranda'
+	description = 'Python, Django, Desenvolvimento de Software e a arte ninja. YAH!'
 	link = '/'
 
 	def items(self):
