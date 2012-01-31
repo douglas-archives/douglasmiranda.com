@@ -35,7 +35,7 @@ aside, nav, article, figure {
 
 /* Body */
 body {
-    background: url("../images/body/background.png") repeat-x 0 0 #F5F4EF;
+    background: url("../images/body/background.png") repeat-x 0 0 #F4F4F4;
     color: #000305;
     font-size: 14px;
     font-family: helvetica, arial;
