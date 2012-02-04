@@ -15,7 +15,7 @@ Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YA
 				<article>
 					{% if artigo_em_destaque.imagem_destaque %}
 					<figure>
-						<a href="{% url blog-artigo slug=artigo_em_destaque.slug %}">
+						<a href="{{ artigo_em_destaque.get_absolute_url }}">
 							<img src="{{ artigo_em_destaque.imagem_destaque.url }}" alt="{{ artigo_em_destaque.titulo }}" />
 						</a>
 					</figure>
@@ -23,7 +23,7 @@ Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YA
 					<hgroup>
 						<h2>if principal:</h2>
 						<h3>
-							<a href="{% url blog-artigo slug=artigo_em_destaque.slug %}">
+							<a href="{{ artigo_em_destaque.get_absolute_url }}">
 								{{ artigo_em_destaque.titulo }}
 							</a>
 						</h3>
