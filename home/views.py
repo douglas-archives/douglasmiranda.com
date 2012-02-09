@@ -3,7 +3,7 @@ from blog.models import Artigo
 
 class HomeListView(ListView):
 	model = Artigo
-	template_name = 'home/home.html'
+	template_name = 'home/index.html'
 
 	def get_context_data(self, **kwargs):
 		context = {}
