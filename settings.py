@@ -142,6 +142,7 @@ INSTALLED_APPS = (
 
     'django.contrib.admin',
 
+    'douglasmiranda.home',
     'douglasmiranda.blog',
     'douglasmiranda.labs',
 )
