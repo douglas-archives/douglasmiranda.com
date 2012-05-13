@@ -113,7 +113,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'custom_middleware_classes.removeWWW.UrlMiddleware',
+    'utils.middlewares.removeWWW.UrlMiddleware',
 )
 
 REMOVE_WWW = True
@@ -189,23 +189,21 @@ FILEBROWSER_URL_FILEBROWSER_MEDIA = '/static/filebrowser/'
 # EXTENSIONS AND FORMATS
 # Allowed Extensions for File Upload. Lower case is important.
 FILEBROWSER_EXTENSIONS = {
-    'Image': ['.jpg','.jpeg','.gif','.png','.tif','.tiff'],
-    'Document': ['.pdf','.doc','.rtf','.txt','.xls','.csv'],
-    'Video': ['.mov','.wmv','.mpeg','.mpg','.avi','.rm'],
-    'Audio': ['.mp3','.mp4','.wav','.aiff','.midi','.m4p'],
-    'Compacted Files': ['.zip','.rar','.tar','.gz','.tar.gz','.jar']
+    'Image': ['.jpg', '.jpeg', '.gif', '.png', '.tif', '.tiff'],
+    'Document': ['.pdf', '.doc', '.rtf', '.txt', '.xls', '.csv'],
+    'Video': ['.mov', '.wmv', '.mpeg', '.mpg', '.avi', '.rm'],
+    'Audio': ['.mp3', '.mp4', '.wav', '.aiff', '.midi', '.m4p'],
+    'Compacted Files': ['.zip', '.rar', '.tar', '.gz', '.tar.gz', '.jar']
 }
 # Define different formats for allowed selections.
 # This has to be a subset of EXTENSIONS.
 # e.g., add ?type=image to the browse-URL ...
 FILEBROWSER_SELECT_FORMATS = {
-    'file': ['Folder','Image','Document','Video','Audio','Compacted Files'],
+    'file': ['Folder', 'Image', 'Document', 'Video', 'Audio', 'Compacted Files'],
     'image': ['Image'],
     'document': ['Document'],
-    'media': ['Video','Audio'],
+    'media': ['Video', 'Audio'],
 }
-
-
 
 # configuracoes adicionais do grappelli
 GRAPPELLI_ADMIN_HEADLINE = u'Douglas Miranda'
