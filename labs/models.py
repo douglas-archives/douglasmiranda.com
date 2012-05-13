@@ -10,10 +10,17 @@ class Projeto(models.Model):
     descricao = models.CharField('descrição', max_length=140,
     help_text=u"uma breve descrição em 140 caracteres. Um tweet :)")
     publicacao = models.DateTimeField('publicação', default=datetime.now, blank=True)
-    imagem = FileBrowseField("imagem", max_length=200, directory="labs/projetos/imagens/",
-                              extensions=[".png", ".jpg", ".jpeg", ".gif"], format='image', blank=True, null=True)
-    status = models.BooleanField('publicado no site', default=True,
-                                  help_text='Se você marcar esta opção, o projeto ficará disponível para visualização no site.')
+    imagem = FileBrowseField("imagem", max_length=200, directory="labs/projetos/imagens/", extensions=[".png", ".jpg", ".jpeg", ".gif"], format='image', blank=True, null=True)
+    status = models.BooleanField('publicado no site', default=True, help_text='Se você marcar esta opção, o projeto ficará disponível para visualização no site.')
+
+    @property
+    def thumbnail(self):
+        if self.imagem:
+            img = self.imagem.version_generate('projetos').url
+        else:
+            img = ""
+        return img
+
 
     def __unicode__(self):
         return self.titulo

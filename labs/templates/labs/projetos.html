@@ -9,7 +9,7 @@
             {% for projeto in ultimos_projetos %}
                 <li>
                     <a href="{{ projeto.link_externo }}">
-                        <img src="{{ projeto.imagem.url }}">
+                        <img src="{{ projeto.thumbnail }}">
                         <p>&raquo; {{ projeto.titulo }}</p>
                         <p class="descricao">{{ projeto.descricao }}</p>
                     </a>
