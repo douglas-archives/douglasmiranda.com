@@ -3,5 +3,5 @@ from labs.views import HomeListView
 
 
 urlpatterns = patterns('',
-	url(r'^projetos/', HomeListView.as_view(), name='labs-projetos'),
+    url(r'^projetos/', HomeListView.as_view(), name='labs-projetos'),
 )
