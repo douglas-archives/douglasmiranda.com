@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 from home.views import HomeListView
 from blog.feeds import UltimosArtigos
 from douglasmiranda.settings import STATIC_URL
-
+from django.conf import settings
 
 admin.autodiscover()
 
@@ -20,7 +20,7 @@ urlpatterns = patterns('',
 
 	# sirvo os arquivos estaticos do admin com o Django,
 	# por alguns problemas que ainda nao resolvi com o django-filebrowser
-	(r'^static/(.*)$', 'django.views.static.serve', {'document_root':'/home/douglasmiranda/www/static/'}),
+	(r'^static/(.*)$', 'django.views.static.serve', {'document_root':settings.STATIC_ROOT}),
 	(r'^grappelli/', include('grappelli.urls')),
 	(r'^admin/filebrowser/', include('filebrowser.urls')),
 	url(r'^admin/', include(admin.site.urls)),

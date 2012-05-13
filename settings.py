@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Django settings for douglasmiranda project.
 import os
-PROJECT_ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
+from utils.path import abspath
 os.environ['DJANGO_SETTINGS_MODULE'] = 'douglasmiranda.settings'
 
 DEBUG = True
@@ -52,7 +52,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT_PATH, 'media')
+MEDIA_ROOT = abspath('media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -74,7 +74,7 @@ ADMIN_MEDIA_PREFIX = '/static/grappelli/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_ROOT_PATH, 'static/'),
+    abspath('static'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -121,8 +121,8 @@ REMOVE_WWW = True
 ROOT_URLCONF = 'douglasmiranda.urls'
 
 TEMPLATE_DIRS = (
-    os.path.join(PROJECT_ROOT_PATH, 'templates'),
-    # os.path.join(PROJECT_ROOT_PATH, 'templates/labs'),
+    abspath('templates'),
+    # abspath('templates/labs'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
