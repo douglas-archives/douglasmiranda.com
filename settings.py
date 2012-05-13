@@ -176,7 +176,7 @@ FILEBROWSER_VERSIONS = {
     'admin_thumbnail': {'verbose_name': '(Admin) Miniatura', 'width': 143, 'height': 40, 'opts': 'crop'},
     'thumbnail': {'verbose_name': 'Miniatura (1 col)', 'width': 60, 'height': 60, 'opts': 'crop'},
     'artigo_destaque': {'verbose_name': 'Artigo/destaque', 'width': 270, 'height': 70, 'opts': 'crop'},
-    'projetos': {'verbose_name': 'Projetos', 'width': 200, 'height': 130, 'opts': 'crop,upsacale'},
+    'projetos': {'verbose_name': 'Projetos', 'width': 200, 'height': 130, 'opts': 'crop'},
     'big': {'verbose_name': 'Grande 480 (6 col)', 'width': 460, 'height': '', 'opts': ''},
     'large': {'verbose_name': 'Grande 640 (8 col)', 'width': 680, 'height': '', 'opts': ''},
 }
