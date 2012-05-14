@@ -3,6 +3,7 @@ from django import http
 from django.utils.http import urlquote
 from django.core import urlresolvers
 
+
 class UrlMiddleware(object):
     """
     Middleware for removing the WWW from a URL if the users sets settings.REMOVE_WWW.
