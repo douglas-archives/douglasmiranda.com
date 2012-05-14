@@ -21,7 +21,6 @@ class Projeto(models.Model):
             img = ""
         return img
 
-
     def __unicode__(self):
         return self.titulo
 
