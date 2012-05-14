@@ -110,3 +110,6 @@
 #article-detail ol li{list-style-type: decimal;}
 #article-detail ul li{list-style-type: disc;}
 .post-info{margin-top:15px;}
+#facebook-like-article span{
+    height:28px !important;
+}
