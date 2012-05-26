@@ -1,3 +1,6 @@
+#content{
+	overflow: visible;
+}
 h3 a{
 	color:#000 !important;
 	text-decoration:none !important;
