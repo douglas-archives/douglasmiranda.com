@@ -59,8 +59,11 @@
     margin: 14px 0;
 }
 #article-detail .entry-content iframe{
-	margin:10px auto;
-	display:block;
+    margin:10px auto;
+    display:block;
+}
+#article-detail .fb_edge_comment_widget iframe{
+	height:225px;
 }
 #article-detail .template-table{
 	width:714px;
