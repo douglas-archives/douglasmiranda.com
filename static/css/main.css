@@ -141,14 +141,19 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
         font-weight: bold;
         margin: 0 0 .6em .2em;
         text-decoration: none;
-        width: 427px;
+        width: 550px;
     }
     #banner h1 a:hover, #banner h1 a:active {
         background: none;
         color: #F96F13;
         text-shadow: none;
     }
-    #banner h1 strong {font-size: 0.36em; font-weight: normal;}
+    #banner h1 strong {
+        display: block;
+        font-size: 0.36em;
+        font-weight: normal;
+        margin-top: 21px;
+    }
 
 /* Main Nav */
 #banner nav {
