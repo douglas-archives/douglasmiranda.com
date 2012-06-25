@@ -47,8 +47,8 @@ body {
 /* wrapper */
 #wrapper {clear: both; margin: 0 auto; width: 800px; position:relative;}
 #fb-root{display:none}
-#facebook-like-article iframe{height:29px !important; margin-left:5px;}
-.twitter-share-button{position:relative; top:-2px; margin-right:5px;}
+#facebook-like-article iframe{height:29px !important; margin-left:20px;}
+.twitter-share-button{position:relative; top:-2px; margin-right:20px;}
 /* Headings */
 h2 {font-size: 22px}
 h3 {font-size: 20px}
