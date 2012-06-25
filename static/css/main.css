@@ -194,6 +194,10 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     text-shadow: none !important;
 }
 
+#banner nav a:hover {
+    background: #4f4f4f;
+}
+
 #banner nav li:first-child a {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
