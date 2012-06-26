@@ -6,15 +6,13 @@
 							<header>
 								<h3 class="entry-title">
 									<a href="{{ artigo.get_absolute_url }}" rel="bookmark" title="{{ artigo.titulo }}">
+										<abbr class="published">
+											{{ artigo.publicacao|date:"d/M"|lower }} - 
+										</abbr>
 										{{ artigo.titulo }}
 									</a>
 								</h3>
 							</header>
-							<footer class="post-info">
-								<abbr class="published">
-									publicado há {{ artigo.publicacao|timesince }}
-								</abbr>
-							</footer><!-- /.post-info -->
 							<div class="entry-content">
 								<p>{{ artigo.resumo }}</p>
 							</div><!-- /.entry-content -->

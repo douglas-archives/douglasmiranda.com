@@ -6,9 +6,20 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
     Featured
 *****************/
 #featured {
-    margin-bottom: 4em;
     position: relative;
     width: 800px;
+}
+#featured article {
+    position: relative;
+    margin-bottom: 4em;
+    float: left;
+}
+#featured article.others {
+    margin-bottom: 6em;
+    width: 380px;
+}
+#featured article.last {
+    margin-left: 40px;
 }
 #featured figure {
     background: #fff;
@@ -47,6 +58,10 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
     top: 70px;
     z-index: 2;
 }
+#featured .others h2{
+    top: 100px;
+    max-width: 360px;
+}
 #featured h3{
     background: #FFFFFF;
     border-bottom-left-radius: 5px;
@@ -57,6 +72,13 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
     top: 169px;
     width: 780px;
     z-index: 0;
+}
+#featured .others h3{
+    height: 40px;
+    width: 360px;
+}
+#featured .others:hover h3 a{
+    color: #F93211;
 }
 #featured h3 a{
     color: #333;

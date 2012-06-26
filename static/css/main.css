@@ -257,10 +257,6 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     border-bottom: 0px;
     margin-bottom: 0px;
 }
-#posts-list .published{
-    color: #666;
-    font-size:12px;
-}
 
 #search-form input[type=text]{
     border: 1px solid #FFFFFF;

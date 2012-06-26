@@ -4,37 +4,39 @@ Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YA
 {% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{{ STATIC_URL }}home/css/home.css?v=1" type="text/css" />
+<link rel="stylesheet" href="{{ STATIC_URL }}home/css/home.css?v=2" type="text/css" />
 {% endblock %}
 {% block body %}
 <body id="index" class="home">
 {% endblock %}
 			{% block featured %}
-			{% if artigo_em_destaque %}
 			<aside id="featured">
-				<article>
-					{% if artigo_em_destaque.imagem_destaque %}
-					<figure>
-						<a href="{{ artigo_em_destaque.get_absolute_url }}">
-							<img src="{{ artigo_em_destaque.imagem_destaque.url }}" alt="{{ artigo_em_destaque.titulo }}" />
-						</a>
-					</figure>
-					{% endif %}
-					<hgroup>
-						<h2>
-							<a href="{{ artigo_em_destaque.get_absolute_url }}">
-								{{ artigo_em_destaque.titulo }}
+			{% if artigos_em_destaque %}
+				{% for destaque in artigos_em_destaque %}
+					<article class="{% if not forloop.first %}others{% endif %}{% if forloop.last %} last{% endif %}">
+						{% if destaque.imagem_destaque %}
+						<figure>
+							<a href="{{ destaque.get_absolute_url }}">
+								<img src="{{ destaque.imagem_destaque.url }}" alt="{{ destaque.titulo }}" />
 							</a>
-						</h2>
-						<h3>
-							<a href="{{ artigo_em_destaque.get_absolute_url }}">
-								{{ artigo_em_destaque.resumo }}
-							</a>
-						</h3>
-					</hgroup>
-				</article>
-			</aside><!-- /#featured -->
+						</figure>
+						{% endif %}
+						<hgroup>
+							<h2>
+								<a href="{{ destaque.get_absolute_url }}">
+									{{ destaque.titulo }}
+								</a>
+							</h2>
+							<h3>
+								<a href="{{ destaque.get_absolute_url }}">
+									{{ destaque.resumo }}
+								</a>
+							</h3>
+						</hgroup>
+					</article>
+				{% endfor %}
 			{% endif %}
+			</aside><!-- /#featured -->
 			{% endblock %}
 			{% block content %}
 			<h2>Article.objects.published()[:6]</h2>
@@ -69,15 +71,15 @@ Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YA
 			{% block js_footer %}
 			<script type="text/javascript">
 				$(document).ready(function() {
-					h1_h2 = '#featured h2, #featured h3';
-					$('#featured').hover(
+					h1_h2 = 'h2, h3';
+					$('#featured article').hover(
 						function() {
-							$(h1_h2).animate({
+							$(this).find(h1_h2).stop().animate({
 								opacity: 0.9
 							}, 500);
 						},
 						function() {
-							$(h1_h2).animate({
+							$(this).find(h1_h2).stop().animate({
 								opacity: 0.7
 							}, 350);
 						}

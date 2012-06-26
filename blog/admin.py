@@ -8,6 +8,7 @@ class ArtigoAdmin(admin.ModelAdmin):
     actions = ['make_published']
     date_hierarchy = 'publicacao'
     list_filter = ['publicacao', 'status']
+    list_editable = ('status', 'principal')
     search_fields = ['titulo']
     prepopulated_fields = {"slug": ("titulo",)}
 
