@@ -6,20 +6,62 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
     Featured
 *****************/
 #featured {
-    background: #fff;
-    margin-bottom: 2em;
-    overflow: hidden;
-    padding: 20px;
-    width: 760px;
-    border-radius: 10px;
+    margin-bottom: 4em;
+    position: relative;
+    width: 800px;
 }
 #featured figure {
-    border: 2px solid #eee;
-    float: right;
-    margin: 0.786em 2em 0 3em;
-    width: 270px;
-    height:70px;
+    background: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom:solid 2px #F96F13;
+    line-height: 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
+#featured figure {
+    margin: 0;
+}
+#featured a {
+    padding: 0;
+    color: #fff;
+}
+#featured h2,
+#featured h3 {
+    background: #000000;
+    color: #FFFFFF;
+    display: block;
+    margin: 0;
+    opacity: 0.7;
+    padding: 10px;
+    position: absolute;
+}
+#featured h2{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px; 
+    font-size: 14px;
+    font-weight: bold;
+    left: 0;
+    max-width: 380px;
+    top: 70px;
+    z-index: 2;
+}
+#featured h3{
+    background: #FFFFFF;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 12px;
+    left: 0;
+    padding-top: 25px;
+    top: 169px;
+    width: 780px;
+    z-index: 0;
+}
+#featured h3 a{
+    color: #333;
+}
+/*
 #featured figure:hover {
     border: 2px solid #F96F13;
 }
@@ -33,7 +75,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 
 #featured h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
 #featured h3 a:hover, #featured h3 a:active {color: #333;}
-
+*/
 
 #posts-list h3 a{
     color:#333;

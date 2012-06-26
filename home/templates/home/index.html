@@ -4,7 +4,7 @@ Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YA
 {% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{{ STATIC_URL }}css/home.css" type="text/css" />
+<link rel="stylesheet" href="{{ STATIC_URL }}home/css/home.css" type="text/css" />
 {% endblock %}
 {% block body %}
 <body id="index" class="home">
@@ -21,16 +21,17 @@ Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YA
 					</figure>
 					{% endif %}
 					<hgroup>
-						<h2>if principal:</h2>
-						<h3>
+						<h2>
 							<a href="{{ artigo_em_destaque.get_absolute_url }}">
 								{{ artigo_em_destaque.titulo }}
 							</a>
+						</h2>
+						<h3>
+							<a href="{{ artigo_em_destaque.get_absolute_url }}">
+								{{ artigo_em_destaque.resumo }}
+							</a>
 						</h3>
 					</hgroup>
-					<p class="description">
-						{{ artigo_em_destaque.resumo }}
-					</p>
 				</article>
 			</aside><!-- /#featured -->
 			{% endif %}
@@ -64,4 +65,23 @@ Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YA
 					</ul>
 				</div><!-- /.social -->
 			</section><!-- /#extras -->
+			{% endblock %}
+			{% block js_footer %}
+			<script type="text/javascript">
+				$(document).ready(function() {
+					h1_h2 = '#featured h2, #featured h3';
+					$('#featured').hover(
+						function() {
+							$(h1_h2).animate({
+								opacity: 0.9
+							}, 500);
+						},
+						function() {
+							$(h1_h2).animate({
+								opacity: 0.7
+							}, 350);
+						}
+					);
+				});
+			</script>
 			{% endblock %}
