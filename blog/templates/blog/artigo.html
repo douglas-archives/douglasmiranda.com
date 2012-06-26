@@ -7,6 +7,9 @@
 	<meta property="og:url" content="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" />
 	<meta property="og:site_name" content="Desenvolvimento Web" />
 	<meta property="og:description" content="{{artigo.resumo}}"/>
+	{% if artigo.imagem_destaque %}
+		<meta property="og:image" content="{{ artigo.imagem_destaque.url }}" />
+	{% endif %}
 	<meta property="fb:admins" content="1844862175" />
 	{% endblock %}
 	{% block css %}
