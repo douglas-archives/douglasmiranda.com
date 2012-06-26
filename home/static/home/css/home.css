@@ -61,21 +61,6 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 #featured h3 a{
     color: #333;
 }
-/*
-#featured figure:hover {
-    border: 2px solid #F96F13;
-}
-#featured .description{
-    margin-left:18px;
-}
-#featured figure img {display: block; float: right;}
-
-#featured h2 {color: #f96f13; font-size: 1.714em; margin-bottom: 0.333em;}
-#featured h3 {font-size: 1.429em; margin-bottom: .5em;margin-left: 18px;}
-
-#featured h3 a:link, #featured h3 a:visited {color: #000305; text-decoration: none;}
-#featured h3 a:hover, #featured h3 a:active {color: #333;}
-*/
 
 #posts-list h3 a{
     color:#333;
