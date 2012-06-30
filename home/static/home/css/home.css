@@ -23,16 +23,15 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 }
 #featured figure {
     background: #fff;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     border-bottom:solid 2px #F96F13;
     line-height: 0;
+    margin: 0;
     position: relative;
-    overflow: hidden;
     z-index: 1;
 }
-#featured figure {
-    margin: 0;
+#featured figure img, #featured figure{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 #featured a {
     padding: 0;
