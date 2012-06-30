@@ -1,14 +1,19 @@
 {% extends 'base.html' %}
-	{% block titulo %}
-		Artigos - {% if page_obj.number %} página {{page_obj.number}} - {% endif %}
-		{{ block.super }}
-	{% endblock %}
-	{% block css %}
+
+{% block titulo %}
+	Artigos - {% if page_obj.number %} página {{page_obj.number}} - {% endif %}
+	{{ block.super }}
+{% endblock %}
+
+{% block css %}
 	<link rel="stylesheet" href="{{ STATIC_URL }}blog/css/todos-artigos.css" type="text/css" />
-	{% endblock %}
-		{% block content %}
-			<h2>Artigos</h2>
-			{% include "global-paginator.html" %}
-			{% include "blog/listagem-artigos.html" %}
-			{% include "global-paginator.html" %}
-		{% endblock %}
+{% endblock %}
+
+{% block content %}
+	<h2>Artigos</h2>
+
+	{% include "global-paginator.html" %}
+	{% include "blog/listagem-artigos.html" %}
+	{% include "global-paginator.html" %}
+
+{% endblock %}

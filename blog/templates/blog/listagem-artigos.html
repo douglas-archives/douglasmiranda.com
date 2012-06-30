@@ -1,25 +1,25 @@
-			{% if artigos %}
-				<ol id="posts-list">
-					{% for artigo in artigos %}
-					<li>
-						<article>
-							<header>
-								<h3 class="entry-title">
-									<a href="{{ artigo.get_absolute_url }}" rel="bookmark" title="{{ artigo.titulo }}">
-										<abbr class="published">
-											{{ artigo.publicacao|date:"d/M"|lower }} - 
-										</abbr>
-										{{ artigo.titulo }}
-									</a>
-								</h3>
-							</header>
-							<div class="entry-content">
-								<p>{{ artigo.resumo }}</p>
-							</div><!-- /.entry-content -->
-						</article>
-					</li>
-					{% endfor %}
-				</ol><!-- /#posts-list -->
-			{% else %}
-				<p>N&atilde;o h&aacute; resultados para esta solicita&ccedil;&atilde;o =/</p>
-			{% endif %}
+{% if artigos %}
+	<ol id="posts-list">
+		{% for artigo in artigos %}
+		<li>
+			<article>
+				<header>
+					<h3 class="entry-title">
+						<a href="{{ artigo.get_absolute_url }}" rel="bookmark" title="{{ artigo.titulo }}">
+							<abbr class="published">
+								{{ artigo.publicacao|date:"d/M"|lower }} - 
+							</abbr>
+							{{ artigo.titulo }}
+						</a>
+					</h3>
+				</header>
+				<div class="entry-content">
+					<p>{{ artigo.resumo }}</p>
+				</div><!-- /.entry-content -->
+			</article>
+		</li>
+		{% endfor %}
+	</ol><!-- /#posts-list -->
+{% else %}
+	<p>N&atilde;o h&aacute; resultados para esta solicita&ccedil;&atilde;o =/</p>
+{% endif %}

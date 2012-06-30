@@ -1,89 +1,98 @@
 {% extends 'base.html' %}
+
 {% block titulo %}
 Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YAH!
 {% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{{ STATIC_URL }}home/css/home.css?v=2" type="text/css" />
+	<link rel="stylesheet" href="{{ STATIC_URL }}home/css/home.css?v=2" type="text/css" />
 {% endblock %}
+
 {% block body %}
-<body id="index" class="home">
+	<body id="index" class="home">
 {% endblock %}
-			{% block featured %}
-			<aside id="featured">
-			{% if artigos_em_destaque %}
-				{% for destaque in artigos_em_destaque %}
-					<article class="{% if not forloop.first %}others{% endif %}{% if forloop.last %} last{% endif %}">
-						{% if destaque.imagem_destaque %}
-						<figure>
-							<a href="{{ destaque.get_absolute_url }}">
-								<img src="{{ destaque.imagem_destaque.url }}" alt="{{ destaque.titulo }}" />
-							</a>
-						</figure>
-						{% endif %}
-						<hgroup>
-							<h2>
-								<a href="{{ destaque.get_absolute_url }}">
-									{{ destaque.titulo }}
-								</a>
-							</h2>
-							<h3>
-								<a href="{{ destaque.get_absolute_url }}">
-									{{ destaque.resumo }}
-								</a>
-							</h3>
-						</hgroup>
-					</article>
-				{% endfor %}
-			{% endif %}
-			</aside><!-- /#featured -->
-			{% endblock %}
-			{% block content %}
-			<h2>Article.objects.published()[:6]</h2>
-			{% include "blog/listagem-artigos.html" %}
-			{% endblock %}
-			{% include "blog/listagem-artigos.html" %}
-			{% include "global-paginator.html" %}
-			{% block extras %}
-			<section id="extras">
-				<div class="blogroll">
-					<h2>blogroll_links()</h2>
-					<ul>
-						<li><a href="http://highscalability.com/" rel="external">High Scalability</a></li>
-						<li><a href="http://smashingmagazine.com/" rel="external">Smashing Magazine</a></li>
-						<li><a href="http://andrewsmedina.com/" rel="external">Andrews Medina</a></li>
 
-						<li><a href="http://tympanus.net/codrops/" rel="external">Codrops</a></li>
-						<li><a href="http://saiadolugar.com.br/" rel="external">Saia do Lugar</a></li>
-						<li><a href="http://blog.augustopascutti.com/" rel="external">Augusto Pascutti</a></li>
-					</ul>
-				</div><!-- /.blogroll -->
+{% block featured %}
+	<aside id="featured">
+	{% if artigos_em_destaque %}
+		{% for destaque in artigos_em_destaque %}
+			<article class="{% if not forloop.first %}others{% endif %}{% if forloop.last %} last{% endif %}">
+				{% if destaque.imagem_destaque %}
+				<figure>
+					<a href="{{ destaque.get_absolute_url }}">
+						<img src="{{ destaque.imagem_destaque.url }}" alt="{{ destaque.titulo }}" />
+					</a>
+				</figure>
+				{% endif %}
+				<hgroup>
+					<h2>
+						<a href="{{ destaque.get_absolute_url }}">
+							{{ destaque.titulo }}
+						</a>
+					</h2>
+					<h3>
+						<a href="{{ destaque.get_absolute_url }}">
+							{{ destaque.resumo }}
+						</a>
+					</h3>
+				</hgroup>
+			</article>
+		{% endfor %}
+	{% endif %}
+	</aside><!-- /#featured -->
+{% endblock %}
 
-				<div class="social">
-					<h2>follow(people.me)</h2>
-					<ul>
-						<li><a href="http://twitter.com/douglaswebdev" rel="me">@douglaswebev</a></li>
-						<li><a href="http://github.com/douglasmiranda" rel="me">github.fork(me)</a></li>
-					</ul>
-				</div><!-- /.social -->
-			</section><!-- /#extras -->
-			{% endblock %}
-			{% block js_footer %}
-			<script type="text/javascript">
-				$(document).ready(function() {
-					h1_h2 = 'h2, h3';
-					$('#featured article').hover(
-						function() {
-							$(this).find(h1_h2).stop().animate({
-								opacity: 0.9
-							}, 500);
-						},
-						function() {
-							$(this).find(h1_h2).stop().animate({
-								opacity: 0.7
-							}, 350);
-						}
-					);
-				});
-			</script>
-			{% endblock %}
+{% block content %}
+<h2>Article.objects.published()[:6]</h2>
+
+{% include "blog/listagem-artigos.html" %}
+
+{% endblock %}
+
+{% include "blog/listagem-artigos.html" %}
+{% include "global-paginator.html" %}
+
+{% block extras %}
+	<section id="extras">
+		<div class="blogroll">
+			<h2>blogroll_links()</h2>
+			<ul>
+				<li><a href="http://highscalability.com/" rel="external">High Scalability</a></li>
+				<li><a href="http://smashingmagazine.com/" rel="external">Smashing Magazine</a></li>
+				<li><a href="http://andrewsmedina.com/" rel="external">Andrews Medina</a></li>
+
+				<li><a href="http://tympanus.net/codrops/" rel="external">Codrops</a></li>
+				<li><a href="http://saiadolugar.com.br/" rel="external">Saia do Lugar</a></li>
+				<li><a href="http://blog.augustopascutti.com/" rel="external">Augusto Pascutti</a></li>
+			</ul>
+		</div><!-- /.blogroll -->
+
+		<div class="social">
+			<h2>follow(people.me)</h2>
+			<ul>
+				<li><a href="http://twitter.com/douglaswebdev" rel="me">@douglaswebev</a></li>
+				<li><a href="http://github.com/douglasmiranda" rel="me">github.fork(me)</a></li>
+			</ul>
+		</div><!-- /.social -->
+	</section><!-- /#extras -->
+{% endblock %}
+
+{% block js_footer %}
+	<script type="text/javascript">
+		$(document).ready(function() {
+			h1_h2 = 'h2, h3';
+			$('#featured article').hover(
+				function() {
+					$(this).find(h1_h2).stop().animate({
+						opacity: 0.9
+					}, 500);
+				},
+				function() {
+					$(this).find(h1_h2).stop().animate({
+						opacity: 0.7
+					}, 350);
+				}
+			);
+		});
+	</script>
+{% endblock %}

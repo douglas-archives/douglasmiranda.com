@@ -4,23 +4,26 @@
 	<meta charset="utf-8" />
 	<meta name="google-site-verification" content="64KgpIRkL_XFYVed2Pju392AunehCxJH5mH__wbPoag" />
 	{% block meta_og %}
-	<meta property="og:title" content="Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YAH!"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:url" content="http://douglasmiranda.com/"/>
-	<meta property="og:image" content="{{STATIC_URL}}images/icon.png" />
-	<meta property="og:site_name" content="douglasmiranda.com"/>
-	<meta property="og:description" content="Artigos sobre desenvolvimento web e falo um pouco sobre o que faço, aprendo e vivencio em minha profissão."/>
-	<meta property="description" content="Artigos sobre desenvolvimento web e falo um pouco sobre o que faço, aprendo e vivencio em minha profissão."/>
+		<meta property="og:title" content="Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YAH!"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:url" content="http://douglasmiranda.com/"/>
+		<meta property="og:image" content="{{STATIC_URL}}images/icon.png" />
+		<meta property="og:site_name" content="douglasmiranda.com"/>
+		<meta property="og:description" content="Artigos sobre desenvolvimento web e falo um pouco sobre o que faço, aprendo e vivencio em minha profissão."/>
+		<meta property="description" content="Artigos sobre desenvolvimento web e falo um pouco sobre o que faço, aprendo e vivencio em minha profissão."/>
 	{% endblock %}
+
 	<link rel="alternate" type="application/rss+xml" title="Ultimos
 artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" />
 	<link rel="shortcut icon" href="/favicon.png" type="image/png" />
 	<title>{% block titulo %}Douglas Miranda{% endblock %}</title>
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/main.css?v=2" type="text/css" />
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
 	{% block css %}{% endblock %}
 	{% block js_head %}{% endblock %}
 	{% block extra_head %}{% endblock %}
+
 </head>
 <body>
 	<div id="wrapper">
@@ -37,10 +40,15 @@ artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" /
 			{% include "horizontal-menu.html" %}
 
 		</header><!-- /#banner -->
+
 		{% block featured %}{% endblock %}
+
 		<section id="content">
+
 			{% block content %}{% endblock %}
+
 		</section><!-- /#content -->
+
 		{% block extras %}{% endblock %}
 
 		<footer id="contentinfo" class="body">
@@ -76,15 +84,16 @@ artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" /
 		<script src="{{ STATIC_URL }}js/global.js"></script>
 
 		{% block js_footer %}{% endblock %}
+		
 		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-26623511-1']);
-		  _gaq.push(['_trackPageview']);
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-26623511-1']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
 		</script>
 	</div>
 </body>

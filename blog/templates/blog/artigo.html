@@ -1,98 +1,104 @@
 {% extends 'base.html' %}
-	{% block atributos_html_tag %}itemscope itemtype="http://schema.org/Article"{%endblock%}
-	{% block titulo %}{{artigo.titulo}} - {{ block.super }}{% endblock %}
-	{% block meta_og %}
-	<meta property="og:title" content="{{artigo.titulo}}" />
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" />
-	<meta property="og:site_name" content="Desenvolvimento Web" />
-	<meta property="og:description" content="{{artigo.resumo}}"/>
-	{% if artigo.imagem_destaque %}
-		<meta property="og:image" content="{{ artigo.imagem_destaque.url }}" />
-	{% endif %}
+
+{% block atributos_html_tag %}itemscope itemtype="http://schema.org/Article"{%endblock%}
+{% block titulo %}{{artigo.titulo}} - {{ block.super }}{% endblock %}
+{% block meta_og %}
+<meta property="og:title" content="{{artigo.titulo}}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" />
+<meta property="og:site_name" content="Desenvolvimento Web" />
+<meta property="og:description" content="{{artigo.resumo}}"/>
+{% if artigo.imagem_destaque %}
+	<meta property="og:image" content="{{ artigo.imagem_destaque.url }}" />
+{% endif %}
 	<meta property="fb:admins" content="1844862175" />
-	{% endblock %}
-	{% block css %}
+{% endblock %}
+
+{% block css %}
 	<link rel="stylesheet" href="{{ STATIC_URL }}blog/css/artigo.css" type="text/css" />
-	{% endblock %}
-	{% block extra_head %}
-		<link rel="canonical" href="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" />
-	{% endblock %}
-		{% block content %}
-			<article id="article-detail">
-				<header>
-					<h1 class="entry-title">
-						<a href="{{artigo.get_absolute_url}}" rel="bookmark" title="{{ artigo.titulo }}">
-							{{ artigo.titulo }}
-						</a>
-					</h1>
-					<p>{{ artigo.resumo }}</p>
-					<a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ artigo.titulo }}" data-url="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" data-count="none" data-via="douglaswebdev" data-lang="pt" data-size="medium">Tweetar</a>
-					<g:plusone annotation="none"></g:plusone>
-					<div id="fb-root"></div>
-					<div id="facebook-like-article" class="fb-like" data-href="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
-				</header>
-				<div class="entry-content">
-					{{ artigo.conteudo|safe }}
-				</div><!-- /.entry-content -->
-				<footer class="post-info">
-					<abbr class="published">
-						{{ artigo.publicacao }}
-					</abbr>
-				</footer><!-- /.post-info -->
-			</article>
-		{% endblock %}
-		{% block extras %}
-			<section id="comments">
-				<div id="disqus_thread"></div>
-				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-				<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-			</section>
-		{% endblock %}
+{% endblock %}
+
+{% block extra_head %}
+	<link rel="canonical" href="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" />
+{% endblock %}
+
+{% block content %}
+	<article id="article-detail">
+		<header>
+			<h1 class="entry-title">
+				<a href="{{artigo.get_absolute_url}}" rel="bookmark" title="{{ artigo.titulo }}">
+					{{ artigo.titulo }}
+				</a>
+			</h1>
+			<p>{{ artigo.resumo }}</p>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ artigo.titulo }}" data-url="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" data-count="none" data-via="douglaswebdev" data-lang="pt" data-size="medium">Tweetar</a>
+			<g:plusone annotation="none"></g:plusone>
+			<div id="fb-root"></div>
+			<div id="facebook-like-article" class="fb-like" data-href="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+		</header>
+		<div class="entry-content">
+			{{ artigo.conteudo|safe }}
+		</div><!-- /.entry-content -->
+		<footer class="post-info">
+			<abbr class="published">
+				{{ artigo.publicacao }}
+			</abbr>
+		</footer><!-- /.post-info -->
+	</article>
+{% endblock %}
+
+{% block extras %}
+	<section id="comments">
+		<div id="disqus_thread"></div>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+	</section>
+{% endblock %}
+
 {% block js_footer %}
-<script type="text/javascript">
-	$(window).load(function(){
-		if($('code.prettyprint').length > 0){
-			// prettify the code
-			$.getScript("{{ STATIC_URL }}plugins/prettify/prettify.js",
-				function(){
-					$('head').append('<link rel="stylesheet" href="{{ STATIC_URL }}plugins/prettify/prettify.css" type="text/css" />');
-					prettyPrint();
-				}
-			)
-		}
-		// disqus
-		var disqus_shortname = 'douglasmiranda';
-		(function() {
-			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		})();
-		// twitter
-		(function() {
-			var s = document.createElement('script');
-			s.type = 'text/javascript';
-			s.async = true;
-			s.src = 'http://platform.twitter.com/widgets.js';
-			var x = document.getElementsByTagName('script')[0];
-			x.parentNode.insertBefore(s, x);
-		})();
-		// facebook
-		(function(d, s, id) {
-		  var js, fjs = d.getElementsByTagName(s)[0];
-		  if (d.getElementById(id)) {return;}
-		  js = d.createElement(s); js.id = id;
-		  js.async = true;
-		  js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=241131705939637";
-		  fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-		// google plus
-		window.___gcfg = {lang: 'pt-BR'};
-		(function() {
-		  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-		  po.src = 'https://apis.google.com/js/plusone.js';
-		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-		})();
-	});
-</script>
+	<script type="text/javascript">
+		$(window).load(function(){
+			if($('code.prettyprint').length > 0){
+				// prettify the code
+				$.getScript("{{ STATIC_URL }}plugins/prettify/prettify.js",
+					function(){
+						$('head').append('<link rel="stylesheet" href="{{ STATIC_URL }}plugins/prettify/prettify.css" type="text/css" />');
+						prettyPrint();
+					}
+				)
+			}
+			// disqus
+			var disqus_shortname = 'douglasmiranda';
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+			// twitter
+			(function() {
+				var s = document.createElement('script');
+				s.type = 'text/javascript';
+				s.async = true;
+				s.src = 'http://platform.twitter.com/widgets.js';
+				var x = document.getElementsByTagName('script')[0];
+				x.parentNode.insertBefore(s, x);
+			})();
+			// facebook
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.async = true;
+				js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1&appId=241131705939637";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+			// google plus
+			window.___gcfg = {lang: 'pt-BR'};
+			(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/plusone.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+		});
+	</script>
 {% endblock %}

@@ -1,15 +1,15 @@
 {% if is_paginated %}
-<div class="pagination">
-	<span class="page-links">
-		{% if page_obj.has_previous %}
-		<a href="?q={{ search_term }}&page={{ page_obj.previous_page_number }}">anterior</a>
-		{% endif %}
-		<span class="page-current">
-			P&aacute;gina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+	<div class="pagination">
+		<span class="page-links">
+			{% if page_obj.has_previous %}
+			<a href="?q={{ search_term }}&page={{ page_obj.previous_page_number }}">anterior</a>
+			{% endif %}
+			<span class="page-current">
+				P&aacute;gina {{ page_obj.number }} de {{ page_obj.paginator.num_pages }}.
+			</span>
+			{% if page_obj.has_next %}
+			<a href="?q={{ search_term }}&page={{ page_obj.next_page_number }}">pr&oacute;xima</a>
+			{% endif %}
 		</span>
-		{% if page_obj.has_next %}
-		<a href="?q={{ search_term }}&page={{ page_obj.next_page_number }}">pr&oacute;xima</a>
-		{% endif %}
-	</span>
-</div>
+	</div>
 {% endif %}

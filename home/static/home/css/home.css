@@ -116,23 +116,23 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
     padding: .3em .25em;
 }
 
-    /* Blogroll */
-    #extras .blogroll {
-        float: left;
-        width: 615px;
-    }
+/* Blogroll */
+#extras .blogroll {
+    float: left;
+    width: 615px;
+}
 
-    #extras .blogroll li {
-        float: left;
-        margin: 0 20px 0 0;
-        width: 185px;
-    }
+#extras .blogroll li {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 185px;
+}
 
-    /* Social */
-    #extras .social {
-        float: right;
-        width: 175px;
-    }
+/* Social */
+#extras .social {
+    float: right;
+    width: 175px;
+}
 
 #extras li:last-child,
 #extras li:last-child a{border: 0}
