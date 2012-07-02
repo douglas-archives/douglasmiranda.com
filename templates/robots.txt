@@ -1,4 +1,3 @@
 User-agent: *
 Disallow: /static/
-Disallow: /media/
 Disallow: /artigo/busca/?
