@@ -1,5 +1,8 @@
+# coding: utf-8
 from django.views.generic import ListView, DetailView, TemplateView
 from django.db.models import Q
+from django.utils.text import smart_split
+import re
 from blog.models import Artigo
 
 
@@ -18,7 +21,29 @@ class BuscaArtigosListView(ListView):
     context_object_name = 'artigos'
 
     def get_queryset(self, **kwargs):
-        return Artigo.objects.publicados().filter(Q(titulo__icontains=self.request.GET['q']) | Q(conteudo__icontains=self.request.GET['q']))
+        query = self.request.GET.get('q', '')
+        if query:
+            querysets = []
+            words = self._extract_words(query)
+            for word in words:
+                querysets.append((
+                    Q(titulo__icontains=word) |
+                    Q(resumo__icontains=word) |
+                    Q(conteudo__icontains=word)
+                ))
+
+            resultado = Artigo.objects.publicados().filter(*querysets)
+        else:
+            resultado = []
+
+        return resultado
+
+    def _extract_words(self, query):
+        query = self._clean_query(query)
+        return [word for word in smart_split(query)]
+
+    def _clean_query(self, query):
+        return re.sub('\,|\.|', '', query)
 
     def get_context_data(self, **kwargs):
         context = super(BuscaArtigosListView, self).get_context_data(**kwargs)
