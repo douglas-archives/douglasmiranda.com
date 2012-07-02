@@ -24,7 +24,7 @@ class BuscaArtigosListView(ListView):
         query = self.request.GET.get('q', '')
         if query:
             querysets = []
-            words = self._extract_words(query)
+            words = self._extract_terms(query)
             for word in words:
                 querysets.append((
                     Q(titulo__icontains=word) |
@@ -38,12 +38,11 @@ class BuscaArtigosListView(ListView):
 
         return resultado
 
-    def _extract_words(self, query):
-        query = self._clean_query(query)
-        return [word for word in smart_split(query)]
+    def _extract_terms(self, query):
+        return [self._clean_term(word) for word in smart_split(query)]
 
-    def _clean_query(self, query):
-        return re.sub('\,|\.|', '', query)
+    def _clean_term(self, query):
+        return re.sub('\,|\.|\"', '', query)
 
     def get_context_data(self, **kwargs):
         context = super(BuscaArtigosListView, self).get_context_data(**kwargs)
