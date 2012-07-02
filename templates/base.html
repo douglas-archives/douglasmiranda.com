@@ -72,19 +72,10 @@ artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" /
 		</footer><!-- /#contentinfo -->
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script type="text/javascript">
-			(function() {
-				if(!window.jQuery){
-					var jq = document.createElement('script'); jq.type = 'text/javascript'; jq.async = true;
-					jq.src = '{{ STATIC_URL }}js/jquery-1.7.2.min.js';
-					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(jq, s);
-			    }
-			})();
-		</script>
 		<script src="{{ STATIC_URL }}js/global.js"></script>
 
 		{% block js_footer %}{% endblock %}
-		
+
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-26623511-1']);
