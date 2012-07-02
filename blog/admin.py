@@ -16,9 +16,9 @@ class ArtigoAdmin(admin.ModelAdmin):
     def make_published(self, request, queryset):
         rows_updated = queryset.update(status=2)
         if rows_updated == 1:
-            message_bit = "1 artigo foi marcado"
+            message_bit = "1 artigo foi publicado"
         else:
-            message_bit = "%s artigos foram marcados" % rows_updated
+            message_bit = "%s artigos foram publicados" % rows_updated
         self.message_user(request, "%s como publicado." % message_bit)
     make_published.short_description = "Publicar artigos selecionados"
 
