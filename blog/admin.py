@@ -11,6 +11,7 @@ class ArtigoAdmin(admin.ModelAdmin):
     list_editable = ('status', 'principal')
     search_fields = ['titulo']
     prepopulated_fields = {"slug": ("titulo",)}
+    radio_fields = {"status": admin.HORIZONTAL}
 
     def make_published(self, request, queryset):
         rows_updated = queryset.update(status=2)
