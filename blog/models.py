@@ -20,10 +20,6 @@ class Artigo(models.Model):
     )
 
     titulo = models.CharField('título', max_length=100)
-    # TODO:
-    # Nao ficou muito bonito isto, sabemos que slug nao pode ser em branco
-    # mas deixei para poder funcionar o tratamento que fiz no save()
-    # Tenho que descobrir se existe uma solucao mais bonita :)
     slug = models.SlugField('URL (slug)', blank=True, unique=True, max_length=100)
     resumo = models.CharField('resumo', max_length=140)
     conteudo = models.TextField(blank=True)
