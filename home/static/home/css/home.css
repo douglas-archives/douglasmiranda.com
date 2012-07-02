@@ -37,6 +37,9 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
     padding: 0;
     color: #fff;
 }
+#featured a:hover {
+    text-shadow:none;
+}
 #featured h2,
 #featured h3 {
     background: #000000;
