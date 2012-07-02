@@ -1,8 +1,4 @@
 *.pyc
 local_settings.py
-.codeintel/*
-dados
-*.sublime-*
 media/*
 tmp/*
-fabfile.py
