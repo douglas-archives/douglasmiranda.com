@@ -46,13 +46,13 @@
     border: 5px solid #f4f4f4;
 }
 #detail img:hover{border: 5px solid #F96F13;}
-.img_left{float: left;}
-.img_right{float: right;}
-.img_center{
+#detail .img_left{float: left;}
+#detail .img_right{float: right;}
+#detail .img_center{
     margin:10px auto;
     display:block;
 }
-.img_block{
+#detail .img_block{
     clear: both;
     display: block;
     float: none;
