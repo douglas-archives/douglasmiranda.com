@@ -1,118 +1,118 @@
-#article-detail header p{
-	color: #555555;
-	font-size: 12px;
-	margin-bottom:16px;
+#detail header p{
+    color: #555555;
+    font-size: 12px;
+    margin-bottom:16px;
 }
-#article-detail .published{
-	font-weight: bold;
+.published{
+    font-weight: bold;
 }
-#article-detail .code-inline{
-	background-color: #F8F8FF;
+.code-inline{
+    background-color: #F8F8FF;
     border: 1px solid #DEDEDE;
     color: #444444;
     font-size: 12px;
     padding: 0 0.2em;
     border-radius: 3px;
 }
-#article-detail .prettyprint{
-	width:754px;
-	background:#fbfbfb url(http://static.douglasmiranda.com/blog/images/articles/code/code-close.png) right bottom no-repeat;
+.prettyprint{
+    width:754px;
+    background:#fbfbfb url(http://static.douglasmiranda.com/blog/images/articles/code/code-close.png) right bottom no-repeat;
     border: #DEDEDE 1px solid;
     padding: 0 0.2em;
     border-radius: 3px;
     display:block;
 }
-#article-detail .prettyprint:hover, #article-detail .code-inline:hover{
-	border:#F96F13 1px solid !important;
+.prettyprint:hover, .code-inline:hover{
+    border:#F96F13 1px solid !important;
 }
-#article-detail .clearfix{
-	clear: both;
+#detail .clearfix{
+    clear: both;
 }
-#article-detail h1{
-	font-weight: 400;
+#detail h1{
+    font-weight: 400;
     line-height: 1.1;
     margin-bottom: 16px;
 }
-#article-detail h1 a, #article-detail h1 span{
-	color:#333333;
-	font-size:22px;
+#detail h1 a, #detail h1 span{
+    color:#333333;
+    font-size:22px;
 }
-#article-detail h3 a,
-#article-detail h4 a{
-	color:#333333;
+#detail h3 a,
+#detail h4 a{
+    color:#333333;
 }
-#article-detail img{
-	margin: 10px 15px;
-	border: 5px solid #f4f4f4;
+#detail img{
+    margin: 10px 15px;
+    border: 5px solid #f4f4f4;
 }
-#article-detail img:hover{border: 5px solid #F96F13;}
-#article-detail .img_left{float: left;}
-#article-detail .img_right{float: right;}
-#article-detail .img_center{
-	margin:10px auto;
-	display:block;
+#detail img:hover{border: 5px solid #F96F13;}
+.img_left{float: left;}
+.img_right{float: right;}
+.img_center{
+    margin:10px auto;
+    display:block;
 }
-#article-detail .img_block{
-	clear: both;
+.img_block{
+    clear: both;
     display: block;
     float: none;
     margin: 14px 0;
 }
-#article-detail .entry-content iframe{
+.entry-content iframe{
     margin:10px auto;
     display:block;
 }
-#article-detail .fb_edge_comment_widget iframe{
-	height:225px !important;
+.fb_edge_comment_widget iframe{
+    height:225px !important;
 }
-#article-detail .template-table{
-	width:714px;
-	background-color: #F8F8FF;
+
+.template-table{
+    width:714px;
+    background-color: #F8F8FF;
     border: 1px solid #DEDEDE;
     color: #333;
     padding: 0 0.2em;
     border-radius: 3px;
 }
-
 .template-table p{
-	margin-bottom:5px;
+    margin-bottom:5px;
 }
 ._2-columns td{
-	padding:3px;
+    padding:3px;
 }
 ._2-columns thead td{
-	border-bottom: 1px solid #DEDEDE;
-	font-weight: bold;
+    border-bottom: 1px solid #DEDEDE;
+    font-weight: bold;
 }
 ._2-columns tfoot td{
-	border-top: 1px solid #DEDEDE;
-	font-size: 12px;
+    border-top: 1px solid #DEDEDE;
+    font-size: 12px;
 }
 ._2-columns tr td {
-	border-left: 1px dashed #DEDEDE;
+    border-left: 1px dashed #DEDEDE;
 }
 ._2-columns tr td:first-child{
-	border-left:0px;
+    border-left:0px;
 }
 
-#article-detail blockquote{
-	padding:30px;
-	margin:15px 0 15px 0;
-	background:url(http://static.douglasmiranda.com/blog/images/articles/blockquote-open.png) no-repeat scroll left top,
-			   url(http://static.douglasmiranda.com/blog/images/articles/blockquote-close.png) no-repeat scroll right bottom;
-	clear:both;
+#detail blockquote{
+    padding:30px;
+    margin:15px 0 15px 0;
+    background:url(http://static.douglasmiranda.com/blog/images/articles/blockquote-open.png) no-repeat scroll left top,
+               url(http://static.douglasmiranda.com/blog/images/articles/blockquote-close.png) no-repeat scroll right bottom;
+    clear:both;
 }
-#article-detail blockquote p{
-	border-left: #f8f8f8 dashed 2px;
-	padding-left:5px;
+#detail blockquote p{
+    border-left: #f8f8f8 dashed 2px;
+    padding-left:5px;
 }
-#article-detail ol li, #article-detail ul li{
-	display: list-item;
-	margin-left:15px;
+#detail ol li, #detail ul li{
+    display: list-item;
+    margin-left:15px;
 }
-#article-detail ol, #article-detail ul{display:table;}
-#article-detail ol li{list-style-type: decimal;}
-#article-detail ul li{list-style-type: disc;}
+#detail ol, #detail ul{display:table;}
+#detail ol li{list-style-type: decimal;}
+#detail ul li{list-style-type: disc;}
 .post-info{margin-top:15px;}
 #facebook-like-article span{
     height:28px !important;

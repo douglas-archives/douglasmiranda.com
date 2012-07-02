@@ -86,6 +86,9 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 #posts-list h3 a{
     color:#333;
 }
+#posts-list abbr{
+    color:#666;
+}
 .entry-title{
     margin-bottom:7px;
 }

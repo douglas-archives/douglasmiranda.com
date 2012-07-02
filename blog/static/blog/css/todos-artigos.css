@@ -4,7 +4,7 @@
 .entry-title{
     margin-bottom:7px;
 }
-.published{
+#posts-list abbr{
     color: #666;
 }
 .entry-content{
