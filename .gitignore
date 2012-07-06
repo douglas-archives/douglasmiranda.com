@@ -1,4 +1,4 @@
 *.pyc
 local_settings.py
-media/*
+douglasmiranda/media/uploads/*
 tmp/*
