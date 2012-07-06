@@ -1,5 +1,5 @@
+# coding: utf-8
 # Django settings for douglasmiranda project.
-import os
 from utils.path import abspath
 
 DEBUG = True
@@ -204,3 +204,7 @@ FILEBROWSER_SELECT_FORMATS = {
 # configuracoes adicionais do grappelli
 GRAPPELLI_ADMIN_HEADLINE = u'Douglas Miranda'
 GRAPPELLI_ADMIN_TITLE = u'Douglas Miranda'
+try:
+    from local_settings import *
+except:
+    pass

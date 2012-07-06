@@ -17,7 +17,7 @@ urlpatterns = patterns('',
     url(r'^me/',  TemplateView.as_view(template_name='me.html'), name='projeto-me'),
     (r'^labs/', include('douglasmiranda.labs.urls')),
     (r'^artigo/', include('douglasmiranda.blog.urls')),
-    (r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': {'ultimos': UltimosArtigos}}),
+    (r'^rss/(?P<url>.*)/$', UltimosArtigos(), {'feed_dict': {'ultimos': UltimosArtigos}}),
 
 
     # sirvo os arquivos estaticos do admin com o Django,
