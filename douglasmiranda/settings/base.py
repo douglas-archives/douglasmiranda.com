@@ -1,6 +1,6 @@
 # coding: utf-8
 # Django settings for douglasmiranda project.
-from utils.path import abspath
+from utils.path import relative_to_project_path
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -69,7 +69,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    abspath('static'),
+    relative_to_project_path('static'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -99,6 +99,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'utils.middlewares.removeWWW.UrlMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -111,7 +112,7 @@ ROOT_URLCONF = 'douglasmiranda.urls'
 WSGI_APPLICATION = 'douglasmiranda.wsgi.application'
 
 TEMPLATE_DIRS = (
-    abspath('templates'),
+    relative_to_project_path('templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -204,7 +205,3 @@ FILEBROWSER_SELECT_FORMATS = {
 # configuracoes adicionais do grappelli
 GRAPPELLI_ADMIN_HEADLINE = u'Douglas Miranda'
 GRAPPELLI_ADMIN_TITLE = u'Douglas Miranda'
-try:
-    from local_settings import *
-except:
-    pass
