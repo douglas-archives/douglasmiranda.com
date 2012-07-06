@@ -2,10 +2,11 @@ from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic import TemplateView
+from django.conf import settings
+from filebrowser.sites import site
 from douglasmiranda.home.views import HomeListView
 from douglasmiranda.blog.feeds import UltimosArtigos
 from douglasmiranda.settings import STATIC_URL
-from django.conf import settings
 
 
 admin.autodiscover()
@@ -25,7 +26,7 @@ urlpatterns = patterns('',
     (r'^static/(.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     (r'^media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     (r'^grappelli/', include('grappelli.urls')),
-    (r'^admin/filebrowser/', include('filebrowser.urls')),
+    url(r'^admin/filebrowser/', include(site.urls)),
     url(r'^admin/', include(admin.site.urls)),
 )
 
