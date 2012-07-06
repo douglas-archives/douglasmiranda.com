@@ -3,7 +3,7 @@ from django.views.generic import ListView, DetailView, TemplateView
 from django.db.models import Q
 from django.utils.text import smart_split
 import re
-from blog.models import Artigo
+from douglasmiranda.blog.models import Artigo
 
 
 class TodosArtigosListView(ListView):

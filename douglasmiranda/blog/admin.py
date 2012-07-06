@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import Artigo
+from douglasmiranda.blog.models import Artigo
 from filebrowser.settings import ADMIN_THUMBNAIL
 
 

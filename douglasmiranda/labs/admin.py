@@ -1,6 +1,6 @@
 from django.contrib import admin
 from filebrowser.settings import ADMIN_THUMBNAIL
-from labs.models import Projeto
+from douglasmiranda.labs.models import Projeto
 
 
 class ProjetoAdmin(admin.ModelAdmin):

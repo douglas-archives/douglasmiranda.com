@@ -1,5 +1,5 @@
 from django.contrib.syndication.feeds import Feed
-from models import Artigo
+from douglasmiranda.blog.models import Artigo
 
 
 class UltimosArtigos(Feed):

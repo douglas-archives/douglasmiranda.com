@@ -1,5 +1,5 @@
 from django.views.generic import ListView
-from labs.models import Projeto
+from douglasmiranda.labs.models import Projeto
 
 
 class HomeListView(ListView):

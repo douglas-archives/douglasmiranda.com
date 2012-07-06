@@ -1,5 +1,5 @@
 from django.views.generic import ListView
-from blog.models import Artigo
+from douglasmiranda.blog.models import Artigo
 
 
 def dump_pks(objects):

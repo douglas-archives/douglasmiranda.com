@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import patterns, url
-from blog.views import TodosArtigosListView, ArtigoDetailView, BuscaArtigosListView, Templates
+from douglasmiranda.blog.views import TodosArtigosListView, ArtigoDetailView, BuscaArtigosListView, Templates
 
 urlpatterns = patterns('',
     url(r'^todos-artigos/', TodosArtigosListView.as_view(), name='blog-todos-artigos'),
