@@ -67,6 +67,8 @@ STATIC_ROOT = ''
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     relative_to_project_path('static'),
@@ -127,7 +129,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.syndication',
 
-    'grappelli',
     'filebrowser',
 
     'django.contrib.admin',
@@ -181,7 +182,7 @@ FILEBROWSER_VERSIONS = {
 # personalizei este endereço pois os arquivos estaticos do filebrowser
 # estão sendo servidos com o Django por alguns problemas com crossbrowser
 # e o uploadify, mais personalizacoes em filebrowser/upload.html
-FILEBROWSER_URL_FILEBROWSER_MEDIA = '/static/filebrowser/'
+# FILEBROWSER_URL_FILEBROWSER_MEDIA = '/static/filebrowser/'
 
 # EXTENSIONS AND FORMATS
 # Allowed Extensions for File Upload. Lower case is important.
