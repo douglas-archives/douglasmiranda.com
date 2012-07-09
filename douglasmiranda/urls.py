@@ -20,7 +20,7 @@ urlpatterns = patterns('',
     (r'^rss/(?P<url>.*)/$', UltimosArtigos(), {'feed_dict': {'ultimos': UltimosArtigos}}),
 
     # (r'^static/(.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    # (r'^media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    (r'^media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     (r'^admin/filebrowser/', include('filebrowser.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )

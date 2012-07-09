@@ -20,7 +20,7 @@ Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YA
 				{% if destaque.imagem_destaque %}
 				<figure>
 					<a href="{{ destaque.get_absolute_url }}">
-						<img src="{{ destaque.imagem_destaque.url }}" alt="{{ destaque.titulo }}" />
+						<img src="{{ destaque.imagem_destaque }}" alt="{{ destaque.titulo }}" />
 					</a>
 				</figure>
 				{% endif %}
