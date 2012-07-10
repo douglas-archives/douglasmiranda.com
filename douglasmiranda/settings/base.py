@@ -133,6 +133,8 @@ INSTALLED_APPS = (
 
     'django.contrib.admin',
 
+    'redactor',
+
     'douglasmiranda.home',
     'douglasmiranda.blog',
     'douglasmiranda.labs',
@@ -206,3 +208,6 @@ FILEBROWSER_SELECT_FORMATS = {
 # configuracoes adicionais do grappelli
 GRAPPELLI_ADMIN_HEADLINE = u'Douglas Miranda'
 GRAPPELLI_ADMIN_TITLE = u'Douglas Miranda'
+
+# refactor
+REDACTOR_OPTIONS = {'lang': 'pt_br'}

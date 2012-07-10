@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from filebrowser.fields import FileBrowseField
+from redactor.fields import RedactorField
 from datetime import datetime
 
 

@@ -1,4 +1,5 @@
 Django==1.4
 git+https://github.com/wardi/django-filebrowser-no-grappelli#egg=django-filebrowser-no-grappelli
+git+https://github.com/douglasmiranda/django-redactorjs#egg=django-redactorjs
 PIL==1.1.7
 mysql-python==1.2.3
