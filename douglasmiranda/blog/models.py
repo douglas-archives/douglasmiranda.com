@@ -29,11 +29,12 @@ class Artigo(models.Model):
         redactor_options={
             'fixed': 'true',
             'imageGetJson': '/',
+            'autoresize': 'true',
         },
-        upload_to='artigo/imagens/',
+        upload_to='artigo/imagens/' + now.strftime("%Y/%m/%d/"),
         blank=True
     )
-    publicacao = models.DateTimeField('publicação', default=datetime.now, blank=True)
+    publicacao = models.DateTimeField('publicação', default=now, blank=True)
     status = models.IntegerField('status', choices=STATUS_CHOICES, default=1)
     principal = models.BooleanField('é principal?', default=False)
     imagem_destaque = FileBrowseField("imagem em destaque", max_length=200, directory="artigos/imagens/", format='image', blank=True, null=True)
