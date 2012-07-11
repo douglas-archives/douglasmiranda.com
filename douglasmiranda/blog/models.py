@@ -30,6 +30,8 @@ class Artigo(models.Model):
             'fixed': 'true',
             'imageGetJson': '/',
             'autoresize': 'true',
+            'css': 'custom-editor-artigo.css',
+            'toolbar': 'custom-toolbar-artigo',
         },
         upload_to='artigo/imagens/' + now.strftime("%Y/%m/%d/"),
         blank=True
