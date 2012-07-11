@@ -145,3 +145,7 @@ img:hover{
     font-size: 12px;
     padding: 0 0.2em;
 }
+iframe, object, img{
+    display: block;
+    margin: 0 auto;
+}
