@@ -3,8 +3,12 @@ if (typeof RTOOLBAR == 'undefined') var RTOOLBAR = {};
 $(document).ready(function () {
     $('.dropdown_item_inlinecode').live('click', function(){
         r = $("#id_conteudo");
-        text = r.getSelection()
-        r.insertHtml('<span class="code-inline">' +text+ '</span>');
+        text = r.getSelection();
+        r.insertHtml('<code class="code-inline">' +text+ '</code>');
+    });
+    $('.dropdown_item_code').live('click', function(){
+        node = $('#id_conteudo').getSelection().anchorNode;
+        $(node).replaceWith('<p><code class="prettyprint">' + $(node).html() + '</code></p>');
     });
 });
 
@@ -35,17 +39,16 @@ RTOOLBAR['custom-toolbar-artigo'] =
                 param: '<blockquote>',
                 style: 'font-style: italic; color: #666; padding-left: 10px;'                           
              },
-             pre:
+             code:
              {  
                 title: RLANG.code,
-                exec: 'formatblock',
-                param: '<pre>',
                 style: 'font-family: monospace, sans-serif;'
              },
              inlinecode:
              {  
                 // title: RLANG.code,
-                title: "Código Inline"
+                title: "Código Inline",
+                style: 'font-family: monospace, sans-serif;'
              },
              h1:
              {

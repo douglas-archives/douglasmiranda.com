@@ -96,13 +96,11 @@ table thead td {
     border-bottom: 2px solid #000 !important;
     font-weight: bold;
 }
-code, pre {
+.prettyprint{
+    background:#fbfbfb url(http://static.douglasmiranda.com/blog/images/articles/code/code-close.png) right bottom no-repeat;
     font-family: monospace sans-serif;
     border: 1px dashed #ccc;
     display: block;
-}
-.prettyprint{
-    background:#fbfbfb url(http://static.douglasmiranda.com/blog/images/articles/code/code-close.png) right bottom no-repeat;
 }
 hr {
   display: block;

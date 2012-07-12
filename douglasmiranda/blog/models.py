@@ -27,9 +27,10 @@ class Artigo(models.Model):
     conteudo = RedactorField(
         verbose_name=u'Texto',
         redactor_options={
-            'fixed': 'true',
+            'fixed': True,
             'imageGetJson': '/',
-            'autoresize': 'true',
+            'autoresize': True,
+            'removeClasses': False,
             'css': 'custom-editor-artigo.css',
             'toolbar': 'custom-toolbar-artigo',
         },
