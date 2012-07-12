@@ -8,7 +8,8 @@ $(document).ready(function () {
     });
     $('.dropdown_item_code').live('click', function(){
         node = $('#id_conteudo').getSelection().anchorNode;
-        $(node).replaceWith('<p><code class="prettyprint">' + $(node).html() + '</code></p>');
+        n = (node.tagName) ? $(node) : $(node.parentElement);
+        n.replaceWith('<p><code class="prettyprint">' + n.html() + '</code></p>');
     });
     $('.dropdown_item_clearfix').live('click', function(){
         node = $('#id_conteudo').getSelection().anchorNode;
