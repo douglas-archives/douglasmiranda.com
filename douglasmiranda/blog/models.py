@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.template.defaultfilters import slugify
-from redactor.fields import RedactorField
 from datetime import datetime
 from filebrowser.fields import FileBrowseField
 
@@ -24,19 +23,7 @@ class Artigo(models.Model):
     titulo = models.CharField('título', max_length=100)
     slug = models.SlugField('URL (slug)', blank=True, unique=True, max_length=100)
     resumo = models.CharField('resumo', max_length=140)
-    conteudo = RedactorField(
-        verbose_name=u'Texto',
-        redactor_options={
-            'fixed': True,
-            'imageGetJson': '/',
-            'autoresize': True,
-            'removeClasses': False,
-            'css': 'custom-editor-artigo.css',
-            'toolbar': 'custom-toolbar-artigo',
-        },
-        upload_to='artigo/imagens/' + now.strftime("%Y/%m/%d/"),
-        blank=True
-    )
+    conteudo = models.TextField('Texto', blank=True)
     publicacao = models.DateTimeField('publicação', default=now, blank=True)
     status = models.IntegerField('status', choices=STATUS_CHOICES, default=1)
     principal = models.BooleanField('é principal?', default=False)
