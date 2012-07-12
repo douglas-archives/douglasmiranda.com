@@ -11,10 +11,5 @@ class ArtigoAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("titulo",)}
     radio_fields = {"status": admin.HORIZONTAL}
 
-    class Media:
-        js = [
-            # '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
-            # '/static/js/admin/tiny_mce/tinymce_setup.js',
-        ]
 
 admin.site.register(Artigo, ArtigoAdmin)

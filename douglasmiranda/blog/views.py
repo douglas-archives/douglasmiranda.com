@@ -1,5 +1,5 @@
 # coding: utf-8
-from django.views.generic import ListView, DetailView, TemplateView
+from django.views.generic import ListView, DetailView
 from django.db.models import Q
 from django.utils.text import smart_split
 import re
@@ -54,14 +54,3 @@ class ArtigoDetailView(DetailView):
     model = Artigo
     template_name = 'blog/artigo.html'
     context_object_name = 'artigo'
-
-
-class Templates(TemplateView):
-    template_name = 'blog/templates/'
-
-    def get_context_data(self, **kwargs):
-        context = super(Templates, self).get_context_data(**kwargs)
-        # o parametro (template_name) resgatado da url completara
-        # o nome do template que sera carregado
-        self.template_name += kwargs['template_name'] + '.html'
-        return context
