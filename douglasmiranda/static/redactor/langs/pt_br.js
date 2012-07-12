@@ -9,6 +9,7 @@ var RLANG = {
     unlink: 'Remover link',
     styles: 'Estilos',
     paragraph: 'Par&aacute;grafo',
+    clearfix: 'Clearfix',
     quote: 'Cita&ccedil;&atilde;o',
     code: 'C&oacute;digo',
     inlinecode: 'C&oacute;digo inline',

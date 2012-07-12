@@ -10,6 +10,11 @@ $(document).ready(function () {
         node = $('#id_conteudo').getSelection().anchorNode;
         $(node).replaceWith('<p><code class="prettyprint">' + $(node).html() + '</code></p>');
     });
+    $('.dropdown_item_clearfix').live('click', function(){
+        node = $('#id_conteudo').getSelection().anchorNode;
+        n = (node.tagName) ? $(node) : $(node.parentElement);
+        n.hasClass('clearfix') ? n.removeClass('clearfix') : n.addClass('clearfix');
+    });
 });
 
 RTOOLBAR['custom-toolbar-artigo'] = 
@@ -31,6 +36,10 @@ RTOOLBAR['custom-toolbar-artigo'] =
                 title: RLANG.paragraph,          
                 exec: 'formatblock',
                 param: '<p>'
+             },
+             clearfix:
+             {
+                title: RLANG.clearfix,
              },
              blockquote:
              {
