@@ -46,8 +46,7 @@ RTOOLBAR['custom-toolbar-artigo'] =
              },
              inlinecode:
              {  
-                // title: RLANG.code,
-                title: "Código Inline",
+                title: RLANG.inlinecode,
                 style: 'font-family: monospace, sans-serif;'
              },
              h1:
