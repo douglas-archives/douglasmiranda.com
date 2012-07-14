@@ -129,8 +129,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.syndication',
 
-    'filebrowser',
-
     'django.contrib.admin',
 
     'redactor',
@@ -167,42 +165,6 @@ LOGGING = {
             'propagate': True,
         },
     }
-}
-
-# configuracoes para o filebrowser
-FILEBROWSER_DIRECTORY = 'uploads/'
-FILEBROWSER_ADMIN_VERSIONS = ['thumbnail', 'artigo_destaque', 'projetos', 'big', 'large']
-FILEBROWSER_VERSIONS = {
-    'admin_thumbnail': {'verbose_name': '(Admin) Miniatura', 'width': 143, 'height': 40, 'opts': 'crop'},
-    'thumbnail': {'verbose_name': 'Miniatura (1 col)', 'width': 60, 'height': 60, 'opts': 'crop'},
-    'artigo_destaque': {'verbose_name': 'Artigo/destaque', 'width': 270, 'height': 70, 'opts': 'crop'},
-    'projetos': {'verbose_name': 'Projetos', 'width': 200, 'height': 130, 'opts': 'crop'},
-    'big': {'verbose_name': 'Grande 480 (6 col)', 'width': 460, 'height': '', 'opts': ''},
-    'large': {'verbose_name': 'Grande 640 (8 col)', 'width': 680, 'height': '', 'opts': ''},
-}
-
-# personalizei este endereço pois os arquivos estaticos do filebrowser
-# estão sendo servidos com o Django por alguns problemas com crossbrowser
-# e o uploadify, mais personalizacoes em filebrowser/upload.html
-# FILEBROWSER_URL_FILEBROWSER_MEDIA = '/static/filebrowser/'
-
-# EXTENSIONS AND FORMATS
-# Allowed Extensions for File Upload. Lower case is important.
-FILEBROWSER_EXTENSIONS = {
-    'Image': ['.jpg', '.jpeg', '.gif', '.png', '.tif', '.tiff'],
-    'Document': ['.pdf', '.doc', '.rtf', '.txt', '.xls', '.csv'],
-    'Video': ['.mov', '.wmv', '.mpeg', '.mpg', '.avi', '.rm'],
-    'Audio': ['.mp3', '.mp4', '.wav', '.aiff', '.midi', '.m4p'],
-    'Compacted Files': ['.zip', '.rar', '.tar', '.gz', '.tar.gz', '.jar']
-}
-# Define different formats for allowed selections.
-# This has to be a subset of EXTENSIONS.
-# e.g., add ?type=image to the browse-URL ...
-FILEBROWSER_SELECT_FORMATS = {
-    'file': ['Folder', 'Image', 'Document', 'Video', 'Audio', 'Compacted Files'],
-    'image': ['Image'],
-    'document': ['Document'],
-    'media': ['Video', 'Audio'],
 }
 
 # refactor

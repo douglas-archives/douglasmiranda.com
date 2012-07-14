@@ -2,7 +2,6 @@
 from django.db import models
 from django.template.defaultfilters import slugify
 from datetime import datetime
-from filebrowser.fields import FileBrowseField
 
 
 class Gerenciador(models.Manager):
@@ -27,7 +26,13 @@ class Artigo(models.Model):
     publicacao = models.DateTimeField('publicação', default=now, blank=True)
     status = models.IntegerField('status', choices=STATUS_CHOICES, default=1)
     principal = models.BooleanField('é principal?', default=False)
-    imagem_destaque = FileBrowseField("imagem em destaque", max_length=200, directory="artigos/imagens/", format='image', blank=True, null=True)
+    imagem_destaque = models.ImageField(
+        "imagem em destaque",
+        max_length=200,
+        upload_to="artigos/imagens/",
+        blank=True,
+        null=True
+    )
 
     objects = Gerenciador()
 
