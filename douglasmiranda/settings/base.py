@@ -129,6 +129,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.syndication',
 
+    'bootstrap_admin',
     'django.contrib.admin',
 
     'redactor',
