@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load thumbnail %}
 
 {% block titulo %}
 Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YAH!
@@ -20,7 +21,11 @@ Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YA
 				{% if destaque.imagem_destaque %}
 				<figure>
 					<a href="{{ destaque.get_absolute_url }}">
-						<img src="{{ destaque.imagem_destaque }}" alt="{{ destaque.titulo }}" />
+						<img {% if forloop.first %}
+								src="{% thumbnail destaque.imagem_destaque 800x184 quality=95 crop %}"
+							{% else %}
+								src="{% thumbnail destaque.imagem_destaque 380x184 quality=95 crop %}"
+							{% endif %} alt="{{ destaque.titulo }}" />
 					</a>
 				</figure>
 				{% endif %}

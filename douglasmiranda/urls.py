@@ -25,6 +25,8 @@ urlpatterns = patterns('',
     url(r'^redactor/', include('redactor.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^', include('filer.server.urls')),
 )
 
 urlpatterns += staticfiles_urlpatterns()

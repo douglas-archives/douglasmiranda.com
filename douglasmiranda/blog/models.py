@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.template.defaultfilters import slugify
+from filer.fields.image import FilerImageField
 from datetime import datetime
 
 
@@ -26,13 +27,7 @@ class Artigo(models.Model):
     publicacao = models.DateTimeField('publicação', default=now, blank=True)
     status = models.IntegerField('status', choices=STATUS_CHOICES, default=1)
     principal = models.BooleanField('é principal?', default=False)
-    imagem_destaque = models.ImageField(
-        "imagem em destaque",
-        max_length=200,
-        upload_to="artigos/imagens/",
-        blank=True,
-        null=True
-    )
+    imagem_destaque = FilerImageField(null=True, blank=True, related_name="imagens_artigos")
 
     objects = Gerenciador()
 

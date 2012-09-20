@@ -133,6 +133,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
 
     'redactor',
+    'filer',
+    'easy_thumbnails',
+    'south',
 
     'douglasmiranda.home',
     'douglasmiranda.blog',
@@ -170,3 +173,12 @@ LOGGING = {
 
 # refactor
 REDACTOR_OPTIONS = {'lang': 'pt_br'}
+
+# django-filer
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    #'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+)
