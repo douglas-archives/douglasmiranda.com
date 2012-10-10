@@ -136,8 +136,8 @@ RTOOLBAR['custom-toolbar-artigo'] =
     },
     image:
     {
-        title: RLANG.image,                         
-        func: 'showImage'           
+        title: RLANG.image,
+        func: 'showImage'
     },
     video:
     {
