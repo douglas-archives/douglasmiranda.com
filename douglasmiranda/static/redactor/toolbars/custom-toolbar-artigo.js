@@ -143,12 +143,7 @@ RTOOLBAR['custom-toolbar-artigo'] =
     {
         title: RLANG.video,
         func: 'showVideo'
-    },
-    file:
-    {
-        title: RLANG.file,
-        func: 'showFile'
-    },  
+    }, 
     table:                  
     { 
         title: RLANG.table,
