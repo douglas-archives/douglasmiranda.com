@@ -179,6 +179,7 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
 
 #banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
 #banner nav li {float: left; display: inline; margin: 0;}
+#banner nav .form-search {position: absolute; right: 0;}
 
 #banner nav a:link, #banner nav a:visited {
     color: #fff;
