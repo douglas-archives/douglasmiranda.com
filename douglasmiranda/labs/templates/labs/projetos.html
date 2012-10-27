@@ -3,7 +3,8 @@
 {% block titulo %}Projetos - {{ block.super }}{% endblock %}
 
 {% block css %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/projetos.css" type="text/css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}labs/css/projetos.css" type="text/css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}labs/jquery-github-widget/css/skin.css">
 {% endblock %}
 
 {% block content %}
@@ -25,21 +26,20 @@
     </p>
     <p>Grandes corporações, ou mesmo algumas pequenas e médias, não irão te achar ou contratar você porque tu fizestes "tal" aplicação, digo, não tão facilmente. Mas se existe algo disponível para acesso global que você contribui ou mesmo é idealizador do projeto, feito com o mesmo nível de excelência que é utilizado quando você presta serviço, para que currículo melhor que este? A empresa pode visualizar sua interação na comunidade e ver o que faz e como.</p>
     <p>Espero ter passado o que quero com esse texto.</p>
-    <h3>Projetos que apoio, contribuo ou gosto de divulgar</h3>
-    <ul id="ultimos-projetos">
-    {% for projeto in ultimos_projetos %}
-        <li>
-            <a href="{{ projeto.link_externo }}">
-                <img src="{{ projeto.imagem }}">
-                <p>&raquo; {{ projeto.titulo }}</p>
-                <p class="descricao">{{ projeto.descricao }}</p>
-            </a>
-        </li>
-    {% endfor %}
-    </ul>
-    {% include "global-paginator.html" %}
+    <h3>Alguns de meus repositórios no github (by me and forks)</h3>
+    <div id="ultimos-projetos">
+        <div class="github-widget" data-repo="douglasmiranda/douglasmiranda.com"></div>
+        <div class="github-widget" data-repo="douglasmiranda/django-class-based-generic-views"></div>
+        <div class="github-widget" data-repo="douglasmiranda/django-admin-bootstrap"></div>
+        <div class="github-widget" data-repo="douglasmiranda/django-redactorjs"></div>
+        <div class="github-widget" data-repo="douglasmiranda/jquery.gridnav"></div>
+        <div class="github-widget" data-repo="douglasmiranda/jquery.dshortener"></div>
+    </div>
 {% endblock %}
 
 {% block js_footer %}
-    <script src="{{ STATIC_URL }}js/projetos.js"></script>
+    <script src="{{ STATIC_URL }}labs/jquery-github-widget/js/jquery.github.widget.js"></script>
+      <script>
+        $('.github-widget').githubWidget();
+      </script>
 {% endblock %}

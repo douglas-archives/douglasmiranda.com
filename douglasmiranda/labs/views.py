@@ -1,10 +1,5 @@
-from django.views.generic import ListView
-from douglasmiranda.labs.models import Projeto
+from django.views.generic import TemplateView
 
 
-class HomeListView(ListView):
-    context_object_name = 'ultimos_projetos'
-    model = Projeto
+class ProjetosView(TemplateView):
     template_name = 'labs/projetos.html'
-    query_set = Projeto.objects.all()
-    paginate_by = 6

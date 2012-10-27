@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import patterns, url
-from douglasmiranda.labs.views import HomeListView
+from douglasmiranda.labs.views import ProjetosView
 
 
 urlpatterns = patterns('',
-    url(r'^projetos/', HomeListView.as_view(), name='labs-projetos'),
+    url(r'^projetos/', ProjetosView.as_view(), name='labs-projetos'),
 )
