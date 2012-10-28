@@ -42,22 +42,13 @@
     color:#333333;
 }
 #detail img{
-    margin: 10px 15px;
     border: 5px solid #f4f4f4;
+    display: block;
+    margin: 10px auto;
+    max-width: 95%;
 }
 #detail img:hover{border: 5px solid #F96F13;}
-#detail .img_left{float: left;}
-#detail .img_right{float: right;}
-#detail .img_center{
-    margin:10px auto;
-    display:block;
-}
-#detail .img_block{
-    clear: both;
-    display: block;
-    float: none;
-    margin: 14px 0;
-}
+
 .entry-content iframe{
     margin:10px auto;
     display:block;
