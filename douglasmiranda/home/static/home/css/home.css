@@ -116,7 +116,7 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 
 #extras a:link, #extras a:visited {
     color: #444;
-    display: block;
+    display: inline-block;
     border-bottom: 1px solid #F4E3E3;
     text-decoration: none;
     padding: .3em .25em;
@@ -138,6 +138,22 @@ img.left, figure.left {float: right; margin: 0 0 2em 2em;}
 #extras .social {
     float: right;
     width: 175px;
+}
+#extras .social i {
+    background: url(../img/icons-links-me.png);
+    display: inline-block;
+    height: 15px;
+    margin-right: 5px;
+    width: 15px;
+}
+#extras .social .twitter {
+    background-position: 15px 0;
+}
+#extras .social .feedburner {
+    background-position: 0 0;
+}
+#extras .social .github {
+    background-position: 32px 0;
 }
 
 #extras li:last-child,
