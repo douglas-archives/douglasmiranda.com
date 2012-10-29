@@ -10,3 +10,8 @@ h3 a{
     width: 100%;
     margin:0px;
 }
+.link-to-my-github{
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+}
