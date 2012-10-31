@@ -1,5 +1,4 @@
 *.pyc
-local_settings.py
 douglasmiranda/media/uploads/*
 douglasmiranda/settings/dev.py
 douglasmiranda/settings/prod.py
