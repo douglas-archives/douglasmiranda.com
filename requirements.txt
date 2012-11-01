@@ -1,6 +1,6 @@
 Django==1.4
-git+https://github.com/douglasmiranda/django-redactorjs#egg=django-redactorjs
-git+https://github.com/douglasmiranda/django-admin-bootstrap#django-admin-bootstrap
+git+git@github.com:douglasmiranda/django-redactorjs.git
+git+git@github.com:douglasmiranda/django-admin-bootstrap.git
 django-filer==0.9
 PIL==1.1.7
 mysql-python==1.2.3
