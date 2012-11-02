@@ -100,7 +100,7 @@ def start_migration():
 @roles('server')
 def start_gunicorn():
     with cd(env.project_root):
-        run('./start_gunicorn.py')
+        run('./start_gunicorn.sh')
 
 
 @roles('server')
@@ -137,6 +137,7 @@ def upload_django_settings():
 @roles('server')
 def upload_gunicorn_settings():
     upload_template('start_gunicorn.sh', '%(project_root)s' % env)
+    run("chmod +x %(project_root)s/start_gunicorn.sh" % env)
     upload_template('etc/gunicorn.prod.conf', '%(project_root)s/etc/' % env)
 
 
