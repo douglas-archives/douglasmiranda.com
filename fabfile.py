@@ -100,7 +100,7 @@ def start_migration():
 @roles('server')
 def start_gunicorn():
     with cd(env.project_root):
-        run('./start_gunicorn_prod.py')
+        run('./start_gunicorn.py')
 
 
 @roles('server')
@@ -130,8 +130,14 @@ def syncdb():
 
 
 @roles('server')
-def upload_config():
+def upload_django_settings():
     upload_template('douglasmiranda/settings/prod.py', '%(project_root)s/douglasmiranda/settings/' % env)
+
+
+@roles('server')
+def upload_gunicorn_settings():
+    upload_template('start_gunicorn.sh', '%(project_root)s' % env)
+    upload_template('etc/gunicorn.prod.conf', '%(project_root)s/etc/' % env)
 
 
 @roles('server')
@@ -140,4 +146,4 @@ def deploy():
     update_app()
     pip_install()
     collect_static_files()
-    # restart_gunicorn()
+    restart_gunicorn()

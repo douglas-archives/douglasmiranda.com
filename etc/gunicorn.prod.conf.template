@@ -1,0 +1,5 @@
+bind = '0.0.0.0:00000'
+workers = 3
+worker_class = 'gevent'
+pidfile = '/path/to/store/the/gunicorn.pid'
+django_settings = 'DJANGO_PROJECT_NAME.settings.prod'

@@ -2,4 +2,6 @@
 douglasmiranda/media/uploads/*
 douglasmiranda/settings/dev.py
 douglasmiranda/settings/prod.py
+etc/gunicorn.prod.conf
+start_gunicorn.sh
 tmp/*
