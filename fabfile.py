@@ -132,8 +132,8 @@ def upload_gunicorn_settings():
 @roles('server')
 def syncdb():
     with cd(env.project_root):
-        run("%(virtualenv_dir)s/bin/python manage.py syncdb syncdb --noinput  --settings=douglasmiranda.settings.prod" % env)
-        run("%(virtualenv_dir)s/bin/python manage.py syncdb migrate --noinput  --settings=douglasmiranda.settings.prod" % env)
+        run("%(virtualenv_dir)s/bin/python manage.py syncdb --noinput  --settings=douglasmiranda.settings.prod" % env)
+        run("%(virtualenv_dir)s/bin/python manage.py migrate --noinput  --settings=douglasmiranda.settings.prod" % env)
 
 
 @roles('server')
