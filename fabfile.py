@@ -92,12 +92,6 @@ def collect_static_files():
 
 
 @roles('server')
-def start_migration():
-    with cd(env.project_root):
-        run("%(virtualenv_dir)s/bin/python manage.py db-migrate" % env)
-
-
-@roles('server')
 def start_gunicorn():
     with cd(env.project_root):
         run('./start_gunicorn.sh')
@@ -124,12 +118,6 @@ def create_user():
 
 
 @roles('server')
-def syncdb():
-    with cd(env.project_root):
-        run("%(virtualenv_dir)s/bin/python manage.py syncdb --settings=douglasmiranda.settings.prod --noinput" % env)
-
-
-@roles('server')
 def upload_django_settings():
     upload_template('douglasmiranda/settings/prod.py', '%(project_root)s/douglasmiranda/settings/' % env)
 
@@ -139,6 +127,13 @@ def upload_gunicorn_settings():
     upload_template('start_gunicorn.sh', '%(project_root)s' % env)
     run("chmod +x %(project_root)s/start_gunicorn.sh" % env)
     upload_template('etc/gunicorn.prod.conf', '%(project_root)s/etc/' % env)
+
+
+@roles('server')
+def syncdb():
+    with cd(env.project_root):
+        run("%(virtualenv_dir)s/bin/python manage.py syncdb syncdb --noinput  --settings=douglasmiranda.settings.prod" % env)
+        run("%(virtualenv_dir)s/bin/python manage.py syncdb migrate --noinput  --settings=douglasmiranda.settings.prod" % env)
 
 
 @roles('server')
