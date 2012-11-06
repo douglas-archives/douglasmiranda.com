@@ -16,6 +16,7 @@ class ArtigoAdminForm(forms.ModelForm):
                     'autoresize': True,
                     'removeClasses': False,
                     'css': 'custom-editor-artigo.css',
+                    'extra_script': 'js/modal_box_image_filer.js',
                     'toolbar': 'custom-toolbar-artigo',
                 },
                 upload_to='artigo/imagens/' + datetime.now().strftime("%Y/%m/%d/"),

@@ -16,6 +16,22 @@ $(document).ready(function () {
         n = (node.tagName) ? $(node) : $(node.parentElement);
         n.hasClass('clearfix') ? n.removeClass('clearfix') : n.addClass('clearfix');
     });
+    $('.redactor_btn_image').live('click', function(){
+        django.jQuery("#id_filer_insert_image_in_redactor").hide();
+        django.jQuery("#id_filer_insert_image_in_redactor_clear").click(function(){
+            django.jQuery("#id_filer_insert_image_in_redactor").removeAttr("value");
+            django.jQuery("#id_filer_insert_image_in_redactor_thumbnail_img").attr("src", "/static/filer/icons/nofile_48x48.png");
+            django.jQuery("#id_filer_insert_image_in_redactor_description_txt").html("");
+            django.jQuery("#id_filer_insert_image_in_redactor_clear").hide();
+        });
+        django.jQuery(document).ready(function(){
+            var plus = django.jQuery("#add_id_filer_insert_image_in_redactor");
+            if (plus.length){
+                plus.remove();
+            }
+        });
+        $('.redactor_btn_image').die('click');
+    });
 });
 
 RTOOLBAR['custom-toolbar-artigo'] = 
