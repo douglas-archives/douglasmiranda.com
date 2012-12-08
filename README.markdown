@@ -12,6 +12,8 @@ Na verdade tentei escrever o máximo em português até nomes de variaveis, pois
 
 [django-filer](https://github.com/stefanfoulis/django-filer) - Manipulador de arquivos de mídia
 
+[django-redactorjs](https://github.com/douglasmiranda/django-redactorjs) - Um WYSIWYG editor. Uma versão fiz algumas melhorias.
+
 Na interface:
 
 [layout](http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/) - Não sou designer, então o layout é de um artigo de Smashing Magazine com uma série de adaptações necessárias
