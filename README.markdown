@@ -8,9 +8,9 @@ Na verdade tentei escrever o máximo em português até nomes de variaveis, pois
 
 [Django](https://www.djangoproject.com/) - Um ótimo framework para desenvolvimento web em Python
 
-[django-grappelli](https://github.com/sehmaschine/django-grappelli) - Um skin para o painel de administração do Django, gostei bastante dele. :)
+[django-admin-bootstrap](https://github.com/douglasmiranda/django-admin-bootstrap) - Um responsible skin para o painel de administração do Django.
 
-[django-filebrowser](https://github.com/sehmaschine/django-filebrowser) - Manipulador de arquivos de mídia
+[django-filer](https://github.com/stefanfoulis/django-filer) - Manipulador de arquivos de mídia
 
 Na interface:
 
