@@ -25,6 +25,7 @@ class ArtigoAdminForm(forms.ModelForm):
 
 
 class ArtigoAdmin(admin.ModelAdmin):
+    actions_on_bottom = True
     list_display = ('titulo', 'publicacao', 'status', 'principal')
     date_hierarchy = 'publicacao'
     list_filter = ['publicacao', 'status']
@@ -33,6 +34,7 @@ class ArtigoAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("titulo",)}
     radio_fields = {"status": admin.HORIZONTAL}
     form = ArtigoAdminForm
+    list_per_page = 10
 
 
 admin.site.register(Artigo, ArtigoAdmin)
