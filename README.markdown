@@ -12,7 +12,7 @@ Na verdade tentei escrever o máximo em português até nomes de variaveis, pois
 
 [django-filer](https://github.com/stefanfoulis/django-filer) - Manipulador de arquivos de mídia
 
-[django-redactorjs](https://github.com/douglasmiranda/django-redactorjs) - Um WYSIWYG editor. Uma versão fiz algumas melhorias.
+[django-wysiwyg-redactor](https://github.com/douglasmiranda/django-wysiwyg-redactor) - WYSIWYG editor. Uma versão do django-redactorjs que fiz algumas melhorias.
 
 Na interface:
 
