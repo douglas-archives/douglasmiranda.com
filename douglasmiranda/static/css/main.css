@@ -131,10 +131,11 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
 #banner {
     margin: 0 auto;
     padding: 2.5em 0 0 0;
+    position: relative;
 }
 
     /* Banner */
-    #banner h1 {font-size: 3.571em; line-height: .6;}
+    #banner h1 {font-size: 2.871em; font-family: 'Cinzel Decorative', cursive; line-height: .6;}
     #banner h1 a:link, #banner h1 a:visited {
         color: #000305;
         display: block;
@@ -169,12 +170,12 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     position:relative;
 }
 #banner #rss{
+    background: url("../images/header/rss.png") repeat scroll 0 0 transparent;
+    bottom: 37px;
+    height: 30px;
     position: absolute;
     right: -5px;
-    top: 100px;
     width: 30px;
-    height: 30px;
-    background:url(../images/header/rss.png);
 }
 
 #banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
@@ -223,6 +224,9 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     Footer
 *****************/
 #contentinfo {padding-bottom: 2em; text-align: right;}
+.footer-credits{
+    font-family: 'Cinzel Decorative', cursive;
+}
 /*
     About
 *****************/

@@ -36,9 +36,7 @@ artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" /
 					</strong>
 				</a>
 			</h1>
-			<a id="rss" href="http://feeds.feedburner.com/douglasmiranda" title="inscrever feed"></a>
 			{% include "horizontal-menu.html" %}
-
 		</header><!-- /#banner -->
 
 		{% block featured %}{% endblock %}
@@ -62,11 +60,11 @@ artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" /
 				</a>
 				<span class="bio">Olá, sou esse cara aí do lado. Tento falar aqui nesse blog um pouco sobre desenvolvimento, compartilhar experiências e expor o meu pensamento de modo open-source para você ler, argumentar, melhorar e redistribuir. :)</span>
 			</address><!-- /#about -->
-			<p>
+			<p class="footer-credits">
 				<a href="http://www.djangoproject.com/" style="float:left">
 				<img border="0" title="Made with Django." alt="Made with Django." src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif">
 				</a>
-				 2011 - 2012
+				 2011 - 2012 / 
 				 <a href="{% url projeto-me %}">Douglas Miranda</a>
 			</p>
 		</footer><!-- /#contentinfo -->
@@ -84,6 +82,20 @@ artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" /
 				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+		<script type="text/javascript">
+			WebFontConfig = {
+				google: { families: [ 'Cinzel+Decorative::latin' ] }
+			};
+			(function() {
+				var wf = document.createElement('script');
+				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+				  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+				wf.type = 'text/javascript';
+				wf.async = 'true';
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(wf, s);
 			})();
 		</script>
 	</div>
