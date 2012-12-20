@@ -35,7 +35,7 @@ aside, nav, article, figure {
 
 /* Body */
 body {
-    background: url("../images/body/background.png") repeat-x 0 0 #F4F4F4;
+    background: url("http://static.douglasmiranda.com/images/body/background.png") repeat-x 0 0 #F4F4F4;
     color: #000305;
     font-size: 14px;
     font-family: helvetica, arial;
@@ -169,13 +169,13 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     border-radius: 5px;
     position:relative;
 }
-#banner #rss{
-    background: url("../images/header/rss.png") repeat scroll 0 0 transparent;
-    bottom: 37px;
-    height: 30px;
+#ninja{
+    background: url(http://static.douglasmiranda.com/images/header/ninja.png) no-repeat;
+    bottom: 40px;
+    height: 113px;
     position: absolute;
-    right: -5px;
-    width: 30px;
+    right: -41px;
+    width: 145px;
 }
 
 #banner nav ul {list-style: none; margin: 0 auto; width: 800px;}
