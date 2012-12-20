@@ -7,7 +7,6 @@ from fabric.api import cd, env, roles, run, local
 from fabric.contrib.files import exists
 from fabric.contrib.files import upload_template
 
-
 env.root = os.path.dirname(os.path.abspath(__file__))
 env.repo = 'git@bitbucket.org:douglasmiranda/douglasmiranda.com.git'
 env.project = 'douglasmiranda_app'
