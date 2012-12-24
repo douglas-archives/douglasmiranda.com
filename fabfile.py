@@ -142,3 +142,10 @@ def deploy():
     pip_install()
     collect_static_files()
     restart_gunicorn()
+
+
+@roles('server')
+def template_deploy():
+    update_repo()
+    update_app()
+    collect_static_files()
