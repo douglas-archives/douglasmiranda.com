@@ -47,12 +47,18 @@ $(document).ready(function(){
         }, 500, function() {
             $(this).css('z-index', '1');
         });
+        $(this).stop().animate({
+            width: 200
+        }, 500);
     });
     $(input_text).blur(function(){
         $(this).removeClass("active");
         if(!$(input_submit).hasClass("hover")){
             $(input_submit).stop().css('z-index', '-1').animate({
                 right: '95'
+            }, 500);
+            $(this).stop().animate({
+                width: 100
             }, 500);
         }
     });
