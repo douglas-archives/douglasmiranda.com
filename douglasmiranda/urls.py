@@ -18,7 +18,6 @@ urlpatterns = patterns('',
     (r'^artigo/', include('douglasmiranda.blog.urls')),
     (r'^rss/(?P<url>.*)/$', UltimosArtigos(), {'feed_dict': {'ultimos': UltimosArtigos}}),
 
-    # (r'^static/(.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     (r'^media/(.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 
     url(r'^redactor/', include('redactor.urls')),
