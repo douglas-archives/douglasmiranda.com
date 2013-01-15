@@ -1,104 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR" {% block atributos_html_tag %}{% endblock %}>
 <head>
-	<meta charset="utf-8" />
-	<meta name="google-site-verification" content="64KgpIRkL_XFYVed2Pju392AunehCxJH5mH__wbPoag" />
-	{% block meta_og %}
-		<meta property="og:title" content="Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YAH!"/>
-		<meta property="og:type" content="website"/>
-		<meta property="og:url" content="http://douglasmiranda.com/"/>
-		<meta property="og:image" content="{{STATIC_URL}}images/icon.png" />
-		<meta property="og:site_name" content="douglasmiranda.com"/>
-		<meta property="og:description" content="Artigos sobre desenvolvimento web e falo um pouco sobre o que faço, aprendo e vivencio em minha profissão."/>
-		<meta property="description" content="Artigos sobre desenvolvimento web e falo um pouco sobre o que faço, aprendo e vivencio em minha profissão."/>
-	{% endblock %}
+    <meta charset="utf-8" />
+    <meta name="google-site-verification" content="64KgpIRkL_XFYVed2Pju392AunehCxJH5mH__wbPoag" />
+    {% block meta_og %}
+        <meta property="og:title" content="Douglas Miranda - Python, Django, Desenvolvimento de Software e a arte ninja. YAH!"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="http://douglasmiranda.com/"/>
+        <meta property="og:image" content="{{STATIC_URL}}images/icon.png" />
+        <meta property="og:site_name" content="douglasmiranda.com"/>
+        <meta property="og:description" content="Artigos sobre desenvolvimento web e falo um pouco sobre o que faço, aprendo e vivencio em minha profissão."/>
+        <meta property="description" content="Artigos sobre desenvolvimento web e falo um pouco sobre o que faço, aprendo e vivencio em minha profissão."/>
+    {% endblock %}
 
-	<link rel="alternate" type="application/rss+xml" title="Ultimos
+    <link rel="alternate" type="application/rss+xml" title="Ultimos
 artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" />
-	<link rel="shortcut icon" href="/favicon.png" type="image/png" />
-	<title>{% block titulo %}Douglas Miranda{% endblock %}</title>
-	<link rel="stylesheet" href="{{ STATIC_URL }}css/main.css?v=3" type="text/css" />
-	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+    <title>{% block titulo %}Douglas Miranda{% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css?v=3" type="text/css" />
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-	{% block css %}{% endblock %}
-	{% block js_head %}{% endblock %}
-	{% block extra_head %}{% endblock %}
+    {% block css %}{% endblock %}
+    {% block js_head %}{% endblock %}
+    {% block extra_head %}{% endblock %}
 
 </head>
 <body>
-	<div id="wrapper">
-		<header id="banner">
-			<h1>
-				<a href="{% url projeto-inicial %}">
-					Douglas Miranda
-					<strong>
-						Python, Django, Desenvolvimento de Software e a arte ninja. YAH!
-					</strong>
-				</a>
-			</h1>
-			<div id="ninja"></div>
-			{% include "horizontal-menu.html" %}
-		</header><!-- /#banner -->
+    <div id="wrapper">
+        <header id="banner">
+            <h1>
+                <a href="{% url projeto-inicial %}">
+                    Douglas Miranda
+                    <strong>
+                        Python, Django, Desenvolvimento de Software e a arte ninja. YAH!
+                    </strong>
+                </a>
+            </h1>
+            <div id="ninja"></div>
+            {% include "horizontal-menu.html" %}
+        </header><!-- /#banner -->
 
-		{% block featured %}{% endblock %}
+        {% block featured %}{% endblock %}
 
-		<section id="content">
+        <section id="content">
+            {% block content %}{% endblock %}
+        </section><!-- /#content -->
 
-			{% block content %}{% endblock %}
+        {% block extras %}{% endblock %}
 
-		</section><!-- /#content -->
-
-		{% block extras %}{% endblock %}
-
-		<footer id="contentinfo" class="body">
-			<address id="about" class="vcard body">
-				<span class="primary">
-					<strong>whoami()</strong>
-					<span class="role">Hey you! Look &raquo;</span>
-				</span><!-- /.primary -->
-				<a href="{% url projeto-me %}">
-					<img src="{{ STATIC_URL }}images/home/douglas-miranda.jpg" alt="oi?" class="photo" width="55" height="55" />
-				</a>
-				<span class="bio">Olá, sou esse cara aí do lado. Tento falar aqui nesse blog um pouco sobre desenvolvimento, compartilhar experiências e expor o meu pensamento de modo open-source para você ler, argumentar, melhorar e redistribuir. :)</span>
-			</address><!-- /#about -->
-			<p class="footer-credits">
-				<a href="http://www.djangoproject.com/" style="float:left">
-				<img border="0" title="Made with Django." alt="Made with Django." src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif">
-				</a>
-				 2011 - 2012 / 
-				 <a href="{% url projeto-me %}">Douglas Miranda</a>
-			</p>
-		</footer><!-- /#contentinfo -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <footer id="contentinfo" class="body">
+            <address id="about" class="vcard body">
+                <span class="primary">
+                    <strong>whoami()</strong>
+                    <span class="role">Hey you! Look &raquo;</span>
+                </span><!-- /.primary -->
+                <a href="{% url projeto-me %}">
+                    <img src="{{ STATIC_URL }}images/home/douglas-miranda.jpg" alt="oi?" class="photo" width="55" height="55" />
+                </a>
+                <span class="bio">Olá, sou esse cara aí do lado. Tento falar aqui nesse blog um pouco sobre desenvolvimento, compartilhar experiências e expor o meu pensamento de modo open-source para você ler, argumentar, melhorar e redistribuir. :)</span>
+            </address><!-- /#about -->
+            <p class="footer-credits">
+                <a href="http://www.djangoproject.com/" style="float:left">
+                <img border="0" title="Made with Django." alt="Made with Django." src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif">
+                </a>
+                 2011 - 2012 / 
+                 <a href="{% url projeto-me %}">Douglas Miranda</a>
+            </p>
+        </footer><!-- /#contentinfo -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/jquery-1.7.2.min.js">\x3C/script>')</script>
-		<script src="{{ STATIC_URL }}js/global.js"></script>
+        <script src="{{ STATIC_URL }}js/global.js"></script>
 
-		{% block js_footer %}{% endblock %}
+        {% block js_footer %}{% endblock %}
 
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-26623511-1']);
-			_gaq.push(['_trackPageview']);
-			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-		<script type="text/javascript">
-			WebFontConfig = {
-				google: { families: [ 'Cinzel+Decorative::latin' ] }
-			};
-			(function() {
-				var wf = document.createElement('script');
-				wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-				  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-				wf.type = 'text/javascript';
-				wf.async = 'true';
-				var s = document.getElementsByTagName('script')[0];
-				s.parentNode.insertBefore(wf, s);
-			})();
-		</script>
-	</div>
+        <script type="text/javascript">
+            // analytics
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-26623511-1']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+            // google webfont
+            WebFontConfig = {
+                google: { families: [ 'Cinzel+Decorative::latin' ] }
+            };
+            (function() {
+                var wf = document.createElement('script');
+                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+            })();
+        </script>
+    </div>
 </body>
 </html>
