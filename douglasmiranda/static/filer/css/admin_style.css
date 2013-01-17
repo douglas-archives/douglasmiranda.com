@@ -58,3 +58,41 @@ a.small_folder_link {
 	line-height: 36px;
 	float: right;
 }
+.wrapper-search-and-tools{
+	display:table;
+	margin: 15px 0 15px 0;
+	width: 100%;
+}
+.wrapper-search-and-tools form{
+	margin: 0;
+}
+#content-main .object-tools{
+	margin: 0;
+}
+.object-tools li{
+	display: inline;
+}
+#changelist-search label{
+	display: inline;
+}
+#changelist #changelist-form{
+	top: 0 ;
+}
+#changelist-search .small.quiet{
+	font-size: 12px;
+}
+.limit-search-to-folder{
+	margin: 4px;
+	padding: 4px 8px;
+	vertical-align: middle;
+}
+.limit-search-to-folder input{
+	margin: 0 2px;
+}
+@media (max-width: 800px) {
+	#changelist-search .small.quiet{
+		display: block;
+		margin: 10px 0;
+		text-align: center;
+	}
+}
