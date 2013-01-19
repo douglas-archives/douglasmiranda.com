@@ -42,12 +42,6 @@ a.insertlinkButton:hover {
 	background-image: url(../img/select_item-hover.gif);
 }
 
-h1.folder_header {
-	background-image: url(../img/nav-bg.gif);
-	background-repeat: repeat-x;
-	background-position: bottom;
-	margin-bottom: 0;
-}
 a.small_folder_link {
 	display: block;
 	height: 36px;
@@ -59,14 +53,15 @@ a.small_folder_link {
 	float: right;
 }
 .wrapper-search-and-tools{
-	display:table;
-	margin: 15px 0 15px 0;
-	width: 100%;
+	margin-bottom: 15px;
+}
+.popup .wrapper-search-and-tools{
+	margin-top: 15px;
 }
 .wrapper-search-and-tools form{
 	margin: 0;
 }
-#content-main .object-tools{
+.wrapper-search-and-tools .object-tools{
 	margin: 0;
 }
 .object-tools li{
@@ -89,10 +84,75 @@ a.small_folder_link {
 .limit-search-to-folder input{
 	margin: 0 2px;
 }
+#toolbartable b a{
+	line-height: 14px;
+}
+#toolbartable b a{
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 300px;
+}
+#toolbartable .checkbox-column,
+#toolbartable .action-checkbox-column{
+	width: 15px;
+	text-align: center;
+}
+#content-main .folder_header{
+	background: none;
+	font-size: 20px;
+}
+.folder_header a i{
+	margin-top: 8px;
+}
+#content-related{
+	padding: 0px;
+	margin-top: 75px;
+}
+.clipboard .item-label{
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+.row-changelist{
+	border-top: 1px solid #CCCCCC;
+}
+#changelist-form .go{
+	border-radius: 0 3px 3px 0;
+}
+#changelist-form .actions {
+	padding: 10px;
+}
+#changelist-form .actions label{
+	line-height: 25px;
+}
 @media (max-width: 800px) {
 	#changelist-search .small.quiet{
 		display: block;
 		margin: 10px 0;
 		text-align: center;
+	}
+	#toolbartable b a{
+		width: 170px;
+	}
+	#main-container .container-object-tools,
+	#main-container .container-changelist-search{
+		float: none;
+		margin: 0;
+		text-align: center;
+		width: 100%;
+	}
+	.wrapper-search-and-tools .pull-left,
+	.wrapper-search-and-tools .pull-right{
+		float: none;
+	}
+	.wrapper-search-and-tools .object-tools{
+		text-align: center;
+		margin-top: 10px;
 	}
 }

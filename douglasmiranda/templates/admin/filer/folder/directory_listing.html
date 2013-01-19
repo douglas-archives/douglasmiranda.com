@@ -53,17 +53,15 @@
     {% endwith %}
 {% endblock %}
 
-{% block sidebar %}
-    <div id="content-related">
-        {% include "admin/filer/tools/clipboard/clipboard.html" %}
-    </div>
-{% endblock %}
+{% block sidebar %}{% endblock %}
 
 {% block content_title %}{% endblock %}
 {% block content %}
-<div id="content-main">
-    <div class="wrapper-search-and-tools" >
+<div class="wrapper-search-and-tools row-fluid">
+    <div class="span8 container-changelist-search">
         {% include "admin/filer/tools/search_form.html" %}
+    </div>
+    <div class="span4 container-object-tools">
         <ul class="object-tools pull-right">
             {% if folder.can_have_subfolders %}
                 <li>
@@ -78,31 +76,36 @@
             {% include 'admin/filer/tools/upload_button_js.html' %}
         </ul>
     </div>
-    
-    <div class="module" id="changelist">
-        {% if not folder.is_root %}
-        <h1 class="folder_header">{% if folder.parent %}<a href="{% url 'admin:filer-directory_listing' folder.parent.id %}{% if is_popup %}?_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}" title="{% trans "Go back to the parent folder" %}">&uarr;</a>{% else %}<a href="{% url 'admin:filer-directory_listing-root' %}{% if is_popup %}?_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}" title="{% trans "Go back to" %} {% trans "root"|title %} {% trans "folder" %}">&uarr;</a>{% endif %}
-            <img src="{{ folder.icons.32 }}" alt="{% trans "Folder Icon" %}" /> {{ folder.name }}
-            <span class="small quiet">({% blocktrans count folder.children_count as counter %}1 folder{% plural %}{{ counter }} folders{% endblocktrans %}, {% blocktrans count folder.file_count as counter %}1 file{% plural %}{{ counter }} files{% endblocktrans %})</span>
-            <span>
-                {% if is_popup %}
-                    {% if select_folder and folder.file_type == 'Folder' %}<a class="insertlink insertlinkButton" href="" onclick="opener.dismissRelatedFolderLookupPopup(window, {{ folder.id }}, '{{ folder.pretty_logical_path }}'); return false;" >&nbsp;</a>{% endif %}
-                {% else %}<a style="display: block; float: right;" class="changelink" href="{% url 'admin:filer_folder_change' folder.id %}" title="{% trans "Change current folder details" %}">{% trans "Change" %}</a>{% endif %}
-            </span>
-        </h1>
-        {% else %}{% if folder.is_smart_folder %}
-        <h1 class="folder_header"><a href="{% url 'admin:filer-directory_listing-root' %}{% if is_popup %}?_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}">&uarr;</a>
-            <img src="{{ folder.icons.32 }}" alt="{% trans "Folder Icon" %}" /> {{ folder.name }}
-        </h1>
-        {% endif %}
-        {% endif %}
-        <form id="changelist-form" action="" method="post">{% csrf_token %}
-        {% if is_popup %}<input type="hidden" name="_popup" value="1" />{% endif %}
-        {% if action_form and actions_on_top and paginator.count and not select_folder and not is_popup %}{% filer_actions %}{% endif %}
-        {% include "admin/filer/folder/directory_table.html" %}
-        {% if action_form and actions_on_bottom and paginator.count and not select_folder and not is_popup %}{% filer_actions %}{% endif %}
-        </form>
+</div>
+<div class="row-fluid row-changelist">
+    <div id="content-main" class="span8">
+        <div class="module" id="changelist">
+            {% if not folder.is_root %}
+            <h1 class="folder_header">{% if folder.parent %}<a href="{% url 'admin:filer-directory_listing' folder.parent.id %}{% if is_popup %}?_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}" title="{% trans "Go back to the parent folder" %}"><i class="icon-arrow-up"></i></a>{% else %}<a href="{% url 'admin:filer-directory_listing-root' %}{% if is_popup %}?_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}" title="{% trans "Go back to" %} {% trans "root"|title %} {% trans "folder" %}"><i class="icon-arrow-up"></i></a>{% endif %}
+                <img src="{{ folder.icons.32 }}" alt="{% trans "Folder Icon" %}" /> {{ folder.name }}
+                <span class="small quiet">({% blocktrans count folder.children_count as counter %}1 folder{% plural %}{{ counter }} folders{% endblocktrans %}, {% blocktrans count folder.file_count as counter %}1 file{% plural %}{{ counter }} files{% endblocktrans %})</span>
+                <span>
+                    {% if is_popup %}
+                        {% if select_folder and folder.file_type == 'Folder' %}<a class="insertlink insertlinkButton" href="" onclick="opener.dismissRelatedFolderLookupPopup(window, {{ folder.id }}, '{{ folder.pretty_logical_path }}'); return false;" >&nbsp;</a>{% endif %}
+                    {% else %}<a style="display: block; float: right;" class="changelink" href="{% url 'admin:filer_folder_change' folder.id %}" title="{% trans "Change current folder details" %}">{% trans "Change" %}</a>{% endif %}
+                </span>
+            </h1>
+            {% else %}{% if folder.is_smart_folder %}
+            <h1 class="folder_header"><a href="{% url 'admin:filer-directory_listing-root' %}{% if is_popup %}?_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}"><i class="icon-arrow-up"></i></a>
+                <img src="{{ folder.icons.32 }}" alt="{% trans "Folder Icon" %}" /> {{ folder.name }}
+            </h1>
+            {% endif %}
+            {% endif %}
+            <form id="changelist-form" action="" method="post">{% csrf_token %}
+            {% if is_popup %}<input type="hidden" name="_popup" value="1" />{% endif %}
+            {% if action_form and actions_on_top and paginator.count and not select_folder and not is_popup %}{% filer_actions %}{% endif %}
+            {% include "admin/filer/folder/directory_table.html" %}
+            {% if action_form and actions_on_bottom and paginator.count and not select_folder and not is_popup %}{% filer_actions %}{% endif %}
+            </form>
+        </div>
+    </div>
+    <div id="content-related" class="span4 well">
+        {% include "admin/filer/tools/clipboard/clipboard.html" %}
     </div>
 </div>
-
 {% endblock %}

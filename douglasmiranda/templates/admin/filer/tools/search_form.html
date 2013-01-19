@@ -8,7 +8,7 @@
             <input type="hidden" name="_popup" value="1" />
             {% if select_folder %}<input type="hidden" name="select_folder" value="1" />{% endif %}
         {% endif %}
-        <input type="text" class="span3 search-query" name="q" placeholder="{% trans "Enter your search phrase here" %}" value="{{ search_string }}" id="searchbar" title="{% trans "Enter your search phrase here" %}" />
+        <input type="text" class="span6 search-query" name="q" placeholder="{% trans "Enter your search phrase here" %}" value="{{ search_string }}" id="searchbar" title="{% trans "Enter your search phrase here" %}" />
         <button class="btn" type="submit" title="{% trans "Click here to" %} {% trans "run search for entered phrase" %}"><i class="icon-search"></i> {% trans "Search" %}</button>
         <label class="badge badge-info limit-search-to-folder" for="limit_search_to_folder">
             <input type="checkbox" id="limit_search_to_folder" name="limit_search_to_folder" {% if limit_search_to_folder %}checked="checked"{% endif %} title="{% trans "Check it to" %} {% trans "limit the search to current folder" %}"/>{% trans "limit the search to current folder" %}
