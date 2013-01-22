@@ -29,19 +29,6 @@ table thead th.thumbHeader {
 	background-repeat:no-repeat;
 	
 }
-.clipboard tr td.thumbnail {
-	width: 40px;
-}
-a.insertlinkButton {
-	padding: 4px;
-	padding-left: 28px;
-	background-image: url(../img/select_item.gif);
-	background-repeat: no-repeat;
-}
-a.insertlinkButton:hover {
-	background-image: url(../img/select_item-hover.gif);
-}
-
 a.small_folder_link {
 	display: block;
 	height: 36px;
@@ -84,15 +71,26 @@ a.small_folder_link {
 .limit-search-to-folder input{
 	margin: 0 2px;
 }
+#toolbartable tbody td{
+	vertical-align: middle;
+}
 #toolbartable b a{
 	line-height: 14px;
 }
-#toolbartable b a{
-	display: inline-block;
+#toolbartable b a,
+.clipboard .item-label{
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	width: 300px;
+}
+#toolbartable .file-buttons .btn{
+	margin-bottom: 5px;
+}
+#toolbartable .file-buttons .btn-text{
+	display: none;
 }
 #toolbartable .checkbox-column,
 #toolbartable .action-checkbox-column{
@@ -109,15 +107,6 @@ a.small_folder_link {
 #content-related{
 	padding: 0px;
 	margin-top: 15px;
-}
-.clipboard .item-label{
-	display: -webkit-box;
-	display: -moz-box;
-	display: box;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	width: 100%;
 }
 .row-changelist{
 	border-top: 1px solid #CCCCCC;
@@ -138,7 +127,7 @@ a.small_folder_link {
 		text-align: center;
 	}
 	#toolbartable b a{
-		width: 170px;
+		/*width: 280px;*/
 	}
 	#main-container .container-object-tools,
 	#main-container .container-changelist-search{
