@@ -66,17 +66,11 @@
     </table>
     <p class="paginator">
         {% if paginated_items.has_previous %}
-            <a href="?page={{ paginated_items.previous_page_number }}{% if q %}&q={{ q }}{% endif %}{% if is_popup %}&_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}">{% trans "previous" %}</a>
+            <a class="btn btn-inverse" href="?page={{ paginated_items.previous_page_number }}{% if q %}&q={{ q }}{% endif %}{% if is_popup %}&_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}"><i class="icon-chevron-left icon-white"></i> {% trans "previous" %}</a>
         {% endif %}
-
-        <span class="this-page">
-            {% blocktrans with paginated_items.number as number and paginated_items.paginator.num_pages as num_pages %}
-            Page {{ number }} of {{ num_pages }}.
-            {% endblocktrans %}
-        </span>
-
+        <span class="this-page label label-inverse">{% blocktrans with paginated_items.number as number and paginated_items.paginator.num_pages as num_pages %}Page {{ number }} of {{ num_pages }}.{% endblocktrans %}</span> 
         {% if paginated_items.has_next %}
-            <a href="?page={{ paginated_items.next_page_number }}{% if q %}&q={{ q }}{% endif %}{% if is_popup %}&_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}">{% trans "next" %}</a>
+            <a class="btn btn-inverse" href="?page={{ paginated_items.next_page_number }}{% if q %}&q={{ q }}{% endif %}{% if is_popup %}&_popup=1{% if select_folder %}&select_folder=1{% endif %}{% endif %}">{% trans "next" %} <i class="icon-chevron-right icon-white"></i></a>
         {% endif %}
     </p>
 </div>

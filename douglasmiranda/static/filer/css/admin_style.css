@@ -97,11 +97,17 @@ a.small_folder_link {
 	width: 15px;
 	text-align: center;
 }
+#toolbartable .table{
+	border-bottom: 1px dashed #CCCCCC;
+}
+#toolbartable .paginator{
+	text-align: center;
+}
 #content-main .folder_header{
 	background: none;
 	font-size: 20px;
 }
-.folder_header a i{
+.folder_header a .icon-arrow-up{
 	margin-top: 8px;
 }
 #content-related{
@@ -120,6 +126,7 @@ a.small_folder_link {
 #changelist-form .actions label{
 	line-height: 25px;
 }
+
 @media (max-width: 800px) {
 	#changelist-search .small.quiet{
 		display: block;
