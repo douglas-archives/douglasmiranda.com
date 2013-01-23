@@ -1,3 +1,4 @@
+# coding: utf-8
 from django.contrib import admin
 from django import forms
 from douglasmiranda.blog.models import Artigo
@@ -35,6 +36,18 @@ class ArtigoAdmin(admin.ModelAdmin):
     radio_fields = {"status": admin.HORIZONTAL}
     form = ArtigoAdminForm
     list_per_page = 10
+
+    fieldsets = (
+        (None, {
+        'fields': ('titulo', 'resumo', 'conteudo', 'imagem_destaque', 'status')
+        }),
+        ('Opções avançadas',
+            {
+                'classes': ('collapse', 'closed'),
+                'fields': ('publicacao', 'principal', 'slug')
+            }
+        ),
+    )
 
 
 admin.site.register(Artigo, ArtigoAdmin)
