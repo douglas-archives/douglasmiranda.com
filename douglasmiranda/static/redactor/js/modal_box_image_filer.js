@@ -4,14 +4,14 @@ $(document).ready(function () {
             '    <table class="redactor_ruler" width="100%">' +
             '        <tr>' +
             '            <td nowrap>' +
-            '                <img alt="nenhum arquivo selecionado" class="quiet" src="http://static.douglas777.webfactional.com/filer/icons/nofile_48x48.png" id="id_filer_insert_image_in_redactor_thumbnail_img">' +
+            '                <img alt="nenhum arquivo selecionado" class="quiet" src="http://static.douglasmiranda.com/filer/icons/nofile_48x48.png" id="id_filer_insert_image_in_redactor_thumbnail_img">' +
             '            </td>' +
             '            <td width="100%">' +
             '                <span id="id_filer_insert_image_in_redactor_description_txt"></span>' +
             '                <a onclick="return showRelatedObjectLookupPopup(this);" title="Olhar" id="lookup_id_filer_insert_image_in_redactor" class="related-lookup" href="/admin/filer/folder/?t=file_ptr">' +
-            '                    <img width="16" height="16" alt="Olhar" src="http://static.douglas777.webfactional.com/admin/img/icon_searchbox.png">' +
+            '                    <img width="16" height="16" alt="Olhar" src="http://static.douglasmiranda.com/admin/img/icon_searchbox.png">' +
             '                </a>' +
-            '                <img width="10" height="10" style="display: none;" title="Limpar" alt="Limpar" src="http://static.douglas777.webfactional.com/admin/img/icon_deletelink.gif" id="id_filer_insert_image_in_redactor_clear">' +
+            '                <img width="10" height="10" style="display: none;" title="Limpar" alt="Limpar" src="http://static.douglasmiranda.com/admin/img/icon_deletelink.gif" id="id_filer_insert_image_in_redactor_clear">' +
             '                <br>' +
             '                <input type="text" class="span8" name="filer_insert_image_in_redactor" id="id_filer_insert_image_in_redactor" style="display: none;">' +
             '            </td>' +
