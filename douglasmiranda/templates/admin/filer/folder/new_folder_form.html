@@ -3,7 +3,7 @@
 {% block content %}
 <h1>{% trans "Add new" %} {% trans "folder" %}</h1>
 <div id="content-main">
-    <form id="folder_form" method="post" action="" enctype="multipart/form-data">
+    <form id="folder_form" class="well" method="post" action="" enctype="multipart/form-data">
         {% csrf_token %}
         <div>
           <input type="hidden" value="1" name="_popup"/>
@@ -24,14 +24,16 @@
               </div>
             </div>
           </fieldset>
-        <div style="overflow: auto;" class="submit-row">
-            <input type="submit" name="_save" class="default" value="{% trans "Save" %}"/>
-        </div>
+          <div class="form-actions navbar navbar-fixed-bottom">
+              <div class="container">
+                  <div class="pull-left save-options-box">
+                    <input type="submit" name="_save" class="btn btn-primary" value="{% trans "Save" %}"/>
+                  </div>
+              </div>
+          </div>
         <script type="text/javascript">document.getElementById("id_name").focus();</script>
         </div>
     </form>
 </div>
-
-        
  <br class="clear"/>
 {% endblock %}
