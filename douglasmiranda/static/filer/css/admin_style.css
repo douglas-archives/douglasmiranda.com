@@ -62,6 +62,7 @@ a.small_folder_link {
 }
 #changelist-search .small.quiet{
 	font-size: 12px;
+	display: inline-block;
 }
 .limit-search-to-folder{
 	margin: 4px;
