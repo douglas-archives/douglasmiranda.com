@@ -127,7 +127,9 @@ a.small_folder_link {
 #changelist-form .actions label{
 	line-height: 25px;
 }
-
+.change-form #content-related{
+	padding: 19px;
+}
 @media (max-width: 800px) {
 	#changelist-search .small.quiet{
 		display: block;
