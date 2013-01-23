@@ -3,7 +3,6 @@ from django.contrib import admin
 from django import forms
 from douglasmiranda.blog.models import Artigo
 from redactor.widgets import RedactorEditor
-from datetime import datetime
 
 
 class ArtigoAdminForm(forms.ModelForm):
@@ -19,8 +18,7 @@ class ArtigoAdminForm(forms.ModelForm):
                     'css': 'custom-editor-artigo.css',
                     'extra_script': 'js/modal_box_image_filer.js',
                     'toolbar': 'custom-toolbar-artigo',
-                },
-                upload_to='artigo/imagens/' + datetime.now().strftime("%Y/%m/%d/"),
+                }
             ),
         }
 
