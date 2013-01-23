@@ -87,7 +87,7 @@
                 <span>
                     {% if is_popup %}
                         {% if select_folder and folder.file_type == 'Folder' %}<a class="insertlink insertlinkButton" href="" onclick="opener.dismissRelatedFolderLookupPopup(window, {{ folder.id }}, '{{ folder.pretty_logical_path }}'); return false;" >&nbsp;</a>{% endif %}
-                    {% else %}<a class="changelink btn btn-warning" href="{% url 'admin:filer_folder_change' folder.id %}" title="{% trans "Change current folder details" %}"><i class="icon-pencil"></i> {% trans "Change" %}</a>{% endif %}
+                    {% else %}<a class="changelink btn" href="{% url 'admin:filer_folder_change' folder.id %}" title="{% trans "Change current folder details" %}"><i class="icon-pencil"></i> {% trans "Change" %}</a>{% endif %}
                 </span>
             </h1>
             {% else %}{% if folder.is_smart_folder %}
