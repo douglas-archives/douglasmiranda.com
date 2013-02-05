@@ -147,7 +147,8 @@ a.small_folder_link {
 		width: 100%;
 	}
 	.wrapper-search-and-tools .pull-left,
-	.wrapper-search-and-tools .pull-right{
+	.wrapper-search-and-tools .pull-right,
+	.wrapper-search-and-tools .object-tools li{
 		float: none;
 	}
 	.wrapper-search-and-tools .object-tools{

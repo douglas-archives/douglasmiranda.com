@@ -26,4 +26,4 @@
         document.getElementById(id_name).innerHTML = chosenName;
         win.close();
     };
-})(jQuery);
+})(django.jQuery);
