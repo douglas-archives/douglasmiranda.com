@@ -8,7 +8,7 @@ class UltimosArtigos(Feed):
     link = '/'
 
     def items(self):
-        return Artigo.objects.publicados()
+        return Artigo.objects.publicados()[:20]
 
     def item_title(self, item):
         return item.titulo
