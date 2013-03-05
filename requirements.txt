@@ -6,4 +6,4 @@ PIL==1.1.7
 mysql-python==1.2.3
 South==0.7.6
 gevent==0.13.8
-gunicorn==0.15.0
+gunicorn==0.17.2
