@@ -1,8 +1,8 @@
 #Meu website douglasmiranda.com
 
-Queria muito fazer um website para eu utilizar como blog e outras coisas que desse vontade de fazer, então aproveitei que estou aprendendo Django e fiz. Agora quero compartilhar, pois talvez possa ser útil para alguém. :)
+Queria muito fazer um website para eu utilizar como blog e outras coisas que desse vontade de fazer, então aproveitei fiz em Django, que me ajudou muito no aprendizado. Agora quero compartilhar, pois talvez possa ser útil para alguém. :)
 
-Na verdade tentei escrever o máximo em português até nomes de variaveis, pois em inglês temos bastante exemplos, conteúdo e fontes de pesquisa. Já para quem não sabe o outro idioma e está aprendendo talvez seja até difícil quando código, comentários e tudo mais é em inglês.
+Na verdade tentei escrever o máximo em português até nomes de variaveis, pois em inglês temos bastante exemplos, conteúdo e fontes de pesquisa. Já para quem não sabe o outro idioma e está aprendendo talvez seja até difícil quando código, comentários e tudo mais está em inglês.
 
 ##Utilizados no projeto
 
@@ -11,6 +11,8 @@ Na verdade tentei escrever o máximo em português até nomes de variaveis, pois
 [django-admin-bootstrap](https://github.com/douglasmiranda/django-admin-bootstrap) - Um responsible skin para o painel de administração do Django.
 
 [django-filer](https://github.com/stefanfoulis/django-filer) - Manipulador de arquivos de mídia
+
+[django-filer-bootstrap-admin-templates](https://github.com/douglasmiranda/django-filer-bootstrap-admin-templates) - Django Templates  para usar django-filer com django-admin-bootstrap
 
 [django-wysiwyg-redactor](https://github.com/douglasmiranda/django-wysiwyg-redactor) - WYSIWYG editor. Uma versão do django-redactorjs que fiz algumas melhorias.
 
