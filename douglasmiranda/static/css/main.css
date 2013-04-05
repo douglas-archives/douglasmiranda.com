@@ -242,14 +242,14 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     border-radius: 10px;
 }
 
-#about .primary {float: left; width: 165px;}
+#about .primary {float: left; width: 105px;}
 #about .primary strong {color: #C64350; display: block; font-size: 1.286em;}
 #about a {padding: 0px;}
 #about .photo {width:55px; height:55px; float: left; margin: 5px 20px;}
 
 #about .url:link, #about .url:visited {text-decoration: none;}
 
-#about .bio {float: right; width: 500px;}
+#about .bio {float: right; width: 555px;}
 #about .primary strong{
     color:#F96F13;
 }
@@ -290,4 +290,15 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
 #search-form input[type=submit]:hover{
     color: #333;
     cursor:pointer;
+}
+.img-circle {
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    -ms-interpolation-mode: bicubic;
+    -webkit-border-radius: 500px;
+     -moz-border-radius: 500px;
+          border-radius: 500px;
 }
