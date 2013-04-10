@@ -13,6 +13,13 @@
             margin-left:15px;
             line-height: 23px;
         }
+        #content blockquote{
+            padding:30px;
+            margin:15px 0 15px 0;
+            background:url(http://static.douglasmiranda.com/blog/images/articles/blockquote-open.png) no-repeat scroll left top,
+                       url(http://static.douglasmiranda.com/blog/images/articles/blockquote-close.png) no-repeat scroll right bottom;
+            clear:both;
+        }
     </style>
 {% endblock extra_head %}
 
@@ -22,6 +29,23 @@
     <p>Resumindo, sou desenvolvedor do tipo que aprendeu C e JAVA na faculdade, mas na "vida real" caiu nas teias da internet (<strike>teias = web, e ainda sou humorista hein haha, quase mais um do zorra total</strike>). Então conheci o PHP e aprofundei-me mais um pouco, aprendi bastante estudando e trabalhando com o Zend Framework, mas hoje estou gostando muito de trabalhar com Python/Django.</p>
     <p>Sou viciado em informação, gosto de obter conhecimento, seja história, astronomia, tecnologia, vários campos dentro das ciências e gosto bastante de design (só o conceito na cabeça, se for para eu fazer, aí não sai nada =/), artes e música. Viciado em seriados.</p>
     <p>Quando não estou em missões secretas de ninja, (Oops, não podia ter falado isso, agora terei de ir atrás de você!), eu estou desenvolvendo, <a href="{% url 'blog-todos-artigos' %}">escrevendo</a>, lendo, (às vezes tudo isto ao mesmo tempo).</p>
+    <blockquote>
+        Os relógios dizem as horas.
+        Os trens levam a lugares.
+        Servem a seus propósitos.
+
+        Por isso máquinas quebradas
+        me deixam triste.
+
+        Não servem a seus propósitos.
+
+        Talvez seja assim com as pessoas.
+
+        Perder o nosso propósito
+        é como estar quebrado.
+
+        { A Invenção de Hugo Cabret }
+    </blockquote>
     <h3>Links úteis:</h3>
     <ul id="links-uteis">
         <li>
