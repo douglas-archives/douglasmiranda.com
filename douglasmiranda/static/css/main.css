@@ -280,6 +280,7 @@ table {margin: .5em auto 1.5em auto; width: 98%;}
     border: 1px dashed #FFFFFF;
     border-radius: 3px 3px 3px 3px;
     color: #FFFFFF;
+    height: 40px;
     margin-left: 5px;
     padding: 9px;
     position: absolute;
