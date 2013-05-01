@@ -4,7 +4,7 @@
 
 {% block css %}
     <link rel="stylesheet" href="{{ STATIC_URL }}labs/css/projetos.css" type="text/css" />
-    <link rel="stylesheet" href="{{ STATIC_URL }}labs/jquery-github-widget/css/skin.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}labs/jquery-github/base.css">
 {% endblock %}
 
 {% block content %}
@@ -19,26 +19,27 @@
     <p>Existem projetos que são legais de estar envolvido pelo objetivo, (alguns possuem causas sociais, revolucionárias e/ou que ajudam muitas pessoas), aprendizado, entre outros motivos, e creio que todos eles só têm a contribuir. :)</p>
     <h3>Alguns dos repositórios que estão no github</h3>
     <div id="ultimos-projetos">
-        <div class="github-widget" data-repo="douglasmiranda/django-admin-bootstrap"></div>
-        <div class="github-widget" data-repo="douglasmiranda/django-wysiwyg-redactor"></div>
-        <div class="github-widget" data-repo="douglasmiranda/jquery.gridnav"></div>
-        <div class="github-widget" data-repo="douglasmiranda/douglasmiranda.com"></div>
-        <div class="github-widget" data-repo="douglasmiranda/django-class-based-generic-views"></div>
-        <div class="github-widget" data-repo="douglasmiranda/dshortener"></div>
-        <div class="github-widget" data-repo="douglasmiranda/elixir-tips-tricks"></div>
-        <div class="github-widget" data-repo="douglasmiranda/splinter-examples"></div>
+        <div class="github-box-wrap" data-repo="douglasmiranda/django-admin-bootstrap"></div>
+        <div class="github-box-wrap" data-repo="douglasmiranda/django-wysiwyg-redactor"></div>
+        <div class="github-box-wrap" data-repo="douglasmiranda/jquery.gridnav"></div>
+        <div class="github-box-wrap" data-repo="douglasmiranda/douglasmiranda.com"></div>
+        <div class="github-box-wrap" data-repo="douglasmiranda/django-class-based-generic-views"></div>
+        <div class="github-box-wrap" data-repo="douglasmiranda/dshortener"></div>
+        <div class="github-box-wrap" data-repo="douglasmiranda/elixir-tips-tricks"></div>
+        <div class="github-box-wrap" data-repo="douglasmiranda/splinter-examples"></div>
     </div>
     <p>
         <a href="http://github.com/douglasmiranda/" class="link-to-my-github" rel="me">
-            <img src="{{ STATIC_URL }}labs/jquery-github-widget/img/cat.png"><br>
+            <img src="{{ STATIC_URL }}labs/jquery-github/cat.png"><br>
             github.com/douglasmiranda
         </a>
     </p>
 {% endblock %}
 
 {% block js_footer %}
-    <script src="{{ STATIC_URL }}labs/jquery-github-widget/js/jquery.github.widget.js"></script>
-      <script>
-        $('.github-widget').githubWidget();
-      </script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="{{ STATIC_URL }}labs/jquery-github/jquery.github.js"></script>
+    <script>
+        $('[data-repo]').github();
+    </script>
 {% endblock %}
