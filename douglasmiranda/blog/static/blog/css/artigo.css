@@ -107,4 +107,8 @@
 .post-info{margin-top:15px;}
 #facebook-like-article span{
     height:28px !important;
+    top:4px;
+}
+.social-links{
+    position: relative;
 }

@@ -31,10 +31,12 @@
 				</a>
 			</h1>
 			<p>{{ artigo.resumo }}</p>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ artigo.titulo }}" data-url="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" data-count="none" data-via="douglaswebdev" data-lang="pt" data-size="medium">Tweetar</a>
-			<g:plusone annotation="none"></g:plusone>
-			<div id="fb-root"></div>
-			<div id="facebook-like-article" class="fb-like" data-href="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+			<div class="social-links">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-text="{{ artigo.titulo }}" data-url="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" data-count="none" data-via="douglaswebdev" data-lang="pt" data-size="medium">Tweetar</a>
+				<g:plusone annotation="none"></g:plusone>
+				<div id="fb-root"></div>
+				<div id="facebook-like-article" class="fb-like" data-href="http://{{ request.META.HTTP_HOST }}{{artigo.get_absolute_url}}" data-send="true" data-width="450" data-show-faces="true" data-font="arial"></div>
+			</div>
 		</header>
 		<div class="entry-content">
 			{{ artigo.conteudo|safe }}
