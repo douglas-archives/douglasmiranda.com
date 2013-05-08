@@ -47,7 +47,7 @@ def _webfaction_create_app():
     try:
         response = server.create_app(session_id, env.project, 'custom_app_with_port', False, '')
         print "App on webfaction created: %s" % response
-        return response
+        return str(response)
 
     except xmlrpclib.Fault:
         print "Não foi possível criar a app %s, talvez o nome dessa app já esteja em uso." % env.project
