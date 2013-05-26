@@ -1,7 +1,7 @@
 *.pyc
 douglasmiranda/media/uploads/*
 douglasmiranda/settings/dev.py
-douglasmiranda/settings/prod.py
+douglasmiranda/settings/sensitive_data.py
 etc/gunicorn.prod.conf
 start_gunicorn.sh
 tmp/*
