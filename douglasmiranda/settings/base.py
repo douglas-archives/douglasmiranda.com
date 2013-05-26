@@ -156,6 +156,7 @@ INSTALLED_APPS = (
     'filer',
     'easy_thumbnails',
     'south',
+    'compressor',
 
     'douglasmiranda.home',
     'douglasmiranda.blog',
