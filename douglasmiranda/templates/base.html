@@ -1,3 +1,4 @@
+{% load compress %}
 <!DOCTYPE html>
 <html lang="pt-BR" {% block atributos_html_tag %}{% endblock %}>
 <head>
@@ -12,18 +13,21 @@
         <meta property="og:description" content="Artigos sobre desenvolvimento web e falo um pouco sobre o que faço, aprendo e vivencio em minha profissão."/>
         <meta property="description" content="Artigos sobre desenvolvimento web e falo um pouco sobre o que faço, aprendo e vivencio em minha profissão."/>
     {% endblock %}
+    {% compress css %}
+        <link rel="alternate" type="application/rss+xml" title="Ultimos
+    artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" />
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <title>{% block titulo %}Douglas Miranda{% endblock %}</title>
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css?v=4" type="text/css" />
+        {% block css %}{% endblock %}
+    {% endcompress css %}
 
-    <link rel="alternate" type="application/rss+xml" title="Ultimos
-artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" />
-    <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-    <title>{% block titulo %}Douglas Miranda{% endblock %}</title>
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css?v=4" type="text/css" />
-    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-    {% block css %}{% endblock %}
-    {% block js_head %}{% endblock %}
+    {% compress js %}
+        {% block js_head %}{% endblock %}
+    {% endcompress js %}
     {% block extra_head %}{% endblock %}
 
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
     <div id="wrapper">
@@ -69,9 +73,11 @@ artigos por Douglas Miranda" href="http://feeds.feedburner.com/douglasmiranda" /
         </footer><!-- /#contentinfo -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/jquery.min.js">\x3C/script>')</script>
-        <script src="{{ STATIC_URL }}js/global.js"></script>
 
-        {% block js_footer %}{% endblock %}
+        {% compress js %}
+            <script src="{{ STATIC_URL }}js/global.js"></script>
+            {% block js_footer %}{% endblock %}
+        {% endcompress js %}
 
         <script type="text/javascript">
             // analytics
