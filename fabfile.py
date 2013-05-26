@@ -118,7 +118,7 @@ def create_user():
 
 @roles('server')
 def upload_django_settings():
-    upload_template('douglasmiranda/settings/prod.py', '%(project_root)s/douglasmiranda/settings/' % env)
+    upload_template('douglasmiranda/settings/sensitive_data.py', '%(project_root)s/douglasmiranda/settings/' % env)
 
 
 @roles('server')
