@@ -1,10 +1,9 @@
 from base import *
-from sensitive_data import DATABASES, SECRET_KEY, DEBUG, TEMPLATE_DEBUG
+from sensitive_data import *
 
-STATIC_ROOT = '/home/douglas777/webapps/douglasmiranda_static_app/'
-MEDIA_ROOT = '/home/douglas777/webapps/douglasmiranda_media_app/'
-STATIC_URL = 'http://static.douglasmiranda.com/'
-MEDIA_URL = 'http://media.douglasmiranda.com/'
+ALLOWED_HOSTS = [
+    '.douglasmiranda.com',  # Allow domain and subdomains
+]
 
 COMPRESS_ENABLED = True
 STATICFILES_FINDERS += (

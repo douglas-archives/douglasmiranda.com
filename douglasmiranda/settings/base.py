@@ -2,7 +2,7 @@
 # Django settings for douglasmiranda project.
 from utils.path import relative_to_project_path
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
