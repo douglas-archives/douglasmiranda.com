@@ -14,8 +14,8 @@ urlpatterns = patterns(
     (r'^robots.txt$', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
     (r'^favicon.png$', RedirectView.as_view(url=settings.STATIC_URL + 'images/favicon.png')),
     url(r'^$', HomeListView.as_view(), name='projeto-inicial'),
-    url(r'^me/', TemplateView.as_view(template_name='me.html'), name='projeto-me'),
-    (r'^labs/', include('douglasmiranda.labs.urls')),
+    url(r'^me/$', TemplateView.as_view(template_name='me.html'), name='projeto-me'),
+    url(r'^labs/projetos/$', TemplateView.as_view(template_name='projetos.html'), name='labs-projetos'),
     (r'^artigo/', include('douglasmiranda.blog.urls')),
     (r'^rss/(?P<url>.*)/$', UltimosArtigos(), {'feed_dict': {'ultimos': UltimosArtigos}}),
 

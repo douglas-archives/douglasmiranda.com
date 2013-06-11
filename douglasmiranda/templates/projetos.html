@@ -3,8 +3,8 @@
 {% block titulo %}Projetos - {{ block.super }}{% endblock %}
 
 {% block css %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}labs/css/projetos.css" type="text/css" />
-    <link rel="stylesheet" href="{{ STATIC_URL }}labs/jquery-github/base.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/projetos.css" type="text/css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}jquery-github/base.css">
 {% endblock %}
 
 {% block content %}
@@ -30,14 +30,14 @@
     </div>
     <p>
         <a href="http://github.com/douglasmiranda/" class="link-to-my-github" rel="me">
-            <img src="{{ STATIC_URL }}labs/jquery-github/cat.png"><br>
+            <img src="{{ STATIC_URL }}jquery-github/cat.png"><br>
             github.com/douglasmiranda
         </a>
     </p>
 {% endblock %}
 
 {% block js_footer %}
-    <script src="{{ STATIC_URL }}labs/jquery-github/jquery.github.js"></script>
+    <script src="{{ STATIC_URL }}jquery-github/jquery.github.js"></script>
     <script>
         $('[data-repo]').github();
     </script>
