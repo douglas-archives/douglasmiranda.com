@@ -1,5 +1,5 @@
 Django==1.5.1
-django-wysiwyg-redactor==0.3.6
+django-wysiwyg-redactor==0.3.7
 bootstrap-admin==0.2.5
 django-filer==0.9.5
 PIL==1.1.7
